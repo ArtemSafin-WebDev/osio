@@ -1,0 +1,133 @@
+.shops {
+  @include blockWrapper;
+  background-color: #fff;
+}
+
+.shops__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  padding-top: 5rem;
+  padding-bottom: 4rem;
+  border-top: 1px solid rgba(#77787d, 0.3);
+}
+
+.shops__heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 4rem;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-bottom: 15.4rem;
+  text-wrap: balance;
+  max-width: 105rem;
+}
+
+.shops__slider-title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 100%;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+}
+
+.shops__slider {
+  margin-bottom: 27.8rem;
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    width: calc((100% / 7) - 2rem * 6 / 7);
+    margin-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.shops__slider-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border: 1px solid #cccccc;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: border-color 0.2s;
+  @media (hover: hover) {
+    &:hover {
+      border-color: black;
+      .shops__slider-card-content {
+        transform: scale(0.95);
+      }
+    }
+  }
+}
+
+.shops__slider-card-content {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-gap: 1rem;
+  grid-template-areas: "arrow" "image" "heading";
+  grid-template-rows: minmax(3.2rem, auto) auto minmax(3.2rem, auto);
+  height: auto;
+  flex-grow: 1;
+  padding: 2rem;
+  transition: transform 0.4s;
+
+  svg {
+    flex-shrink: 0;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: auto;
+    grid-area: arrow;
+    justify-self: flex-end;
+    fill: #cccccc;
+    align-self: flex-start;
+  }
+}
+
+.shops__slider-card-title {
+  grid-area: heading;
+  align-self: flex-end;
+  justify-self: flex-start;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #77787d;
+  line-height: 130%;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  font-family: var(--inter);
+}
+
+.shops__slider-card-image-container {
+  margin: 0 -2rem;
+  aspect-ratio: 246 / 164;
+  position: relative;
+  grid-area: image;
+}
+
+.shops__slider-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.shops__remark {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 100%;
+  color: #77787d;
+  font-family: var(--inter);
+}

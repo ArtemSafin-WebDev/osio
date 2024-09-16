@@ -1,0 +1,100 @@
+.features {
+  @include blockWrapper;
+  background-color: #77787d;
+  color: white;
+}
+
+.features__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-gap: 2rem;
+  min-height: 100vh;
+  grid-template-areas: "top" "text" "list";
+  grid-template-rows: auto 1fr auto;
+}
+
+.features__top {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(white, 0.3);
+  grid-area: top;
+  padding: 3.5rem 0;
+}
+
+.features__title,
+.features__heading {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 100%;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+}
+
+.features__large-text {
+  grid-area: text;
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 5rem;
+  line-height: 120%;
+  text-align: center;
+  text-transform: uppercase;
+  color: #feff6a;
+  align-self: center;
+  justify-self: center;
+  text-wrap: balance;
+  position: relative;
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    pointer-events: none;
+    color: rgb(75, 75, 75);
+    text-wrap: balance;
+    clip-path: inset(calc(var(--progress, 0) * 1%) 0 0 0);
+  }
+}
+
+.features__list {
+  grid-area: list;
+  max-width: 137.5rem;
+  justify-self: center;
+  margin-bottom: 8rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 2rem;
+  width: 100%;
+}
+
+.features__card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.features__card-amount {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 3rem;
+  line-height: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.features__card-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 120%;
+  text-align: center;
+  letter-spacing: -0.05rem;
+}
