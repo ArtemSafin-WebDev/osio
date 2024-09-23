@@ -1,3 +1,7 @@
+import Swiper from "swiper";
+import "swiper/css";
+import { SwiperOptions } from "swiper/types";
+
 export default function products() {
   const elements = Array.from(
     document.querySelectorAll<HTMLElement>(".products")
@@ -31,6 +35,38 @@ export default function products() {
         event.preventDefault();
         setActive(btnIndex);
       });
+    });
+
+    const sliders = Array.from(
+      element.querySelectorAll<HTMLElement>(".products__slider")
+    );
+
+    const mql = window.matchMedia("(max-width: 640px)");
+
+    sliders.forEach((slider) => {
+      const container = slider.querySelector<HTMLElement>(".swiper");
+      if (!container) return;
+
+      const options: SwiperOptions = {
+        slidesPerView: "auto",
+        speed: 600,
+      };
+
+      let instance: Swiper | null = null;
+
+      const handleWidthChange = (e: MediaQueryListEvent | MediaQueryList) => {
+        if (e.matches) {
+          if (instance) instance.destroy();
+          instance = new Swiper(container, options);
+        } else {
+          if (instance) instance.destroy();
+          instance = null;
+        }
+      };
+
+      mql.addEventListener("change", handleWidthChange);
+
+      handleWidthChange(mql);
     });
   });
 }

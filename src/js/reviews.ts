@@ -3,8 +3,9 @@ import "swiper/css";
 import gsap from "gsap";
 import { Flip } from "gsap/all";
 import { Navigation } from "swiper/modules";
+import { ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(Flip);
+gsap.registerPlugin(Flip, ScrollTrigger);
 
 export default function reviews() {
   const elements = Array.from(
@@ -90,6 +91,9 @@ export default function reviews() {
               { opacity: 1 },
               { opacity: 0, duration: 0.2 }
             ),
+          onComplete: () => {
+            ScrollTrigger.refresh();
+          },
         });
         return;
       } else if (

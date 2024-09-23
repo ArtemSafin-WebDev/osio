@@ -48,12 +48,14 @@
 }
 
 .reviews__slider {
-  width: 137.4rem;
-  margin: 0 auto;
-  min-height: 80rem;
-  display: flex;
-  flex-direction: column;
-  position: relative;
+  @include breakpointMF(small-tablet) {
+    width: 137.4rem;
+    margin: 0 auto;
+    min-height: 80rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
 
   @include breakpoint(mobile) {
     min-height: auto;
@@ -74,27 +76,29 @@
   .swiper-wrapper {
     align-items: center;
 
-    &::after {
-      content: "";
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-
-      height: 150vh;
-      z-index: 1;
-      background-color: rgba(black, 0.3);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.4s, visibility 0s linear 0.4s;
-      min-width: 1000%;
-    }
-
-    &:has(.reviews__slider-card.active) {
+    @include breakpointMF(small-tablet) {
       &::after {
-        opacity: 1;
-        visibility: inherit;
-        transition: opacity 0.4s, visibility 0.4s;
+        content: "";
+        position: fixed;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        height: 150vh;
+        z-index: 1;
+        background-color: rgba(black, 0.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s, visibility 0s linear 0.4s;
+        min-width: 1000%;
+      }
+
+      &:has(.reviews__slider-card.active) {
+        &::after {
+          opacity: 1;
+          visibility: inherit;
+          transition: opacity 0.4s, visibility 0.4s;
+        }
       }
     }
   }
@@ -104,9 +108,16 @@
     flex-direction: column;
     height: auto;
     box-sizing: border-box;
-    position: static;
-    z-index: auto;
-    transition: opacity 0.2s;
+
+    @include breakpointMF(small-tablet) {
+      position: static;
+      z-index: auto;
+      transition: opacity 0.2s;
+      &:has(.reviews__slider-card.active) {
+        position: relative;
+        z-index: 100;
+      }
+    }
 
     @include breakpoint(mobile) {
       width: 30.6rem;
@@ -114,11 +125,6 @@
       &:last-child {
         margin-right: 0;
       }
-    }
-
-    &:has(.reviews__slider-card.active) {
-      position: relative;
-      z-index: 100;
     }
 
     @include breakpointMF(small-tablet) {
@@ -160,6 +166,17 @@
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   justify-self: flex-start;
 
+  &:link,
+  &:visited {
+    color: white;
+  }
+
+  @include breakpointMF(small-tablet) {
+    &.active {
+      z-index: 50;
+    }
+  }
+
   @include breakpoint(mobile) {
     align-self: stretch;
     padding: 2.5rem 5rem;
@@ -169,14 +186,6 @@
     line-height: 100%;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
-  }
-  &:link,
-  &:visited {
-    color: white;
-  }
-
-  &.active {
-    z-index: 50;
   }
 
   @media (hover: hover) {

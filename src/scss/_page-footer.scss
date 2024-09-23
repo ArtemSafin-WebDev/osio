@@ -1,11 +1,12 @@
 .page-footer {
   background-color: black;
   color: white;
-
+  position: relative;
+  isolation: isolate;
   @include blockWrapper;
 
   @include breakpoint(mobile) {
-    display: none;
+    padding-bottom: 14rem;
   }
 }
 
@@ -15,25 +16,47 @@
   flex-direction: column;
   padding-top: 4.3rem;
   border-top: 1px solid rgba(#77787d, 0.3);
+
+  @include breakpoint(mobile) {
+    padding-top: 1.6rem;
+  }
 }
 
 .page-footer__logo {
   align-self: center;
   margin-bottom: 23.6rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 15.4rem;
+  }
 }
 
 .page-footer__logo-image {
   width: 44.4rem;
   height: auto;
   display: block;
+
+  @include breakpoint(mobile) {
+    width: 13.6rem;
+  }
 }
 
 .page-footer__bottom {
-  display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
-  grid-gap: 2rem;
-  align-items: flex-end;
-  grid-template-areas: "left decor right";
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-gap: 2rem;
+    align-items: flex-end;
+    grid-template-areas: "left decor right";
+  }
+
+  @include breakpoint(mobile) {
+    display: grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 1fr auto;
+    grid-gap: 2rem;
+    grid-row-gap: 0.8rem;
+  }
 }
 
 .page-footer__bottom-left {
@@ -43,6 +66,10 @@
   gap: 4rem;
   margin-bottom: 4rem;
   align-items: flex-start;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
 }
 
 .page-footer__copyright {
@@ -50,6 +77,14 @@
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1.9rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    grid-column: 1 / 2;
+  }
 }
 
 .page-footer__policy {
@@ -62,6 +97,14 @@
   text-underline-offset: 0.2rem;
   transition: text-decoration-color 0.2s;
 
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    grid-column: 1 / 2;
+  }
+
   @media (hover: hover) {
     &:hover {
       text-decoration-color: transparent;
@@ -70,9 +113,21 @@
 }
 
 .page-footer__decor {
-  grid-area: decor;
-  justify-self: stretch;
-  height: auto;
+  @include breakpointMF(small-tablet) {
+    grid-area: decor;
+    justify-self: stretch;
+    height: auto;
+  }
+
+  @include breakpoint(mobile) {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    width: 36rem;
+    height: auto;
+    z-index: -1;
+  }
 }
 
 .page-footer__bottom-right {
@@ -82,22 +137,52 @@
   justify-self: flex-end;
   align-items: flex-end;
   margin-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
 }
 
 .page-footer__made-by {
   display: flex;
   gap: 4.2rem;
   align-items: flex-end;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.page-footer__made-by-text {
   font-style: normal;
   font-weight: 500;
   font-size: 1.5rem;
   line-height: 1.9rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    grid-column: 1 / 2;
+    br {
+      display: none;
+    }
+  }
 }
 
 .page-footer__made-by-logo {
   flex-shrink: 0;
   width: 5rem;
   height: auto;
+
+  @include breakpoint(mobile) {
+    grid-column: 2 / 3;
+    align-self: flex-end;
+    justify-self: flex-end;
+    width: 3rem;
+    grid-row: 1 / -1;
+  }
 }
 
 .page-footer__top {
@@ -106,6 +191,11 @@
   grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-gap: 2rem;
   align-items: flex-start;
+
+  @include breakpoint(mobile) {
+    display: block;
+    margin-bottom: 10rem;
+  }
 }
 
 .page-footer__top-heading {
@@ -115,6 +205,13 @@
   font-size: 4rem;
   line-height: 120%;
   text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 120%;
+  }
 }
 
 .page-footer__social-list {
@@ -123,6 +220,10 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 1rem;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .page-footer__social-list-item {
@@ -157,6 +258,10 @@
 
 .page-footer__nav {
   grid-column: 5 / -1;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .page-footer__nav-list {
