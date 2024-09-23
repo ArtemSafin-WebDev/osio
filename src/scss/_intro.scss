@@ -6,6 +6,10 @@
   color: white;
   isolation: isolate;
   min-height: 100vh;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .intro__content {
@@ -222,7 +226,7 @@
   font-weight: 500;
   font-size: 6rem;
   line-height: 120%;
-  letter-spacing: -0.1rem;
+
   text-transform: uppercase;
   text-wrap: balance;
   margin-bottom: 4rem;

@@ -10,6 +10,11 @@
   padding-top: 5rem;
   padding-bottom: 4rem;
   border-top: 1px solid rgba(#77787d, 0.3);
+
+  @include breakpoint(mobile) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
 }
 
 .shops__heading {
@@ -21,6 +26,15 @@
   margin-bottom: 15.4rem;
   text-wrap: balance;
   max-width: 105rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 120%;
+    max-width: none;
+    margin-bottom: 10rem;
+  }
 }
 
 .shops__slider-title {
@@ -31,22 +45,46 @@
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   margin-bottom: 5rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+  }
 }
 
 .shops__slider {
   margin-bottom: 27.8rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 13rem;
+  }
   .swiper {
     overflow: visible;
   }
 
+  .swiper-wrapper {
+    @include breakpointMF(small-tablet) {
+      display: grid;
+      grid-template-columns: repeat(7, minmax(0, 1fr));
+      grid-gap: 2rem;
+    }
+  }
   .swiper-slide {
-    width: calc((100% / 7) - 2rem * 6 / 7);
-    margin-right: 2rem;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    &:last-child {
-      margin-right: 0;
+    height: auto;
+    @include breakpoint(mobile) {
+      width: 19.5rem;
+      margin-right: 0.8rem;
+      &:last-child {
+        margin-right: 0;
+      }
     }
   }
 }
@@ -59,6 +97,10 @@
   border-radius: 1rem;
   overflow: hidden;
   transition: border-color 0.2s;
+
+  @include breakpoint(mobile) {
+    border-radius: 1rem;
+  }
   @media (hover: hover) {
     &:hover {
       border-color: black;
@@ -80,6 +122,10 @@
   flex-grow: 1;
   padding: 2rem;
   transition: transform 0.4s;
+
+  @include breakpoint(mobile) {
+    padding: 2rem;
+  }
 
   svg {
     flex-shrink: 0;
@@ -105,10 +151,19 @@
   letter-spacing: 0.15rem;
   text-transform: uppercase;
   font-family: var(--inter);
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.2rem;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    line-height: 130%;
+  }
 }
 
 .shops__slider-card-image-container {
-  margin: 0 -2rem;
+  // margin: 0 -2rem;
   aspect-ratio: 246 / 164;
   position: relative;
   grid-area: image;
@@ -130,4 +185,11 @@
   line-height: 100%;
   color: #77787d;
   font-family: var(--inter);
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 140%;
+  }
 }

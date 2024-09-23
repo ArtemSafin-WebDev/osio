@@ -2,6 +2,7 @@ import Swiper from "swiper";
 import "swiper/css";
 import gsap from "gsap";
 import { Flip } from "gsap/all";
+import { Navigation } from "swiper/modules";
 
 gsap.registerPlugin(Flip);
 
@@ -15,12 +16,28 @@ export default function reviews() {
     if (!container) return;
 
     new Swiper(container, {
-      slidesPerView: 2,
+      slidesPerView: "auto",
       slidesPerGroup: 1,
       speed: 600,
-      spaceBetween: 20,
+      spaceBetween: 0,
       longSwipesRatio: 0.2,
+      modules: [Navigation],
+      navigation: {
+        prevEl: element.querySelector<HTMLButtonElement>(
+          ".reviews__arrow--prev"
+        ),
+        nextEl: element.querySelector<HTMLButtonElement>(
+          ".reviews__arrow--next"
+        ),
+      },
       slideToClickedSlide: false,
+      breakpoints: {
+        641: {
+          slidesPerView: 2,
+          slidesPerGroup: 1,
+          spaceBetween: 20,
+        },
+      },
       on: {
         slideChange: () => {
           const activeCards = Array.from(
@@ -36,9 +53,6 @@ export default function reviews() {
           });
         },
       },
-
-      //   centeredSlides: true,
-      //   loop: true,
     });
 
     element.addEventListener("click", async (event) => {
@@ -49,12 +63,7 @@ export default function reviews() {
       ) {
         event.preventDefault();
         const card = target.closest(".reviews__slider-card");
-        // const top = card?.querySelector<HTMLElement>(
-        //   ".reviews__slider-card-top-row"
-        // )!;
-        // const bottom = card?.querySelector<HTMLElement>(
-        //   ".reviews__slider-card-bottom-row"
-        // )!;
+
         const content = card?.querySelector<HTMLElement>(
           ".reviews__slider-card-content"
         )!;

@@ -3,6 +3,10 @@
   color: white;
 
   @include blockWrapper;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .page-footer__content {

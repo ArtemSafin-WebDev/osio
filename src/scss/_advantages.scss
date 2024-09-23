@@ -2,6 +2,10 @@
   @include blockWrapper;
   background-color: #fff;
   padding-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    padding-bottom: 3rem;
+  }
 }
 
 .advantages__content {
@@ -18,6 +22,28 @@
   padding: 3.5rem 0;
   border-bottom: 1px solid rgba(#77787d, 0.3);
   margin-bottom: 16rem;
+  position: relative;
+
+  &::after {
+    content: "";
+    top: 100%;
+    width: 1px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(#77787d, 0.3);
+    height: 8rem;
+    position: absolute;
+
+    @include breakpoint(mobile) {
+      height: 6rem;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    gap: 1rem;
+    margin-bottom: 10rem;
+    padding: 2.6rem 0;
+  }
 }
 
 .advantages__top-text {
@@ -28,6 +54,15 @@
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   color: #77787d;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
 }
 
 .advantages__heading {
@@ -41,6 +76,15 @@
   margin-bottom: 20rem;
   max-width: 80rem;
   align-self: center;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 120%;
+    margin-bottom: 14rem;
+  }
 }
 
 .advantages__slider {
@@ -50,8 +94,14 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 2rem;
-  grid-template-rows: auto 1fr auto;
+
   min-height: 40rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    min-height: auto;
+    grid-auto-rows: auto 1fr auto;
+  }
 }
 
 .advantages__list-item {
@@ -67,6 +117,11 @@
   padding: 4rem;
   border: 1px solid #cccccc;
   border-radius: 1rem;
+
+  @include breakpoint(mobile) {
+    min-height: 19rem;
+    padding: 1.6rem;
+  }
 }
 
 .advantages__slider-card-icon {
@@ -84,6 +139,13 @@
   text-align: center;
   text-transform: uppercase;
   align-self: center;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 120%;
+  }
 }
 
 .advantages__slider-card-text {
@@ -94,4 +156,12 @@
   color: #77787d;
   line-height: 140%;
   font-family: var(--inter);
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 140%;
+    letter-spacing: -0.05rem;
+  }
 }

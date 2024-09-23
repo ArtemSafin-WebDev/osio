@@ -3,6 +3,11 @@
   background-color: #fff;
   padding-top: 5rem;
   padding-bottom: 10rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 1.6rem;
+    padding-bottom: 2.6rem;
+  }
 }
 
 .products__content {
@@ -17,6 +22,17 @@
   gap: 4rem;
   margin-bottom: 6.2rem;
   justify-content: space-between;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.products__tabs-nav {
+  @include breakpoint(mobile) {
+    margin-bottom: 5.8rem;
+    align-self: flex-start;
+  }
 }
 
 .products__tabs-nav-list {
@@ -25,6 +41,11 @@
   padding: 1.2rem 1.7rem;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 1rem;
+
+  @include breakpoint(mobile) {
+    padding: 1rem;
+    margin: 0;
+  }
 }
 
 .products__tabs-nav-list-item {
@@ -32,6 +53,7 @@
   padding-right: 1rem;
   margin-right: 1rem;
   position: relative;
+
   &::after {
     content: "";
     position: absolute;
@@ -66,6 +88,16 @@
   border-radius: 4rem;
   user-select: none;
   white-space: nowrap;
+
+  @include breakpoint(mobile) {
+    padding: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
   &:link,
   &:visited {
     color: #77787d;
@@ -82,6 +114,11 @@
   position: relative;
   display: grid;
   place-items: center;
+
+  @include breakpoint(mobile) {
+    order: 30;
+    margin-top: 4.8rem;
+  }
 }
 
 .products__link {
@@ -100,6 +137,20 @@
     visbiility 0.4s;
   color: black;
   padding: 2rem;
+  justify-content: center;
+  text-align: center;
+
+  @include breakpoint(mobile) {
+    padding: 2.5rem 5rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    justify-self: stretch;
+    align-self: center;
+  }
   &:link,
   &:visited {
     color: black;
@@ -134,11 +185,13 @@
   }
 
   .swiper-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-gap: 2rem;
-    min-height: 68rem;
-    grid-template-rows: 1fr auto 1fr;
+    @include breakpointMF(small-tablet) {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-gap: 2rem;
+      min-height: 68rem;
+      grid-auto-rows: 1fr auto 1fr;
+    }
   }
 
   .swiper-slide {
@@ -148,6 +201,16 @@
     box-sizing: border-box;
 
     display: contents;
+
+    @include breakpoint(mobile) {
+      display: flex;
+      flex-direction: column;
+      width: 32rem;
+      margin-right: 1.6rem;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   }
 }
 
@@ -162,6 +225,11 @@
   grid-template-areas: "title" "image" "specs";
   grid-row: span 3;
   transition: border-color 0.2s;
+
+  @include breakpoint(mobile) {
+    grid-template-rows: 1fr auto 1fr;
+    padding: 1.6rem;
+  }
 
   @media (hover: hover) {
     &:hover {
@@ -185,6 +253,13 @@
   font-weight: 500;
   font-size: 2.7rem;
   line-height: 140%;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 120%;
+  }
 }
 
 .products__slider-card-tags {
@@ -192,6 +267,10 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
+
+  @include breakpoint(mobile) {
+    gap: 1rem;
+  }
 }
 
 .products__slider-card-tag {
@@ -212,6 +291,17 @@
   background-color: #d1ffc8;
   font-family: var(--inter);
 
+  @include breakpoint(mobile) {
+    padding: 0.7rem;
+    border-radius: 4rem;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    line-height: 100%;
+  }
+
   &--red {
     background-color: #ffc4ae;
   }
@@ -222,6 +312,11 @@
   aspect-ratio: 365 / 268;
   position: relative;
   align-self: center;
+
+  @include breakpoint(mobile) {
+    margin: 0 -1.6rem;
+    aspect-ratio: 321 / 236;
+  }
 }
 
 .products__slider-card-image {
@@ -246,4 +341,12 @@
   text-transform: uppercase;
   color: #77787d;
   margin-bottom: -1rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: -0.5rem;
+  }
 }

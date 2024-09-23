@@ -12,6 +12,13 @@
 
   min-height: 100vh;
   padding: 4rem 0;
+
+  @include breakpoint(mobile) {
+    min-height: max(100svh, 77rem);
+    padding: 3rem 0;
+    gap: 2.4rem;
+    flex-direction: column;
+  }
 }
 
 .brand__bg {
@@ -24,7 +31,6 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
-    // backdrop-filter: blur(5px);
   }
 }
 
@@ -43,6 +49,13 @@
   display: flex;
   flex-direction: column;
   gap: 4rem;
+
+  @include breakpoint(mobile) {
+    width: auto;
+    flex-grow: 1;
+    gap: 2.4rem;
+    display: contents;
+  }
 }
 
 .brand__heading {
@@ -52,6 +65,15 @@
   line-height: 100%;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 180%;
+    position: relative;
+    z-index: 2;
+  }
 }
 
 .brand__large-text {
@@ -61,6 +83,16 @@
   line-height: 120%;
   text-transform: uppercase;
   max-width: 91rem;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4rem;
+    line-height: 120%;
+    position: relative;
+    z-index: 2;
+  }
 }
 
 .brand__small-text {
@@ -72,6 +104,17 @@
   letter-spacing: -0.1rem;
   font-family: var(--inter);
   max-width: 44.5rem;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.2rem;
+    line-height: 140%;
+    position: relative;
+    z-index: 2;
+    letter-spacing: 0;
+  }
 }
 
 .brand__video-link {
@@ -85,10 +128,26 @@
   place-items: center;
   z-index: 1;
 
+  @include breakpoint(mobile) {
+    width: 43rem;
+    height: 43rem;
+    margin: 0;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1.5rem;
+  }
+
   svg {
     fill: white;
     width: 11.7rem;
     height: 9.1rem;
+
+    @include breakpoint(mobile) {
+      width: 5.3rem;
+      height: 6.9rem;
+    }
   }
 }
 
@@ -101,12 +160,6 @@
   mask-size: auto 100%;
   mask-repeat: no-repeat;
   mask-position: center;
-
-  // background-image: url("../images/brand-mask.svg");
-  // background-size: contain;
-  // background-repeat: no-repeat;
-  // background-position: center;
-
   &::after {
     content: "";
     position: absolute;
