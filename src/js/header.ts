@@ -98,4 +98,25 @@ export default function header() {
       item.classList.remove("mobile-categories-open");
     });
   });
+
+  const mobileSearch = document.querySelector<HTMLElement>(
+    ".osio-header__mobile-search-btn"
+  );
+
+  mobileSearch?.addEventListener("click", (event) => {
+    event.preventDefault();
+    document.body.classList.toggle("mobile-search-open");
+    document.body.classList.remove("menu-open");
+  });
+
+  document.addEventListener("click", (event) => {
+    const target = event.target as HTMLElement;
+    if (
+      target.matches(".osio-header__mobile-search") ||
+      target.closest(".osio-header__mobile-search")
+    ) {
+      return;
+    }
+    document.body.classList.remove("mobile-search-open");
+  });
 }

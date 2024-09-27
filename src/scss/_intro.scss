@@ -27,18 +27,26 @@
   visibility: hidden;
   transition: opacity 0.4s, visibility 0s linear 0.4s;
 
-  .intro:has(.osio-header__search-wrapper:hover) &,
-  .intro:has(
-      .osio-header__categories-list-item:hover .osio-header__categories-dropdown
-    )
-    & {
-    opacity: 1;
-    visibility: inherit;
-    transition: opacity 0.4s, visibility 0.4s;
+  @include breakpointMF(small-tablet) {
+    .intro:has(.osio-header__search-wrapper:hover) &,
+    .intro:has(
+        .osio-header__categories-list-item:hover
+          .osio-header__categories-dropdown
+      )
+      & {
+      opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
   }
 
   @include breakpoint(mobile) {
-    display: none;
+    z-index: 10;
+    body.mobile-search-open & {
+      opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
   }
 }
 
