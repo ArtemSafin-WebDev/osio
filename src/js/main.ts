@@ -9,6 +9,7 @@ import intro from "./intro";
 import products from "./products";
 import features from "./features";
 import contactForm from "./contactForm";
+import header from "./header";
 
 document.addEventListener("DOMContentLoaded", () => {
   openWorld();
@@ -20,6 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   products();
   features();
   contactForm();
+  header();
 });
 
 window.addEventListener("load", () => {
