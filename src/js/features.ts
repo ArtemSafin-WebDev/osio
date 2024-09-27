@@ -30,5 +30,21 @@ export default function features() {
         ease: "none",
       }
     );
+
+    const newTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: element,
+        start: "center center",
+      },
+    });
+
+    newTl.from(
+      Array.from(element.querySelectorAll<HTMLElement>(".features__list-item")),
+      {
+        autoAlpha: 0,
+        duration: 0.6,
+        stagger: 0.3,
+      }
+    );
   });
 }
