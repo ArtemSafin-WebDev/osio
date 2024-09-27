@@ -36,6 +36,10 @@
     visibility: inherit;
     transition: opacity 0.4s, visibility 0.4s;
   }
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .intro__content {
