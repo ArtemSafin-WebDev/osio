@@ -429,6 +429,9 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s, visibility 0s linear 0.4s;
+  body:not(.loaded) & {
+    display: none;
+  }
 
   .osio-header__search-wrapper:hover & {
     opacity: 1;
@@ -511,6 +514,10 @@
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+    body:not(.loaded) & {
+      display: none;
+    }
   }
 
   @include breakpoint(mobile) {
@@ -524,6 +531,10 @@
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s;
     padding-top: calc(5.2rem + 6rem);
+
+    body:not(.loaded) & {
+      display: none;
+    }
 
     .mobile-categories-open & {
       opacity: 1;
@@ -579,6 +590,10 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+  body:not(.loaded) & {
+    display: none;
+  }
 
   .mobile-search-open & {
     opacity: 1;

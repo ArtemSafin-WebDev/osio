@@ -27,6 +27,10 @@
   visibility: hidden;
   transition: opacity 0.4s, visibility 0s linear 0.4s;
 
+  body:not(.loaded) & {
+    display: none;
+  }
+
   @include breakpointMF(small-tablet) {
     .intro:has(.osio-header__search-wrapper:hover) &,
     .intro:has(
@@ -206,12 +210,12 @@
 .intro__slider-nav {
   justify-self: center;
   padding: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  // border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 0.5rem;
 
   @include breakpoint(mobile) {
     border-radius: 1rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    // border: 1px solid rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -222,8 +226,8 @@
 
 .intro__slider-nav-list-item {
   flex-shrink: 0;
-  padding-right: 1rem;
-  border-right: 1px solid rgba(#ffffff, 0.3);
+  // padding-right: 1rem;
+  // border-right: 1px solid rgba(#ffffff, 0.3);
   margin-right: 1rem;
 
   @include breakpoint(mobile) {
