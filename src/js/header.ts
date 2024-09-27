@@ -1,9 +1,9 @@
 export default function header() {
-  const elements = Array.from(
+  const dropdowns = Array.from(
     document.querySelectorAll<HTMLElement>(".osio-header__categories-dropdown")
   );
 
-  elements.forEach((element) => {
+  dropdowns.forEach((element) => {
     const navLinks = Array.from(
       element.querySelectorAll<HTMLElement>(
         ".osio-header__categories-subcategories-nav-link"
@@ -35,5 +35,13 @@ export default function header() {
         setActive(linkIndex);
       });
     });
+  });
+
+  const burger = document.querySelector<HTMLButtonElement>(
+    ".osio-header__burger"
+  );
+
+  burger?.addEventListener("click", () => {
+    document.body.classList.toggle("menu-open");
   });
 }

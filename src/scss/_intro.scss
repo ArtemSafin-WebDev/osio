@@ -1,15 +1,21 @@
 .intro {
-  position: relative;
   display: flex;
   flex-direction: column;
   background-color: black;
   color: white;
   isolation: isolate;
   min-height: 100vh;
-  z-index: 40;
+
+  @include breakpointMF(small-tablet) {
+    position: relative;
+    z-index: 40;
+  }
 
   @include breakpoint(mobile) {
     min-height: 100svh;
+    position: relative;
+    z-index: 80;
+    min-height: 77rem;
   }
 }
 
@@ -97,6 +103,11 @@
   height: 5.2rem;
   position: relative;
   z-index: 30;
+
+  @include breakpoint(mobile) {
+    position: relative;
+    z-index: 80;
+  }
 }
 
 .intro__ticker-track {

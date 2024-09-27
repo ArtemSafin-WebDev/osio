@@ -1,12 +1,14 @@
 .osio-header {
   @include blockWrapper;
-  position: relative;
-  z-index: 30;
+
+  @include breakpointMF(small-tablet) {
+    position: relative;
+    z-index: 30;
+  }
 }
 
 .osio-header__content {
   @include blockContent;
-  border-bottom: 1px solid rgba(white, 0.3);
 
   @include breakpointMF(small-tablet) {
     display: grid;
@@ -14,19 +16,36 @@
     grid-gap: 2rem;
     align-items: center;
     grid-template-areas: "logo content";
+    border-bottom: 1px solid rgba(white, 0.3);
   }
 
   @include breakpoint(mobile) {
-    padding: 1.8rem 0;
+    height: 6rem;
     display: flex;
     align-items: center;
     gap: 3rem;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background-color: rgba(white, 0.3);
+      z-index: 80;
+    }
   }
 }
 
 .osio-header__logo {
   justify-self: flex-start;
   grid-area: logo;
+
+  @include breakpoint(mobile) {
+    position: relative;
+    z-index: 80;
+  }
 }
 
 .osio-header__logo-image {
@@ -53,16 +72,18 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    -webkit-overflow-scrolling: touch;
-    z-index: 120;
-    background-color: #fff;
-    color: #77787d;
+
+    z-index: 70;
+    background-color: #77787d;
+    color: #fff;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s;
-    overscroll-behavior-y: contain;
-    overflow-y: auto;
+
     color: white;
+
+    padding-top: calc(5.2rem + 6rem);
+
     body:not(.loaded) & {
       display: none;
     }
@@ -72,8 +93,33 @@
       visibility: inherit;
       transition: opacity 0.4s, visibility 0.4s;
     }
+  }
+}
 
-    @include blockWrapper;
+.osio-header__scroll-wrapper {
+  display: contents;
+
+  @include breakpoint(mobile) {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+.osio-header__wrapper-inner {
+  display: contents;
+
+  @include breakpoint(mobile) {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-gap: 2rem;
+    grid-template-areas: "lang social" "cat cat" "nav nav" "link link";
+    padding: 0 var(--content-padding);
+    padding-bottom: 2.8rem;
+    padding-top: 1.6rem;
   }
 }
 
@@ -85,10 +131,18 @@
     align-items: center;
     gap: 3rem;
   }
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
 }
 
 .osio-header__nav {
   flex-shrink: 0;
+
+  @include breakpoint(mobile) {
+    grid-area: nav;
+  }
 }
 
 .osio-header__nav-list {
@@ -100,8 +154,8 @@
   @include breakpoint(mobile) {
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 2rem;
-    align-items: flex-start;
+    gap: 1.5rem;
+    align-items: stretch;
   }
 }
 
@@ -138,6 +192,9 @@
     font-weight: 500;
     font-size: 1.4rem;
     line-height: 100%;
+    grid-area: lang;
+    align-self: center;
+    justify-self: flex-start;
   }
 }
 
@@ -145,6 +202,11 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  @include breakpoint(mobile) {
+    grid-area: social;
+    justify-self: flex-end;
+    align-self: center;
+  }
 }
 
 .osio-header__social-list-item {
@@ -215,17 +277,28 @@
     padding: 2rem;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 0.5rem;
+    grid-area: link;
   }
 }
 
 .osio-header__bottom {
   display: flex;
   min-height: 8rem;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
 }
 
 .osio-header__categories {
   display: flex;
   flex-direction: column;
+
+  @include breakpoint(mobile) {
+    grid-area: cat;
+    margin-bottom: 8rem;
+    margin-top: 4rem;
+  }
 }
 
 .osio-header__categories-list {
@@ -237,7 +310,7 @@
   @include breakpoint(mobile) {
     flex-direction: column;
     flew-wrap: nowrap;
-    gap: 3rem;
+    gap: 2rem;
   }
 }
 
@@ -649,10 +722,6 @@
   justify-content: center;
   gap: 2rem;
   margin-bottom: 4rem;
-
-  @include breakpoint(mobile) {
-    display: none;
-  }
 }
 
 .osio-header__categories-subcategories-nav-link {
@@ -677,6 +746,43 @@
   @media (hover: hover) {
     &:hover {
       color: white;
+    }
+  }
+}
+
+.osio-header__burger {
+  display: none;
+
+  @include breakpoint(mobile) {
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 2rem;
+    height: 2rem;
+    gap: 0.6rem;
+    margin-left: auto;
+    justify-content: center;
+    position: relative;
+    z-index: 80;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 0.2rem;
+      background-color: #fff;
+      transition: transform 0.2s;
+      width: 100%;
+    }
+
+    .menu-open & {
+      &::before {
+        transform: translateY(0.4rem) rotate(-30deg);
+      }
+
+      &::after {
+        transform: translateY(-0.4rem) rotate(30deg);
+      }
     }
   }
 }
