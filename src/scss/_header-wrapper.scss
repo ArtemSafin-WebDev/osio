@@ -1,0 +1,10 @@
+.header-wrapper {
+  display: block;
+  position: relative;
+  z-index: 15;
+  margin-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 3rem;
+  }
+}

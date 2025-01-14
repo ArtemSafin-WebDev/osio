@@ -1,0 +1,59 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin-bottom: 8rem;
+
+  @include breakpoint(mobile) {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+    gap: 1rem;
+  }
+  a {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color: rgba(black, 0.5);
+
+    @include breakpoint(mobile) {
+      gap: 1rem;
+    }
+
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 50%;
+      background-color: rgba(black, 0.3);
+
+      @include breakpoint(mobile) {
+        width: 0.4rem;
+        height: 0.4rem;
+      }
+    }
+    &:link,
+    &:visited {
+      color: rgba(black, 0.5);
+    }
+    &.active {
+      color: black;
+      cursor: default;
+      pointer-events: none;
+      &::after {
+        display: none;
+      }
+    }
+  }
+}

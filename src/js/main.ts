@@ -12,6 +12,7 @@ import contactForm from "./contactForm";
 import header from "./header";
 import brand from "./brand";
 import fancybox from "./fancybox";
+import buy from "./buy";
 
 document.addEventListener("DOMContentLoaded", () => {
   openWorld();
@@ -26,6 +27,7 @@ document.addEventListener("DOMContentLoaded", () => {
   header();
   brand();
   fancybox();
+  buy();
 });
 
 window.addEventListener("load", () => {
