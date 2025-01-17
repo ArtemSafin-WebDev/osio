@@ -1,0 +1,154 @@
+.support-detail {
+  @include blockWrapper;
+  margin-bottom: 10rem;
+}
+
+.support-detail__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.support-detail__heading {
+  text-wrap: balance;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.1rem;
+  text-transform: uppercase;
+  margin-bottom: 10rem;
+  max-width: 120rem;
+}
+
+.support-detail__video {
+  display: block;
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  overflow: clip;
+  margin-bottom: 8rem;
+  &::before {
+    content: "";
+    padding-bottom: 42.3%;
+    display: block;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+  }
+}
+
+.support-detail__video-preview {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.support-detail__play {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10rem;
+  height: 10rem;
+  z-index: 5;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: white;
+  }
+}
+
+.support-detail__text-content {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2rem;
+  grid-row-gap: 2rem;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.1rem;
+  font-family: var(--inter);
+
+  & > * {
+    grid-column: 2 / 4;
+  }
+
+  :is(p) {
+  }
+  :is(h1, h2, h3) {
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 4.8rem */
+    text-transform: uppercase;
+    font-family: var(--stem);
+
+    margin-top: 2rem;
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  :is(ul) {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    & > li {
+      position: relative;
+      padding-left: 3.5rem;
+      font-size: 2.5rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      letter-spacing: -0.1rem;
+      font-family: var(--inter);
+      &::before {
+        content: "";
+        background-color: currentColor;
+        transform: translateY(-50%);
+        position: absolute;
+        left: 1.2rem;
+        top: 0.7em;
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+      }
+    }
+  }
+
+  :is(h4, h5, h6) {
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    font-family: var(--stem);
+
+    & + ul,
+    & + ol {
+      margin-top: -1.8rem;
+    }
+  }
+}

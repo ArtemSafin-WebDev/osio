@@ -13,6 +13,7 @@ import header from "./header";
 import brand from "./brand";
 import fancybox from "./fancybox";
 import buy from "./buy";
+import actualMaterials from "./actualMaterials";
 
 document.addEventListener("DOMContentLoaded", () => {
   openWorld();
@@ -28,6 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
   brand();
   fancybox();
   buy();
+  actualMaterials();
 });
 
 window.addEventListener("load", () => {
