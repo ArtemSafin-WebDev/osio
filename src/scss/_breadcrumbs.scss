@@ -55,5 +55,13 @@
         display: none;
       }
     }
+
+    &:not(.active) {
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: black;
+        }
+      }
+    }
   }
 }

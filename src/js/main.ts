@@ -14,6 +14,7 @@ import brand from "./brand";
 import fancybox from "./fancybox";
 import buy from "./buy";
 import actualMaterials from "./actualMaterials";
+import otherMaterials from "./otherMaterials";
 
 document.addEventListener("DOMContentLoaded", () => {
   openWorld();
@@ -30,6 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   fancybox();
   buy();
   actualMaterials();
+  otherMaterials();
 });
 
 window.addEventListener("load", () => {
