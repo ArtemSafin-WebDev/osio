@@ -15,6 +15,7 @@ import fancybox from "./fancybox";
 import buy from "./buy";
 import actualMaterials from "./actualMaterials";
 import otherMaterials from "./otherMaterials";
+import selects from "./selects";
 
 document.addEventListener("DOMContentLoaded", () => {
   openWorld();
@@ -32,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
   buy();
   actualMaterials();
   otherMaterials();
+  selects();
 });
 
 window.addEventListener("load", () => {

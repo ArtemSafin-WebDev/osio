@@ -1,0 +1,308 @@
+.drivers {
+  @include blockWrapper;
+  margin-bottom: 10rem;
+}
+
+.drivers__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.drivers__categories {
+  margin-bottom: 10rem;
+  display: block;
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.1rem;
+  text-transform: uppercase;
+  color: #ccc;
+
+  a:not(.active) {
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--text-color);
+      }
+    }
+  }
+  a.active {
+    color: var(--text-color);
+    &:link,
+    &:visited {
+      color: var(--text-color);
+    }
+  }
+}
+
+.drivers__filters {
+  margin-bottom: 8rem;
+}
+
+.drivers__filters-form {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.drivers__filters-selects {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.drivers__filters-select {
+  width: 22rem;
+  &:nth-child(1) {
+    width: 32rem;
+  }
+}
+
+.drivers__filters-reset {
+  margin-left: auto;
+  display: flex;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 1.4rem */
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--text-color);
+      border-color: var(--text-color);
+      color: white;
+    }
+  }
+}
+
+.drivers__results {
+  display: flex;
+  flex-direction: column;
+}
+
+.drivers__results-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.drivers__results-heading {
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-bottom: 6rem;
+  span {
+    color: #ccc;
+  }
+}
+
+.drivers__results-header {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns:
+    minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
+    minmax(0, 1fr);
+  padding-bottom: 4rem;
+  border-bottom: 1px solid #77787d;
+}
+
+.drivers__results-header-item {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 1.2rem */
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  color: #77787d;
+  font-family: var(--inter);
+}
+
+.drivers__results-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.drivers__results-list-item {
+  border-bottom: 1px solid rgba(black, 0.1);
+
+  .drivers__results-list--documents & {
+    border-top: 1px solid rgba(black, 0.1);
+  }
+}
+
+.drivers__results-card {
+  padding: 4rem 0;
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns:
+    minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
+    minmax(0, 1fr);
+  grid-template-areas: "info version date os size";
+  align-items: flex-start;
+
+  &--document {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas: "info rightcol";
+  }
+}
+
+.drivers__results-card-right-col {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.drivers__results-card-info {
+  grid-area: info;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.drivers__results-card-info-heading-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 6rem;
+}
+
+.drivers__results-card-title {
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  max-width: 36rem;
+
+  .drivers__results-card--document & {
+    max-width: 49rem;
+  }
+}
+
+.drivers__results-card-label {
+  display: block;
+  text-align: center;
+  padding: 1.3rem;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-family: var(--inter);
+  border-radius: 4rem;
+  background: #feff6a;
+  flex-shrink: 0;
+}
+
+.drivers__results-card-info-description {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.1rem;
+  color: #77787d;
+  font-family: var(--inter);
+  max-width: 74rem;
+
+  .drivers__results-card--document & {
+    max-width: 60rem;
+  }
+}
+
+.drivers__results-card-version,
+.drivers__results-card-date,
+.drivers__results-card-os,
+.drivers__results-card-size {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 2.8rem */
+  letter-spacing: -0.1rem;
+  color: #77787d;
+  font-family: var(--inter);
+  padding-top: 0.5rem;
+}
+
+.drivers__results-card-version {
+  grid-area: version;
+}
+
+.drivers__results-card-date {
+  grid-area: date;
+}
+
+.drivers__results-card-os {
+  grid-area: os;
+}
+
+.drivers__results-card-size {
+  grid-area: size;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  justify-content: space-between;
+}
+
+.drivers__results-card-icon {
+  flex-shrink: 0;
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  transition: background-color 0.2s, border-color 0.2s;
+  margin-top: -0.9rem;
+  display: grid;
+  place-items: center;
+
+  .drivers__results-card-right-col & {
+    margin-top: 0;
+  }
+  svg {
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: var(--text-color);
+    transition: fill 0.2s;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .drivers__results-card:hover & {
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+    }
+  }
+}
+
+.drivers__show-more {
+  align-self: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #ccc;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  margin-top: 6rem;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--text-color);
+      border-color: var(--text-color);
+      color: white;
+    }
+  }
+}
