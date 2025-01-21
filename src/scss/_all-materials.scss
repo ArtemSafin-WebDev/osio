@@ -1,6 +1,12 @@
 .all-materials {
   @include blockWrapper;
   margin-bottom: 8rem;
+
+  @include breakpoint(mobile) {
+    .search-form {
+      display: none;
+    }
+  }
 }
 
 .all-materials__content {
@@ -15,6 +21,13 @@
   grid-gap: 2rem;
   align-items: center;
   margin-bottom: 4.4rem;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4rem;
+    align-items: stretch;
+  }
 }
 
 .all-materials__heading {
@@ -26,6 +39,14 @@
   grid-column: 1 / 4;
   justify-self: flex-start;
 
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+
   span {
     color: #ccc;
   }
@@ -35,6 +56,12 @@
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-gap: 2rem;
+  grid-auto-rows: 1fr;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1.6rem;
+  }
 }
 
 .all-materials__list-item {
@@ -59,6 +86,20 @@
   &:link,
   &:visited {
     color: var(--text-color);
+  }
+
+  @include breakpoint(mobile) {
+    margin-top: 4rem;
+    align-self: stretch;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 2rem;
+    text-align: center;
+    justify-content: center;
   }
 
   @media (hover: hover) and (pointer: fine) {

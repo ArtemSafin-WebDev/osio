@@ -1,6 +1,10 @@
 .support-intro {
   @include blockWrapper;
   margin-bottom: 10rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 6rem;
+  }
 }
 
 .support-intro__content {
@@ -14,6 +18,14 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 2rem;
   margin-bottom: 10rem;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
 }
 
 .support-intro__heading {
@@ -24,6 +36,15 @@
   letter-spacing: -0.1rem;
   text-transform: uppercase;
   text-wrap: balance;
+
+  @include breakpoint(mobile) {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 3.6rem */
+    letter-spacing: -0.1rem;
+    text-transform: uppercase;
+  }
 }
 
 .support-intro__text {
@@ -33,12 +54,26 @@
   line-height: 140%;
   font-family: var(--inter);
   max-width: 45rem;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
 }
 
 .support-intro__cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 2rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-auto-rows: 1fr;
+    grid-gap: 1.6rem;
+  }
 }
 
 .support-intro__card {
@@ -61,7 +96,7 @@
     content: "";
     display: block;
     grid-area: stack;
-    padding-bottom: 103.5%;
+    padding-bottom: 100%;
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -83,6 +118,10 @@
     position: absolute;
     inset: 0;
     background-color: rgba(black, 0.2);
+
+    @include breakpoint(mobile) {
+      background-color: rgba(black, 0.1);
+    }
   }
 }
 
@@ -103,35 +142,65 @@
   padding: 4rem;
   gap: 2.5rem;
   z-index: 5;
+
+  @include breakpoint(mobile) {
+    padding: 1.6rem;
+    gap: 1rem;
+  }
 }
 
-.support-intro__heading-text {
+.support-intro__card-title-text {
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 100%; /* 1.4rem */
+  line-height: 100%;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
 }
 
-.support-intro__heading {
+.support-intro__card-title {
   font-size: 4rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 120%; /* 4.8rem */
+  line-height: 120%;
   text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
 }
 
-.support-intro__text {
+.support-intro__card-text {
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
   max-width: 47rem;
   font-family: var(--inter);
+
+  @include breakpoint(mobile) {
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    max-width: none;
+  }
 }
 
-.support-intro__link {
+.support-intro__card-link {
   margin-top: auto;
   align-self: flex-start;
   font-size: 1.4rem;
@@ -149,6 +218,16 @@
   &:link,
   &:visited {
     color: white;
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 1rem */
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 1.5rem 2rem;
   }
 
   @media (hover: hover) and (pointer: fine) {

@@ -1,6 +1,10 @@
 .actual-materials {
   @include blockWrapper;
   margin-bottom: 10rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 6rem;
+  }
 }
 
 .actual-materials__content {
@@ -17,11 +21,30 @@
   gap: 2rem;
 
   margin-bottom: 8rem;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-bottom: 6rem;
+    align-items: stretch;
+  }
 }
 
 .actual-materials__tabs-nav {
   grid-column: 1 / 4;
   justify-self: flex-start;
+
+  @include breakpoint(mobile) {
+    justify-self: stretch;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+
+    @include noScrollbar;
+    margin: 0 calc(-1 * var(--content-padding));
+    padding: 0 var(--content-padding);
+    scroll-padding-left: calc(var(--content-padding) + 1rem + 1px);
+  }
 }
 
 .actual-materials__tabs-nav-list {
@@ -34,6 +57,7 @@
   @include breakpoint(mobile) {
     padding: 1rem;
     margin: 0;
+    width: max-content;
   }
 }
 
@@ -78,15 +102,6 @@
   user-select: none;
   white-space: nowrap;
 
-  @include breakpoint(mobile) {
-    padding: 1.5rem;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 100%;
-    letter-spacing: 0.2rem;
-    text-transform: uppercase;
-  }
   &:link,
   &:visited {
     color: #77787d;
@@ -95,6 +110,25 @@
   &.active {
     background-color: black;
     color: white;
+  }
+
+  &:not(.active) {
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--text-color);
+      }
+    }
+  }
+
+  @include breakpoint(mobile) {
+    padding: 1.5rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    scroll-snap-align: start;
   }
 }
 
@@ -105,6 +139,15 @@
   line-height: 120%;
   text-transform: uppercase;
   margin-bottom: 6rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+  }
 }
 
 .actual-materials__tabs {
@@ -139,6 +182,10 @@
   justify-content: center;
   gap: 2rem;
   margin-top: 6rem;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .actual-materials__arrow {
@@ -191,6 +238,11 @@
     margin-right: 2rem;
     &:last-child {
       margin-right: 0;
+    }
+
+    @include breakpoint(mobile) {
+      width: 30rem;
+      margin-right: 0.8rem;
     }
   }
 }

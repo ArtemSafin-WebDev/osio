@@ -45,15 +45,29 @@
   flex-grow: 1;
   padding: 4rem;
   gap: 2rem;
+
+  @include breakpoint(mobile) {
+    padding: 1.6rem;
+    gap: 1.4rem;
+  }
 }
 
 .material-card__category {
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 100%; /* 1.4rem */
+  line-height: 100%;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
 }
 
 .material-card__title {
@@ -61,6 +75,13 @@
   font-style: normal;
   font-weight: 500;
   line-height: 120%;
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
 }
 
 .material-card__duration {
@@ -81,4 +102,8 @@
   background: rgba(255, 255, 255, 0.3);
   z-index: 2;
   color: white;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
