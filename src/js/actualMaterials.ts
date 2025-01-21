@@ -33,14 +33,16 @@ export default function actualMaterials() {
       });
     });
 
+    let instances: Swiper[] = [];
+
     const sliders = Array.from(
       element.querySelectorAll<HTMLElement>(".actual-materials__slider")
     );
 
-    sliders.forEach((slider) => {
+    const initSlider = (slider: HTMLElement) => {
       const container = slider.querySelector<HTMLElement>(".swiper");
       if (!container) return;
-      new Swiper(container, {
+      const instance = new Swiper(container, {
         speed: 600,
         slidesPerView: "auto",
         modules: [Navigation],
@@ -53,6 +55,19 @@ export default function actualMaterials() {
           ),
         },
       });
+
+      instances.push(instance);
+    };
+
+    sliders.forEach((slider) => initSlider(slider));
+
+    document.addEventListener("actual:reinitSliders", () => {
+      instances.forEach((instance) => instance.destroy());
+      instances = [];
+      const sliders = Array.from(
+        element.querySelectorAll<HTMLElement>(".actual-materials__slider")
+      );
+      sliders.forEach((slider) => initSlider(slider));
     });
   });
 }
