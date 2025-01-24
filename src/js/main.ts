@@ -16,6 +16,7 @@ import buy from "./buy";
 import actualMaterials from "./actualMaterials";
 import otherMaterials from "./otherMaterials";
 import selects from "./selects";
+import drivers from "./drivers";
 
 document.addEventListener("DOMContentLoaded", () => {
   openWorld();
@@ -34,6 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
   actualMaterials();
   otherMaterials();
   selects();
+  drivers();
 });
 
 window.addEventListener("load", () => {

@@ -21,131 +21,202 @@
             </a>
         </div>
         <div class="drivers__filters">
-            <form action="/" method="GET" class="drivers__filters-form">
-                <div class="drivers__filters-selects">
-                    <div class="drivers__filters-select">
-
-
-                        <div class="select js-select" data-placeholder="тип оборудования">
-                            <button class="select__btn" type="button">
-                                <span class="select__btn-text js-btn-text">
-
-                                </span>
-                                <svg width="14" height="14" aria-hidden="true">
-                                    <use xlink:href="#arrow-down"></use>
-                                </svg>
-                            </button>
-                            <div class="select__dropdown">
-                                <div class="select__dropdown-inner">
-                                    <ul class="select__choices-list">
-                                        <li class="select__choices-list-item">
-                                            <label class="select__choice">
-                                                <input type="radio" name="type" value="Тип 1"
-                                                    class="select__choice-input">
-                                                <span class="select__choice-text">
-                                                    Тип 1
-                                                </span>
-                                            </label>
-                                        </li>
-                                        <li class="select__choices-list-item">
-                                            <label class="select__choice">
-                                                <input type="radio" name="type" value="Тип 2"
-                                                    class="select__choice-input">
-                                                <span class="select__choice-text">
-                                                    Тип 2
-                                                </span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+            <button class="drivers__filters-btn js-drivers-filters-open-btn" type="button">
+                фильтры
+                <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#filters"></use>
+                </svg>
+            </button>
+            <div class="drivers__filters-dropdown">
+                <div class="drivers__filters-dropdown-inner">
+                    <div class="drivers__filters-dropdown-inner-touch-area">
 
                     </div>
-                    <div class="drivers__filters-select">
+                    <button class="drivers__filters-close js-drivers-filters-close-btn" type="button">
+                        фильтры
+                        <svg width="14" height="14" aria-hidden="true">
+                            <use xlink:href="#filters-close"></use>
+                        </svg>
+                    </button>
+                    <form action="/" method="GET" class="drivers__filters-form">
+                        <div class="drivers__filters-selects">
+                            <div class="drivers__filters-select">
 
 
-                        <div class="select js-select" data-placeholder="линейка">
-                            <button class="select__btn" type="button">
-                                <span class="select__btn-text js-btn-text">
+                                <div class="select js-select" data-placeholder="тип оборудования">
+                                    <div class="select__accordion-btn">
+                                        <span class="select__btn-accordion-text">
+                                            тип оборудования
+                                        </span>
+                                        <span class="select__btn-accordion-icon">
 
-                                </span>
-                                <svg width="14" height="14" aria-hidden="true">
-                                    <use xlink:href="#arrow-down"></use>
-                                </svg>
-                            </button>
-                            <div class="select__dropdown">
-                                <div class="select__dropdown-inner">
-                                    <ul class="select__choices-list">
-                                        <li class="select__choices-list-item">
-                                            <label class="select__choice">
-                                                <input type="radio" name="ruler" value="Тип 1"
-                                                    class="select__choice-input">
-                                                <span class="select__choice-text">
-                                                    Тип 1
-                                                </span>
-                                            </label>
-                                        </li>
-                                        <li class="select__choices-list-item">
-                                            <label class="select__choice">
-                                                <input type="radio" name="ruler" value="Тип 2"
-                                                    class="select__choice-input">
-                                                <span class="select__choice-text">
-                                                    Тип 2
-                                                </span>
-                                            </label>
-                                        </li>
-                                    </ul>
+                                        </span>
+                                    </div>
+                                    <button class="select__btn" type="button">
+
+                                        <span class="select__btn-text js-btn-text">
+
+                                        </span>
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="select__dropdown">
+                                        <div class="select__dropdown-inner">
+                                            <ul class="select__choices-list">
+                                                <li class="select__choices-list-item">
+                                                    <label class="select__choice">
+                                                        <input type="radio" name="type" value="Тип 1"
+                                                            class="select__choice-input">
+                                                        <span class="select__choice-mark"></span>
+                                                        <span class="select__choice-text">
+                                                            Тип 1
+                                                        </span>
+
+                                                    </label>
+                                                </li>
+                                                <li class="select__choices-list-item">
+                                                    <label class="select__choice">
+                                                        <input type="radio" name="type" value="Тип 2"
+                                                            class="select__choice-input">
+                                                        <span class="select__choice-mark"></span>
+                                                        <span class="select__choice-text">
+                                                            Тип 2
+                                                        </span>
+
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
                                 </div>
+
+                            </div>
+                            <div class="drivers__filters-select">
+
+
+                                <div class="select js-select" data-placeholder="линейка">
+                                    <div class="select__accordion-btn">
+                                        <span class="select__btn-accordion-text">
+                                            линейка
+                                        </span>
+                                        <span class="select__btn-accordion-icon">
+
+                                        </span>
+                                    </div>
+                                    <button class="select__btn" type="button">
+                                        <span class="select__btn-text js-btn-text">
+
+                                        </span>
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="select__dropdown">
+                                        <div class="select__dropdown-inner">
+                                            <ul class="select__choices-list">
+                                                <li class="select__choices-list-item">
+                                                    <label class="select__choice">
+                                                        <input type="radio" name="line" value="FocusLine"
+                                                            class="select__choice-input">
+                                                        <span class="select__choice-mark"></span>
+                                                        <span class="select__choice-text">
+                                                            FocusLine
+                                                        </span>
+
+                                                    </label>
+                                                </li>
+                                                <li class="select__choices-list-item">
+                                                    <label class="select__choice">
+                                                        <input type="radio" name="line" value="BaseLine"
+                                                            class="select__choice-input">
+                                                        <span class="select__choice-mark"></span>
+                                                        <span class="select__choice-text">
+                                                            BaseLine
+                                                        </span>
+
+                                                    </label>
+                                                </li>
+                                                <li class="select__choices-list-item">
+                                                    <label class="select__choice">
+                                                        <input type="radio" name="line" value="CyberLine"
+                                                            class="select__choice-input">
+                                                        <span class="select__choice-mark"></span>
+                                                        <span class="select__choice-text">
+                                                            CyberLine
+                                                        </span>
+
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="drivers__filters-select">
+
+
+                                <div class="select js-select" data-placeholder="модель">
+                                    <div class="select__accordion-btn">
+                                        <span class="select__btn-accordion-text">
+                                            модель
+                                        </span>
+                                        <span class="select__btn-accordion-icon">
+
+                                        </span>
+                                    </div>
+                                    <button class="select__btn" type="button">
+
+                                        <span class="select__btn-text js-btn-text">
+
+                                        </span>
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#arrow-down"></use>
+                                        </svg>
+                                    </button>
+                                    <div class="select__dropdown">
+                                        <div class="select__dropdown-inner">
+                                            <ul class="select__choices-list">
+                                                <li class="select__choices-list-item">
+                                                    <label class="select__choice">
+                                                        <input type="radio" name="model" value="Модель 1"
+                                                            class="select__choice-input">
+                                                        <span class="select__choice-mark"></span>
+                                                        <span class="select__choice-text">
+                                                            Модель 1
+                                                        </span>
+
+                                                    </label>
+                                                </li>
+                                                <li class="select__choices-list-item">
+                                                    <label class="select__choice">
+                                                        <input type="radio" name="model" value="Модель 2"
+                                                            class="select__choice-input">
+                                                        <span class="select__choice-mark"></span>
+                                                        <span class="select__choice-text">
+                                                            Модель 2
+                                                        </span>
+
+                                                    </label>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-
-                    </div>
-                    <div class="drivers__filters-select">
-
-
-                        <div class="select js-select" data-placeholder="модель">
-                            <button class="select__btn" type="button">
-                                <span class="select__btn-text js-btn-text">
-
-                                </span>
-                                <svg width="14" height="14" aria-hidden="true">
-                                    <use xlink:href="#arrow-down"></use>
-                                </svg>
-                            </button>
-                            <div class="select__dropdown">
-                                <div class="select__dropdown-inner">
-                                    <ul class="select__choices-list">
-                                        <li class="select__choices-list-item">
-                                            <label class="select__choice">
-                                                <input type="radio" name="model" value="Модель 1"
-                                                    class="select__choice-input">
-                                                <span class="select__choice-text">
-                                                    Тип 1
-                                                </span>
-                                            </label>
-                                        </li>
-                                        <li class="select__choices-list-item">
-                                            <label class="select__choice">
-                                                <input type="radio" name="model" value="Модель 2"
-                                                    class="select__choice-input">
-                                                <span class="select__choice-text">
-                                                    Тип 2
-                                                </span>
-                                            </label>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+                        <button class="drivers__filters-apply js-drivers-filters-close-btn" type="button">
+                            применить
+                        </button>
+                        <button class="drivers__filters-reset" type="reset">
+                            сбросить фильтры
+                        </button>
+                    </form>
                 </div>
+            </div>
 
-                <button class="drivers__filters-reset" type="reset">
-                    сбросить фильтры
-                </button>
-            </form>
         </div>
         <div class="drivers__results">
             <h3 class="drivers__results-heading">

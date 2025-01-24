@@ -1,6 +1,10 @@
 .drivers {
   @include blockWrapper;
   margin-bottom: 10rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 8rem;
+  }
 }
 
 .drivers__content {
@@ -20,6 +24,24 @@
   text-transform: uppercase;
   color: #ccc;
 
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    align-items: stretch;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%;
+    letter-spacing: -0.1rem;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+
+    span {
+      display: none;
+    }
+  }
+
   a:not(.active) {
     @media (hover: hover) and (pointer: fine) {
       &:hover {
@@ -38,6 +60,139 @@
 
 .drivers__filters {
   margin-bottom: 8rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 4rem;
+  }
+}
+
+.drivers__filters-btn {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    height: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+
+    svg {
+      flex-shrink: 0;
+      width: 2rem;
+      height: 2rem;
+      fill: black;
+    }
+  }
+}
+
+.drivers__filters-dropdown {
+  @include breakpoint(mobile) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 70;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0, 0, 0, 0.5);
+
+    body:not(.loaded) & {
+      display: none;
+    }
+
+    .filters-shown & {
+      opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
+  }
+}
+
+.drivers__filters-dropdown-inner {
+  @include breakpoint(mobile) {
+    margin-top: auto;
+    background-color: #77787d;
+    padding: 0 var(--content-padding);
+    padding-top: 3.7rem;
+    padding-bottom: 2.8rem;
+    color: white;
+    flex-shrink: 0;
+    position: relative;
+    transition: transform 0.6s;
+    transform: translateY(100%);
+
+    .filters-shown & {
+      transform: translateY(0%);
+    }
+    &::before {
+      content: "";
+      width: 13.5rem;
+      height: 0.5rem;
+      border-radius: 10rem;
+      background: #000;
+      top: 0.8rem;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+    }
+  }
+}
+
+.drivers__filters-dropdown-inner-touch-area {
+  display: none;
+  @include breakpoint(mobile) {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 3.2rem;
+    left: 0;
+  }
+}
+
+.drivers__filters-close {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    justify-content: space-between;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+    width: 100%;
+    text-align: left;
+    svg {
+      width: 2.4rem;
+      height: 2.4rem;
+      fill: white;
+      flex-shrink: 0;
+    }
+  }
 }
 
 .drivers__filters-form {
@@ -45,18 +200,57 @@
   align-items: center;
   gap: 2rem;
   justify-content: space-between;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0;
+    align-items: stretch;
+  }
 }
 
 .drivers__filters-selects {
   display: flex;
   align-items: flex-start;
   gap: 2rem;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    margin-bottom: 4rem;
+  }
 }
 
 .drivers__filters-select {
-  width: 22rem;
-  &:nth-child(1) {
-    width: 32rem;
+  @include breakpointMF(small-tablet) {
+    width: 22rem;
+    &:nth-child(1) {
+      width: 32rem;
+    }
+  }
+}
+
+.drivers__filters-apply {
+  display: none;
+  @include breakpoint(mobile) {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 2.25rem 4rem;
+    color: var(--text-color);
+    background-color: white;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid white;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    display: block;
+    margin-bottom: 1.6rem;
   }
 }
 
@@ -74,6 +268,23 @@
   border-radius: 1rem;
   border: 1px solid #ccc;
   transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+
+  @include breakpoint(mobile) {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 2.25rem 4rem;
+    color: white;
+    border-radius: 1rem;
+    text-align: center;
+    border: 1px solid #ccc;
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+  }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
@@ -104,6 +315,15 @@
   span {
     color: #ccc;
   }
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+  }
 }
 
 .drivers__results-header {
@@ -114,6 +334,10 @@
     minmax(0, 1fr);
   padding-bottom: 4rem;
   border-bottom: 1px solid #77787d;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .drivers__results-header-item {
@@ -135,45 +359,85 @@
 .drivers__results-list-item {
   border-bottom: 1px solid rgba(black, 0.1);
 
-  .drivers__results-list--documents & {
-    border-top: 1px solid rgba(black, 0.1);
+  @include breakpoint(mobile) {
+    &:first-child {
+      border-top: 1px solid rgba(black, 0.1);
+    }
+  }
+
+  @include breakpointMF(small-tablet) {
+    .drivers__results-list--documents & {
+      &:first-child {
+        border-top: 1px solid rgba(black, 0.1);
+      }
+    }
   }
 }
 
 .drivers__results-card {
-  padding: 4rem 0;
-  display: grid;
-  grid-gap: 2rem;
-  grid-template-columns:
-    minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
-    minmax(0, 1fr);
-  grid-template-areas: "info version date os size";
-  align-items: flex-start;
+  @include breakpointMF(small-tablet) {
+    padding: 4rem 0;
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns:
+      minmax(0, 3fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
+      minmax(0, 1fr);
+    grid-template-areas: "info version date os size";
+    align-items: flex-start;
 
-  &--document {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    grid-template-areas: "info rightcol";
+    &--document {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-areas: "info rightcol";
+    }
+  }
+
+  @include breakpoint(mobile) {
+    padding: 3rem 0;
+    grid-gap: 0.8rem;
+    display: grid;
+    grid-template-columns: 4.8rem 1fr 1fr 4.8rem;
+    grid-row-gap: 1.6rem;
+    grid-auto-flow: dense;
   }
 }
 
 .drivers__results-card-right-col {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 2rem;
+  @include breakpointMF(small-tablet) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  @include breakpoint(mobile) {
+    display: contents;
+  }
 }
 
 .drivers__results-card-info {
-  grid-area: info;
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
+  @include breakpointMF(small-tablet) {
+    grid-area: info;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
 }
 
 .drivers__results-card-info-heading-wrapper {
   display: flex;
   align-items: flex-start;
   gap: 6rem;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+  }
 }
 
 .drivers__results-card-title {
@@ -183,8 +447,18 @@
   line-height: 120%;
   max-width: 36rem;
 
-  .drivers__results-card--document & {
-    max-width: 49rem;
+  @include breakpointMF(small-tablet) {
+    .drivers__results-card--document & {
+      max-width: 49rem;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    padding-right: 1rem;
   }
 }
 
@@ -202,6 +476,17 @@
   border-radius: 4rem;
   background: #feff6a;
   flex-shrink: 0;
+
+  @include breakpoint(mobile) {
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 0.8rem */
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 0.7rem 0.9rem;
+    align-self: flex-start;
+  }
 }
 
 .drivers__results-card-info-description {
@@ -214,8 +499,27 @@
   font-family: var(--inter);
   max-width: 74rem;
 
-  .drivers__results-card--document & {
-    max-width: 60rem;
+  @include breakpointMF(small-tablet) {
+    .drivers__results-card--document & {
+      max-width: 60rem;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.05rem;
+    grid-column: 1 / -1;
+
+    .drivers__results-card:has(.drivers__results-card-version) &,
+    .drivers__results-card:has(.drivers__results-card-date) &,
+    .drivers__results-card:has(.drivers__results-card-os) &,
+    .drivers__results-card:has(.drivers__results-card-size) & {
+      margin-bottom: 2.4rem;
+    }
   }
 }
 
@@ -231,26 +535,101 @@
   color: #77787d;
   font-family: var(--inter);
   padding-top: 0.5rem;
+
+  @include breakpoint(mobile) {
+    padding: 0;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.05rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    color: black;
+    grid-column: span 2;
+
+    &::before {
+      content: attr(data-text);
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      color: #77787d;
+    }
+  }
 }
 
-.drivers__results-card-version {
-  grid-area: version;
-}
-
-.drivers__results-card-date {
-  grid-area: date;
+.drivers__results-card-size::before {
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .drivers__results-card-os {
-  grid-area: os;
+  @include breakpoint(mobile) {
+    grid-column: 3 / -1;
+  }
+}
+
+.drivers__results-card-version {
+  @include breakpointMF(small-tablet) {
+    grid-area: version;
+  }
+}
+
+.drivers__results-card-date {
+  @include breakpointMF(small-tablet) {
+    grid-area: date;
+  }
+}
+
+.drivers__results-card-os {
+  @include breakpointMF(small-tablet) {
+    grid-area: os;
+  }
 }
 
 .drivers__results-card-size {
-  grid-area: size;
-  display: flex;
-  align-items: flex-start;
-  gap: 2rem;
-  justify-content: space-between;
+  @include breakpointMF(small-tablet) {
+    grid-area: size;
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    justify-content: space-between;
+  }
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.drivers__results-card-size-text {
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.05rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    color: black;
+    grid-column: span 2;
+
+    &::before {
+      content: attr(data-text);
+      font-size: 1.2rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      color: #77787d;
+    }
+  }
 }
 
 .drivers__results-card-icon {
@@ -264,9 +643,20 @@
   display: grid;
   place-items: center;
 
-  .drivers__results-card-right-col & {
-    margin-top: 0;
+  @include breakpointMF(small-tablet) {
+    .drivers__results-card-right-col & {
+      margin-top: 0;
+    }
   }
+
+  @include breakpoint(mobile) {
+    grid-column: 4 / -1;
+    grid-row: 1 / 2;
+    align-self: flex-start;
+    justify-self: flex-end;
+    margin: 0;
+  }
+
   svg {
     display: block;
     width: 2.4rem;
@@ -297,6 +687,18 @@
   text-transform: uppercase;
   margin-top: 6rem;
   transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+
+  @include breakpoint(mobile) {
+    margin-top: 4rem;
+    padding: 2.4rem 5rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    align-self: stretch;
+  }
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {

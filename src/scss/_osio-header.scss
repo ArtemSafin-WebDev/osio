@@ -428,7 +428,7 @@
 
   @include breakpoint(mobile) {
     flex-direction: column;
-    flew-wrap: nowrap;
+    flex-wrap: nowrap;
     gap: 1.5rem;
   }
 }

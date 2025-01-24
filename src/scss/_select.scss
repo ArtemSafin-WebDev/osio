@@ -1,30 +1,119 @@
 .select {
   position: relative;
+
+  @include breakpoint(mobile) {
+    border-bottom: 1px solid rgba(#ccc, 0.3);
+  }
+}
+
+.select__accordion-btn {
+  display: none;
+  @include breakpoint(mobile) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2rem 0;
+    text-align: left;
+    width: 100%;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 1.4rem */
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    color: rgba(white, 0.3);
+
+    svg {
+      display: none;
+    }
+
+    .select.open & {
+      color: white;
+    }
+  }
 }
 
 .select__btn {
-  display: flex;
-  align-items: center;
-  border-radius: 1rem;
-  border: 1px solid #ccc;
-  padding: 2rem;
-  gap: 2rem;
-  background-color: #fff;
-  color: var(--text-color);
-  text-align: left;
-  width: 100%;
-  svg {
-    flex-shrink: 0;
-    fill: var(--text-color);
-    margin-left: auto;
-    width: 1.5rem;
-    height: 0.7rem;
-    transition: transform 0.2s;
+  @include breakpointMF(small-tablet) {
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    padding: 2rem;
+    gap: 2rem;
+    background-color: #fff;
+    color: var(--text-color);
+    text-align: left;
+    width: 100%;
+    svg {
+      flex-shrink: 0;
+      fill: var(--text-color);
+      margin-left: auto;
+      width: 1.5rem;
+      height: 0.7rem;
+      transition: transform 0.2s;
+    }
+
+    .select.active & {
+      svg {
+        transform: rotate(180deg);
+      }
+    }
   }
 
-  .select.active & {
-    svg {
-      transform: rotate(180deg);
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.select__btn-accordion-text {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: block;
+    width: 30%;
+    flex-grow: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.select__btn-accordion-icon {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: block;
+    width: 1rem;
+    height: 1rem;
+    position: relative;
+    transition: transform 0.2s;
+    &::before,
+    &::after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #a0a0a4;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      transition: background-color 0.2s;
+    }
+
+    &::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .select.open & {
+      transform: rotate(45deg);
+      &::before,
+      &::after {
+        background-color: white;
+      }
     }
   }
 }
@@ -42,66 +131,137 @@
   line-height: 100%;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .select__dropdown {
-  position: absolute;
-  left: 0;
-  top: 100%;
-  width: 100%;
-  height: auto;
-  z-index: 15;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.2s, visibility 0s linear 0.2s;
-  padding-top: 0.5rem;
-  .select.active & {
-    opacity: 1;
-    visibility: inherit;
-    transition: opacity 0.2s, visibility 0.2s;
+  @include breakpointMF(small-tablet) {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    height: auto;
+    z-index: 15;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s, visibility 0s linear 0.2s;
+    padding-top: 0.5rem;
+    .select.active & {
+      opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.2s, visibility 0.2s;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+
+    .select.open & {
+      grid-template-rows: 1fr;
+    }
   }
 }
 
 .select__dropdown-inner {
-  background-color: #fff;
-  border-radius: 1rem;
-  border: 1px solid #ccc;
-  overflow: hidden;
+  @include breakpointMF(small-tablet) {
+    background-color: #fff;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    overflow: hidden;
+  }
+
+  @include breakpoint(mobile) {
+    overflow: hidden;
+  }
 }
 
 .select__choices-list {
   display: flex;
   flex-direction: column;
+
+  @include breakpoint(mobile) {
+    gap: 1rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .select__choice {
   display: block;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+  }
 }
 
 .select__choice-input {
   display: none;
 }
 
+.select__choice-mark {
+  display: none;
+
+  @include breakpoint(mobile) {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    flex-shrink: 0;
+    display: grid;
+    place-items: center;
+    transition: border-color 0.2s;
+    border: 1px solid rgba(#cccccc, 0.3);
+    order: -1;
+    &::before {
+      content: "";
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: var(--primary-color);
+      border-radius: 50%;
+      transition: opacity 0.2s;
+      opacity: 0;
+    }
+  }
+}
+
 .select__choice-text {
-  padding: 2rem;
-  min-width: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 1.4rem;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 100%;
-  letter-spacing: 0.2rem;
-  text-transform: uppercase;
-  width: 100%;
-  transition: color 0.2s, background-color 0.2s;
-  border-radius: 1rem;
-  cursor: pointer;
-  display: block;
-  .select__choice-input:checked ~ & {
-    background-color: var(--text-color);
-    color: white;
-    cursor: default;
+  @include breakpointMF(small-tablet) {
+    padding: 2rem;
+    min-width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    width: 100%;
+    transition: color 0.2s, background-color 0.2s;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: block;
+    .select__choice-input:checked ~ & {
+      background-color: var(--text-color);
+      color: white;
+      cursor: default;
+    }
+  }
+}
+
+.select__choice-input:checked ~ .select__choice-mark {
+  border-color: var(--primary-color);
+  &::before {
+    opacity: 1;
   }
 }
