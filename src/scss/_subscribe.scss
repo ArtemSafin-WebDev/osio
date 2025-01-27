@@ -1,0 +1,130 @@
+.subscribe {
+  @include blockWrapper;
+  margin-bottom: 10rem;
+}
+
+.subscribe__content {
+  @include blockContent;
+}
+
+.subscribe__card {
+  border-radius: 1rem;
+  background: #ccc;
+  padding: 4rem;
+  min-height: 48rem;
+  position: relative;
+  isolation: isolate;
+  background-image: url("../images/subscribe-decor.svg");
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: center right 6rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.subscribe__card-image {
+  z-index: -1;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: auto;
+  right: 17.5rem;
+  position: absolute;
+}
+
+.subscribe__text-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.subscribe__heading {
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 4.8rem */
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.subscribe__text {
+  max-width: 45rem;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-family: var(--inter);
+  margin-bottom: 3rem;
+}
+
+.subscribe__form {
+  margin-top: auto;
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: auto;
+}
+
+.subscribe__form-field {
+  width: 40rem;
+}
+
+.subscribe__form-input {
+  display: block;
+  width: 100%;
+  height: 7.4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 1rem;
+  border: 1px solid #77787d;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 1.4rem */
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+
+  color: var(--text-color);
+
+  &::placeholder {
+    color: var(--text-color);
+  }
+}
+.subscribe__form-submit {
+  display: block;
+  text-align: center;
+  padding: 3rem 4.3rem;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 1.4rem */
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  border-radius: 1rem;
+  background: #b8b8b8;
+  transition: color 0.2s, background-color 0.2s;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--text-color);
+      color: white;
+    }
+  }
+}
+
+.subscribe__policy {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-family: var(--inter);
+  color: #77787d;
+  max-width: 40rem;
+  a {
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 1px;
+  }
+}

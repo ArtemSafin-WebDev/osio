@@ -116,10 +116,25 @@
   color: black;
   position: relative;
   z-index: 1;
+  .mediacenter__list & {
+    border: 1px solid #ccc;
+  }
 
   &:link,
   &:visited {
     color: black;
+  }
+
+  &.open-world__slider-card--large {
+    color: white;
+    background-color: black;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "stack";
+    &:link,
+    &:visited {
+      color: white;
+    }
   }
 
   &--video {
@@ -143,6 +158,23 @@
   .open-world__slider-card--video & {
     position: static;
     overflow: visible;
+  }
+
+  .open-world__slider-card--large & {
+    aspect-ratio: unset;
+    grid-area: stack;
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0) 0%,
+          rgba(0, 0, 0, 0.2) 100%
+        ),
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%);
+    }
   }
 
   svg {
@@ -194,6 +226,15 @@
   padding: 4rem;
   padding-bottom: 3.5rem;
 
+  .open-world__slider-card--large & {
+    grid-area: stack;
+    z-index: 5;
+    min-height: auto;
+    padding: 4rem;
+    padding-bottom: 3.5rem;
+    justify-content: flex-end;
+  }
+
   @include breakpoint(mobile) {
     min-height: 24rem;
     padding: 1.6rem;
@@ -224,6 +265,7 @@
   font-weight: 500;
   font-size: 2.5rem;
   line-height: 120%;
+  text-wrap: balance;
 
   @include breakpoint(mobile) {
     font-style: normal;
@@ -242,6 +284,16 @@
   letter-spacing: 0.2rem;
   color: #77787d;
   text-transform: uppercase;
+
+  .open-world__slider-card--large & {
+    margin-top: 4rem;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
 
   @include breakpoint(mobile) {
     font-style: normal;
