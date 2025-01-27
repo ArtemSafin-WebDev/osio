@@ -4,6 +4,7 @@ import support from "./pages-data/support";
 import supportDetail from "./pages-data/supportDetail";
 import drivers from "./pages-data/drivers";
 import driversDocuments from "./pages-data/drivers-documents";
+import contacts from "./pages-data/contacts";
 
 const pagesConfig = {
   ...home,
@@ -12,6 +13,7 @@ const pagesConfig = {
   ...supportDetail,
   ...drivers,
   ...driversDocuments,
+  ...contacts,
 };
 
 export default pagesConfig;
