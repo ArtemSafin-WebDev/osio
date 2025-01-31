@@ -4,11 +4,21 @@
   color: black;
   padding-top: 4rem;
   padding-bottom: 4rem;
+  &--other {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 10rem;
+    background-color: transparent;
+  }
 
   @include breakpoint(mobile) {
     padding-top: 3rem;
     padding-bottom: 3rem;
     background-color: rgba(204, 204, 204, 1);
+    &--other {
+      padding-top: 0;
+      background-color: transparent;
+    }
   }
 }
 
@@ -59,6 +69,10 @@
   border-radius: 1rem;
   transition: color 0.2s, background-color 0.2s, color 0.2s;
   text-transform: uppercase;
+
+  .open-world--other & {
+    border: 1px solid #ccc;
+  }
 
   @include breakpoint(mobile) {
     order: 15;
@@ -352,6 +366,7 @@
     fill: black;
     transition: fill 0.2s;
   }
+
   &.swiper-button-disabled {
     cursor: default;
     opacity: 0.5;
@@ -361,6 +376,20 @@
     @media (hover: hover) {
       &:hover {
         background-color: white;
+      }
+    }
+  }
+
+  .open-world--other & {
+    background: rgba(0, 0, 0, 0.1);
+    &:not(.swiper-button-disabled) {
+      @media (hover: hover) {
+        &:hover {
+          background-color: black;
+          svg {
+            fill: white;
+          }
+        }
       }
     }
   }

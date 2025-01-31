@@ -6,6 +6,7 @@ import drivers from "./pages-data/drivers";
 import driversDocuments from "./pages-data/drivers-documents";
 import contacts from "./pages-data/contacts";
 import mediacenter from "./pages-data/mediacenter";
+import singleNews from "./pages-data/singleNews";
 
 const pagesConfig = {
   ...home,
@@ -16,6 +17,7 @@ const pagesConfig = {
   ...driversDocuments,
   ...contacts,
   ...mediacenter,
+  ...singleNews,
 };
 
 export default pagesConfig;
