@@ -150,6 +150,24 @@
   }
 }
 
+.reviews__text {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 2.1rem */
+  letter-spacing: -0.05rem;
+  font-family: var(--inter);
+  align-self: flex-end;
+  max-width: 44rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
 .reviews__link {
   padding: 2rem;
   text-align: center;
@@ -194,6 +212,188 @@
       border-color: white;
       color: black;
     }
+  }
+}
+
+.reviews__video-card {
+  position: relative;
+  z-index: 1;
+
+  border-radius: 1rem;
+  overflow: hidden;
+  overflow: clip;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "stack";
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 77%;
+    grid-area: stack;
+
+    @include breakpoint(mobile) {
+      padding-bottom: 162%;
+    }
+  }
+}
+
+.reviews__video-card-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(black, 0.4);
+  }
+}
+
+.reviews__video-card-bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reviews__video-card-content {
+  grid-area: stack;
+  z-index: 10;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  grid-gap: 2rem;
+  grid-template-areas: "tags nothing" "title title" "author play";
+  padding: 4rem;
+
+  @include breakpoint(mobile) {
+    padding: 1.6rem;
+  }
+}
+
+.reviews__video-card-tags {
+  grid-area: tags;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-self: flex-start;
+  justify-self: flex-start;
+}
+
+.reviews__video-card-tag {
+  display: block;
+  text-align: center;
+  padding: 1.1rem 1.3rem;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  flex-shrink: 0;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  border-radius: 4rem;
+  background: rgba(255, 255, 255, 0.3);
+  @include breakpoint(mobile) {
+    padding: 0.6rem;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 0.8rem */
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    font-family: var(--inter);
+  }
+}
+
+.reviews__video-card-title {
+  grid-area: title;
+  text-align: center;
+  align-self: center;
+  justify-self: center;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 4.2rem */
+  letter-spacing: -0.05rem;
+  font-family: var(--inter);
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 2.8rem */
+    letter-spacing: -0.05rem;
+  }
+}
+
+.reviews__video-card-author {
+  grid-area: author;
+  align-self: flex-end;
+  justify-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.reviews__video-card-name {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%; /* 1.4rem */
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 1.2rem */
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+}
+
+.reviews__video-card-role {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%; /* 2.1rem */
+  letter-spacing: -0.05rem;
+  font-family: var(--inter);
+  color: rgba(255, 255, 255, 0.5);
+
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.68rem */
+    letter-spacing: -0.05rem;
+  }
+}
+
+.reviews__video-card-play {
+  grid-area: play;
+  align-self: flex-end;
+  justify-self: flex-end;
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transition: background-color 0.2s;
+  @include breakpoint(mobile) {
+    width: 6rem;
+    height: 6rem;
+  }
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: white;
+    transition: fill 0.2s;
   }
 }
 
@@ -477,7 +677,7 @@
     display: block;
     width: 100%;
     height: 100%;
-    fill: black;
+    fill: white;
     transition: fill 0.2s;
   }
   &.swiper-button-disabled {
@@ -489,6 +689,9 @@
     @media (hover: hover) {
       &:hover {
         background-color: white;
+        svg {
+          fill: var(--text-color);
+        }
       }
     }
   }
