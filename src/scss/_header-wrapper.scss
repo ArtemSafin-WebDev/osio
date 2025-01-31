@@ -4,6 +4,13 @@
   z-index: 15;
   margin-bottom: 4rem;
 
+  &--fixed {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+
   @include breakpoint(mobile) {
     margin-bottom: 2rem;
   }
