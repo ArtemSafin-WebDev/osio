@@ -1,6 +1,10 @@
 .contacts {
   @include blockWrapper;
   margin-bottom: 14rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 6rem;
+  }
 }
 
 .contacts__content {
@@ -9,11 +13,33 @@
   flex-direction: column;
 }
 
+.contacts__outside-heading {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: block;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.1rem;
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+  }
+}
+
 .contacts__row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 2rem;
   margin-bottom: 10rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
   &:last-child {
     margin-bottom: 0;
   }
@@ -26,6 +52,10 @@
   overflow: hidden;
   overflow: clip;
   background-color: #f2f2f2;
+
+  @include breakpoint(mobile) {
+    aspect-ratio: 343 / 280;
+  }
 }
 
 .contacts__image {
@@ -50,6 +80,18 @@
   justify-content: space-between;
   display: flex;
   flex-direction: column;
+
+  @include breakpoint(mobile) {
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-gap: 2rem;
+    grid-row-gap: 4rem;
+    grid-template-areas: "list social" "req req";
+    background-image: url("../images/contacts-decor-mobile.svg");
+    background-position: right top;
+    background-size: 12.8rem auto;
+  }
 }
 
 .contacts__heading {
@@ -59,12 +101,20 @@
   line-height: 120%;
   letter-spacing: -0.1rem;
   text-transform: uppercase;
+  @include breakpoint(mobile) {
+    display: none;
+  }
 }
 
 .contacts__list {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+
+  @include breakpoint(mobile) {
+    grid-area: list;
+    gap: 1.4rem;
+  }
 }
 
 .contacts__card {
@@ -72,6 +122,13 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 2rem;
   align-items: center;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.2rem;
+  }
 }
 
 .contacts__card-key {
@@ -81,21 +138,33 @@
   line-height: 140%;
   letter-spacing: -0.1rem;
   font-family: var(--inter);
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 1.96rem */
+    letter-spacing: -0.1rem;
+  }
 }
 
 .contacts__card-value {
   font-size: 3.6rem;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 140%;
   letter-spacing: -0.1rem;
-  font-family: var(--inter);
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%;
+    letter-spacing: 0;
+  }
 
   &:link {
     text-decoration: underline;
-    // text-decoration-skip-ink: none;
-    // text-underline-offset: 1px;
-    // text-decoration-thickness: 0.2rem;
     text-decoration-color: transparent;
     transition: text-decoration-color 0.2s, color 0.2s;
     @media (hover: hover) and (pointer: fine) {
@@ -111,6 +180,10 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 2rem;
   align-items: center;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
 }
 
 .contacts__download {
@@ -129,6 +202,20 @@
   transition: border-color 0.2s, background-color 0.2s, color 0.2s;
   color: var(--text-color);
   justify-self: flex-start;
+  justify-content: center;
+  text-align: center;
+  @include breakpoint(mobile) {
+    padding: 2rem 4rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    grid-area: req;
+    align-self: flex-end;
+    justify-self: stretch;
+  }
   &:link,
   &:visited {
     color: var(--text-color);
@@ -140,6 +227,11 @@
     width: 1.8rem;
     height: 1.8rem;
     fill: #797979;
+
+    @include breakpoint(mobile) {
+      width: 1.6rem;
+      height: 1.6rem;
+    }
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -160,6 +252,14 @@
   align-items: center;
   gap: 1rem;
   flex-wrap: wrap;
+
+  @include breakpoint(mobile) {
+    grid-area: social;
+    align-self: flex-end;
+    justify-self: flex-end;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .contacts__social-list-item {
@@ -174,6 +274,11 @@
   border-radius: 50%;
   transition: background-color 0.2s;
   background-color: rgba(black, 0.1);
+
+  @include breakpoint(mobile) {
+    width: 4rem;
+    height: 4rem;
+  }
 
   svg {
     display: block;
@@ -197,18 +302,36 @@
   font-size: 4rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 120%; /* 4.8rem */
+  line-height: 120%;
   text-transform: uppercase;
   margin-bottom: 14rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+  }
 }
 
 .contacts__partners-list {
   column-count: 4;
   column-gap: 2rem;
+
+  @include breakpoint(mobile) {
+    column-gap: 0.8rem;
+    column-count: 2;
+  }
 }
 
 .contacts__partners-list-item {
   margin-bottom: 3rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+  }
 }
 
 .contacts__partners-link {
@@ -216,10 +339,19 @@
   font-size: 1.5rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 130%; /* 1.95rem */
+  line-height: 130%;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   color: #77787d;
+
+  @include breakpoint(mobile) {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
   &:link,
   &:visited {
     color: #77787d;
