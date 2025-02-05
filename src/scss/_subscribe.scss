@@ -1,6 +1,10 @@
 .subscribe {
   @include blockWrapper;
   margin-bottom: 10rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 4rem;
+  }
 }
 
 .subscribe__content {
@@ -20,6 +24,39 @@
   background-position: center right 6rem;
   display: flex;
   flex-direction: column;
+
+  @include breakpoint(mobile) {
+    background-image: none;
+    padding: 2rem;
+    min-height: auto;
+  }
+}
+
+.subscribe__card-image-wrapper {
+  display: contents;
+
+  @include breakpoint(mobile) {
+    display: block;
+    position: relative;
+    isolation: isolate;
+    margin: 12rem -2rem;
+    padding: 0 2rem;
+  }
+}
+
+.subscribe__card-mobile-decor {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    position: absolute;
+  }
 }
 
 .subscribe__card-image {
@@ -30,21 +67,42 @@
   width: auto;
   right: 17.5rem;
   position: absolute;
+
+  @include breakpoint(mobile) {
+    position: static;
+    width: 100%;
+    height: auto;
+    z-index: 2;
+  }
 }
 
 .subscribe__text-content {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
 }
 
 .subscribe__heading {
   font-size: 4rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 120%; /* 4.8rem */
+  line-height: 120%;
   text-transform: uppercase;
   margin-bottom: 2rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin: 0;
+    order: -10;
+  }
 }
 
 .subscribe__text {
@@ -55,6 +113,17 @@
   line-height: 140%;
   font-family: var(--inter);
   margin-bottom: 3rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.05rem;
+    order: -9;
+    margin: 0;
+    margin-top: 1.2rem;
+  }
 }
 
 .subscribe__form {
@@ -64,10 +133,22 @@
   gap: 2rem;
   margin-bottom: 2rem;
   margin-top: auto;
+
+  @include breakpoint(mobile) {
+    margin: 0;
+    align-items: stretch;
+    gap: 1.6rem;
+    flex-direction: column;
+    margin: 0;
+  }
 }
 
 .subscribe__form-field {
   width: 40rem;
+
+  @include breakpoint(mobile) {
+    width: auto;
+  }
 }
 
 .subscribe__form-input {
@@ -81,11 +162,22 @@
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 100%; /* 1.4rem */
+  line-height: 100%;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
-
   color: var(--text-color);
+
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    height: 6rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 
   &::placeholder {
     color: var(--text-color);
@@ -111,6 +203,16 @@
       color: white;
     }
   }
+
+  @include breakpoint(mobile) {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%; /* 1rem */
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 2.5rem 3rem;
+  }
 }
 
 .subscribe__policy {
@@ -121,6 +223,16 @@
   font-family: var(--inter);
   color: #77787d;
   max-width: 40rem;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.05rem;
+    margin-top: 1.8rem;
+  }
   a {
     text-decoration: underline;
     text-decoration-skip-ink: none;
