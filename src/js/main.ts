@@ -17,8 +17,10 @@ import actualMaterials from "./actualMaterials";
 import otherMaterials from "./otherMaterials";
 import selects from "./selects";
 import drivers from "./drivers";
+import singleNews from "./singleNews";
 
 document.addEventListener("DOMContentLoaded", () => {
+  singleNews();
   openWorld();
   shops();
   reviews();
