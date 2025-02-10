@@ -37,17 +37,26 @@ export default function aboutFeatures() {
         ".about-features__card-image-wrapper"
       );
 
+      const smallText = card.querySelector<HTMLElement>(
+        ".about-features__card-small-text"
+      )!;
+
       btn?.addEventListener("click", async (event) => {
         event.preventDefault();
-        if (!document.startViewTransition || !VIEW_TRANSITION) {
+        const isMobile = window.matchMedia("(max-width: 640px)").matches;
+
+        if (!isMobile) {
           const state = Flip.getState([btn, number, image, card]);
-          const secondState = Flip.getState([text, title, textSecond], {
-            props: "fontSize",
-          });
+          const secondState = Flip.getState(
+            [title, text, textSecond, smallText],
+            {
+              props: "fontSize",
+            }
+          );
           card.classList.toggle("active");
           Flip.from(state, {
             duration: 0.6,
-            // ease: "power1.inOut",
+
             nested: true,
             onEnter: (elements) =>
               gsap.fromTo(
@@ -61,13 +70,9 @@ export default function aboutFeatures() {
                 { opacity: 1 },
                 { opacity: 0, duration: 0.2 }
               ),
-            // onComplete: () => {
-            //   ScrollTrigger.refresh();
-            // },
           });
           Flip.from(secondState, {
             duration: 0.6,
-            // ease: "power1.inOut",
             absolute: true,
             onEnter: (elements) =>
               gsap.fromTo(
@@ -81,19 +86,48 @@ export default function aboutFeatures() {
                 { opacity: 1 },
                 { opacity: 0, duration: 0.2 }
               ),
-            // onComplete: () => {
-            //   ScrollTrigger.refresh();
-            // },
           });
-          return;
+        } else {
+          const state = Flip.getState([card, btn, title, number]);
+          const secondState = Flip.getState([textSecond, smallText, image], {
+            props: "fontSize",
+          });
+          card.classList.toggle("active");
+          Flip.from(state, {
+            duration: 0.8,
+
+            nested: true,
+            onEnter: (elements) =>
+              gsap.fromTo(
+                elements,
+                { opacity: 0 },
+                { opacity: 1, duration: 0.2, delay: 0 }
+              ),
+            onLeave: (elements) =>
+              gsap.fromTo(
+                elements,
+                { opacity: 1 },
+                { opacity: 0, duration: 0.2 }
+              ),
+          });
+          Flip.from(secondState, {
+            duration: 0.8,
+            absolute: true,
+
+            onEnter: (elements) =>
+              gsap.fromTo(
+                elements,
+                { opacity: 0 },
+                { opacity: 1, duration: 0.2, delay: 0 }
+              ),
+            onLeave: (elements) =>
+              gsap.fromTo(
+                elements,
+                { opacity: 1 },
+                { opacity: 0, duration: 0.2 }
+              ),
+          });
         }
-        const transition = document.startViewTransition(() =>
-          card.classList.toggle("active")
-        );
-
-        await transition.finished;
-
-        ScrollTrigger.refresh();
       });
     });
   });

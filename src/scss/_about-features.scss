@@ -1,6 +1,10 @@
 .about-features {
   @include blockWrapper;
   margin-bottom: 11rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 8rem;
+  }
 }
 
 .about-features__content {
@@ -15,6 +19,10 @@
   justify-content: space-between;
   gap: 5rem;
   margin-bottom: 3.5rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+  }
 }
 
 .about-features__top-item {
@@ -25,10 +33,45 @@
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   color: #77787d;
+
+  @include breakpoint(mobile) {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    &:nth-child(2) {
+      text-align: right;
+    }
+  }
 }
 
 .about-features__list-item {
   border-bottom: 1px solid black;
+
+  &:nth-child(1) {
+    .about-features__card-decor {
+      position: absolute;
+      width: 95.7rem;
+      z-index: -1;
+      pointer-events: none;
+      right: 0;
+      bottom: 0;
+      transition: opacity 0.4s, transform 0.4s;
+      height: auto;
+      opacity: 0;
+      transform-origin: center bottom;
+
+      @include breakpoint(mobile) {
+        display: none;
+      }
+    }
+
+    .about-features__card.active .about-features__card-decor {
+      opacity: 1;
+    }
+  }
 
   &:first-child {
     border-top: 1px solid black;
@@ -41,11 +84,22 @@
   grid-gap: 2rem;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   position: relative;
-  view-transition-name: card;
+
+  @include breakpoint(mobile) {
+    padding: 2rem 0;
+    grid-template-columns: auto 1fr auto;
+    grid-row-gap: 2rem;
+    overflow: hidden;
+    overflow: clip;
+  }
 
   &.active {
     padding: 4rem 0;
     grid-row-gap: 3rem;
+    @include breakpoint(mobile) {
+      padding: 2rem 0;
+      grid-row-gap: 2rem;
+    }
   }
 }
 
@@ -63,15 +117,38 @@
   line-height: 120%;
   text-transform: uppercase;
   background-color: #fff;
-  view-transition-name: cardnumber;
-  // grid-row: 1 / 2;
-  // grid-column: 1 / 5;
+
+  @include breakpoint(mobile) {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: center;
+  }
 
   .about-features__card.active & {
-    grid-row: 3 / 4;
-    grid-column: 1 / 2;
-    align-self: flex-end;
-    justify-self: flex-start;
+    @include breakpointMF(small-tablet) {
+      align-self: flex-end;
+      justify-self: flex-start;
+      grid-row: 3 / 4;
+      grid-column: 1 / 2;
+    }
+
+    @include breakpoint(mobile) {
+      align-self: flex-start;
+      // display: none;
+      // grid-column: 1 / -1;
+      order: 50;
+      grid-row: unset;
+      margin-top: -4rem;
+
+      // display: none;
+    }
   }
 }
 
@@ -83,11 +160,17 @@
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 
-  view-transition-name: cardtitle;
-  // grid-row: 1 / 2;
-  // grid-column: 1 / 5;
-  // margin-left: 8.6rem;
-  // margin-top: 1.8rem;
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 100%;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    align-self: center;
+  }
 
   .about-features__card.active & {
     font-size: 1.4rem;
@@ -96,10 +179,24 @@
     line-height: 100%;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
-    grid-row: 1 / 2;
-    grid-column: 1 / 5;
-    margin-left: 0;
-    margin-top: 0;
+
+    @include breakpointMF(small-tablet) {
+      grid-row: 1 / 2;
+      grid-column: 1 / 5;
+    }
+
+    @include breakpoint(mobile) {
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 100%;
+      letter-spacing: 0.1rem;
+      text-transform: uppercase;
+      grid-row: 1 / 2;
+      grid-column: 1 / 2;
+      align-self: flex-start;
+      justify-self: flex-start;
+    }
   }
 }
 
@@ -113,19 +210,13 @@
   grid-column: 7 / 12;
   align-self: flex-start;
   justify-self: flex-start;
-  // max-width: 60rem;
-  view-transition-name: cardtext;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
 
   .about-features__card.active & {
     display: none;
-    // font-size: 4rem;
-    // font-style: normal;
-    // font-weight: 500;
-    // line-height: 1.2;
-    // text-transform: uppercase;
-    // grid-row: 2 / 3;
-    // grid-column: 1 / 5;
-    // max-width: none;
   }
 }
 
@@ -136,8 +227,20 @@
   font-weight: 500;
   line-height: 1.2;
   text-transform: uppercase;
-  grid-row: 2 / 3;
-  grid-column: 1 / 5;
+
+  @include breakpointMF(small-tablet) {
+    grid-row: 2 / 3;
+    grid-column: 1 / 5;
+  }
+
+  @include breakpoint(mobile) {
+    grid-column: 1 / -1;
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
   .about-features__card.active & {
     display: block;
   }
@@ -146,8 +249,6 @@
 .about-features__card-image-wrapper {
   aspect-ratio: 1 / 1;
   position: relative;
-  grid-column: 5 / 7;
-  grid-row: 1 / 2;
   align-self: flex-start;
   width: 13rem;
   justify-self: center;
@@ -155,12 +256,28 @@
   overflow: clip;
   border-radius: 50%;
 
-  view-transition-name: cardimage;
+  @include breakpointMF(small-tablet) {
+    grid-column: 5 / 7;
+    grid-row: 1 / 2;
+  }
+
+  @include breakpoint(mobile) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: 24rem;
+    display: none;
+  }
 
   .about-features__card.active & {
-    grid-column: 5 / 9;
-    grid-row: 2 / 3;
-    width: 100%;
+    @include breakpointMF(small-tablet) {
+      grid-column: 5 / 9;
+      grid-row: 2 / 3;
+      width: 100%;
+    }
+
+    @include breakpoint(mobile) {
+      display: block;
+    }
   }
 }
 
@@ -188,16 +305,40 @@
   line-height: 120%;
   text-transform: uppercase;
 
-  grid-row: 1 / 2;
-  grid-column: 12 / 13;
-  align-self: flex-start;
-  justify-self: flex-end;
-
-  view-transition-name: cardbtn;
-
-  .about-features__card.active & {
+  @include breakpointMF(small-tablet) {
     grid-row: 1 / 2;
     grid-column: 12 / 13;
+    align-self: flex-start;
+    justify-self: flex-end;
+  }
+
+  @include breakpoint(mobile) {
+    width: 5rem;
+    height: 3rem;
+    border-radius: 2.5rem;
+    font-size: 2.5rem;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 120%;
+    text-transform: uppercase;
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+    justify-self: flex-end;
+    align-self: center;
+  }
+
+  .about-features__card.active & {
+    @include breakpointMF(small-tablet) {
+      grid-row: 1 / 2;
+      grid-column: 12 / 13;
+    }
+
+    @include breakpoint(mobile) {
+      grid-column: 3 / 4;
+      grid-row: 1 / 2;
+      align-self: flex-start;
+      justify-self: flex-end;
+    }
   }
 }
 
@@ -217,11 +358,42 @@
   grid-row: 1 / 2;
   align-self: flex-start;
 
+  @include breakpoint(mobile) {
+    align-self: center;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    gap: 1.5rem;
+    display: contents;
+  }
+
   .about-features__card.active & {
     display: contents;
   }
 }
 
-::view-transition-group(*) {
-  animation-duration: 1s;
+.about-features__card-small-text {
+  display: none;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.1rem;
+  font-family: var(--inter);
+
+  @include breakpointMF(small-tablet) {
+    grid-column: 10 / -1;
+    grid-row: 2 / 3;
+    padding-top: 7rem;
+  }
+
+  @include breakpoint(mobile) {
+    grid-column: 1 / -1;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+  .about-features__card.active & {
+    display: block;
+  }
 }

@@ -101,6 +101,10 @@
   z-index: -1;
   transition: transform 0.4s;
 
+  body:not(.loaded) & {
+    transition: none;
+  }
+
   @include breakpoint(mobile) {
     top: 50%;
     left: 50%;
