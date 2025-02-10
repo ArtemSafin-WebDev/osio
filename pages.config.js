@@ -8,6 +8,7 @@ import contacts from "./pages-data/contacts";
 import mediacenter from "./pages-data/mediacenter";
 import singleNews from "./pages-data/singleNews";
 import singleNews2 from "./pages-data/singleNews2";
+import about from "./pages-data/about";
 
 const pagesConfig = {
   ...home,
@@ -20,6 +21,7 @@ const pagesConfig = {
   ...mediacenter,
   ...singleNews,
   ...singleNews2,
+  ...about,
 };
 
 export default pagesConfig;

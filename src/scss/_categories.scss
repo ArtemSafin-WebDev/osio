@@ -1,6 +1,15 @@
 .categories {
   @include blockWrapper;
   padding: 4rem 0;
+
+  &--about {
+    padding: 0;
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 8rem;
+    }
+  }
 }
 
 .categories__content {
@@ -155,5 +164,35 @@
       border-color: black;
       color: white;
     }
+  }
+}
+
+.categories__top-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+  }
+}
+
+.categories__link {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 1.4rem */
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 1.2rem */
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
   }
 }

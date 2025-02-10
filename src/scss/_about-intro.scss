@@ -1,0 +1,253 @@
+.about-intro {
+  position: relative;
+  z-index: 1;
+  color: white;
+  background-color: var(--text-color);
+  @include blockWrapper;
+  overflow: hidden;
+  margin-bottom: 7.7rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 4rem;
+  }
+}
+
+.about-intro__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    z-index: 2;
+    backdrop-filter: blur(5px);
+  }
+}
+
+.about-intro__bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-intro__content {
+  @include blockContent;
+  min-height: min(100vh, 102.8rem);
+  padding-top: 16rem;
+  padding-bottom: 8.7rem;
+  display: flex;
+  flex-direction: column;
+
+  padding-bottom: 6rem;
+
+  @include breakpoint(mobile) {
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-top: 9rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.about-intro__row {
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+  justify-content: space-between;
+  padding: 5rem 0;
+  margin: auto 0;
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 0;
+    justify-content: flex-start;
+    gap: 3rem;
+    padding-top: 0;
+    padding-bottom: 3rem;
+  }
+}
+
+.about-intro__text-content {
+  display: flex;
+  flex-direction: column;
+  padding-top: 3.5rem;
+  gap: 3rem;
+
+  @include breakpoint(mobile) {
+    padding: 0;
+    gap: 2rem;
+  }
+}
+
+.about-intro__heading {
+  font-size: 6rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.1rem;
+  text-transform: uppercase;
+  text-wrap: balance;
+
+  @include breakpoint(mobile) {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    letter-spacing: -0.1rem;
+    text-transform: uppercase;
+  }
+}
+
+.about-intro__text {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-family: var(--inter);
+  max-width: 60rem;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+.about-intro__advantages {
+  padding-top: 4.8rem;
+  border-top: 1px solid rgba(white, 0.3);
+
+  @include breakpoint(mobile) {
+    border: none;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    margin: 0 calc(-1 * var(--content-padding));
+    padding: 0 var(--content-padding);
+    scroll-padding-left: var(--content-padding);
+    scroll-snap-type: x mandatory;
+    margin-top: auto;
+    @include noScrollbar;
+  }
+}
+
+.about-intro__advantages-list {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-gap: 6.4rem;
+
+  @include breakpoint(mobile) {
+    border-top: 1px solid rgba(white, 0.3);
+    width: max-content;
+    display: flex;
+    align-items: flex-start;
+    gap: 5rem;
+    padding-top: 2rem;
+  }
+}
+
+.about-intro__advantages-list-item {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    width: 20rem;
+    flex-shrink: 0;
+    scroll-snap-align: start;
+  }
+}
+
+.about-intro__advantages-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  @include breakpoint(mobile) {
+    gap: 2rem;
+  }
+}
+
+.about-intro__advantages-card-icon {
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.about-intro__advantages-card-title {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+}
+
+.about-intro__video-link {
+  flex-shrink: 0;
+  width: 46.5rem;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  overflow: clip;
+  border-radius: 50%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  margin-right: 17rem;
+
+  @include breakpoint(mobile) {
+    width: 24rem;
+    align-self: center;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+    z-index: 3;
+  }
+
+  svg {
+    position: relative;
+    z-index: 8;
+    width: 8rem;
+    height: 8rem;
+    fill: white;
+
+    @include breakpoint(mobile) {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+}
+
+.about-intro__video-link-preview {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

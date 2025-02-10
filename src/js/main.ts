@@ -18,6 +18,7 @@ import otherMaterials from "./otherMaterials";
 import selects from "./selects";
 import drivers from "./drivers";
 import singleNews from "./singleNews";
+import aboutFeatures from "./aboutFeatures";
 
 document.addEventListener("DOMContentLoaded", () => {
   singleNews();
@@ -38,6 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   otherMaterials();
   selects();
   drivers();
+  aboutFeatures();
 });
 
 window.addEventListener("load", () => {
