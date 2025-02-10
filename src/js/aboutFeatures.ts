@@ -8,13 +8,15 @@ export default function aboutFeatures() {
     document.querySelectorAll<HTMLElement>(".about-features")
   );
 
-  const VIEW_TRANSITION = false;
   elements.forEach((element) => {
     const cards = Array.from(
       element.querySelectorAll<HTMLElement>(".about-features__card")
     );
 
     cards.forEach((card) => {
+      const clickableArea = card.querySelector<HTMLElement>(
+        ".about-features__card-clickable-area"
+      );
       const btn = card.querySelector<HTMLButtonElement>(
         ".about-features__card-btn"
       )!;
@@ -41,7 +43,7 @@ export default function aboutFeatures() {
         ".about-features__card-small-text"
       )!;
 
-      btn?.addEventListener("click", async (event) => {
+      clickableArea?.addEventListener("click", async (event) => {
         event.preventDefault();
         const isMobile = window.matchMedia("(max-width: 640px)").matches;
 

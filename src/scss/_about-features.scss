@@ -58,18 +58,25 @@
       pointer-events: none;
       right: 0;
       bottom: 0;
-      transition: opacity 0.4s, transform 0.4s;
+      transition: opacity 0.4s;
       height: auto;
       opacity: 0;
       transform-origin: center bottom;
 
       @include breakpoint(mobile) {
-        display: none;
+        width: 34.7rem;
+        transform: translateX(50%);
+        max-width: none;
+        bottom: 2rem;
       }
     }
 
     .about-features__card.active .about-features__card-decor {
       opacity: 1;
+
+      @include breakpoint(mobile) {
+        transition: opacity 0.4s ease 0.4s;
+      }
     }
   }
 
@@ -141,13 +148,10 @@
 
     @include breakpoint(mobile) {
       align-self: flex-start;
-      // display: none;
-      // grid-column: 1 / -1;
+
       order: 50;
       grid-row: unset;
       margin-top: -4rem;
-
-      // display: none;
     }
   }
 }
@@ -339,6 +343,29 @@
       align-self: flex-start;
       justify-self: flex-end;
     }
+  }
+}
+
+.about-features__card-clickable-area {
+  width: 8rem;
+  height: 4.8rem;
+  z-index: 16;
+  opacity: 0;
+  cursor: pointer;
+  @include breakpointMF(small-tablet) {
+    grid-row: 1 / 2;
+    grid-column: 12 / 13;
+    align-self: flex-start;
+    justify-self: flex-end;
+  }
+  @include breakpoint(mobile) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    justify-self: flex-end;
+    align-self: stretch;
+    width: 100%;
+    height: auto;
+    margin: -2rem 0;
   }
 }
 
