@@ -80,6 +80,128 @@
     }
   }
 
+  &:nth-child(2) {
+    .about-features__card-decor:nth-of-type(1) {
+      position: absolute;
+      width: 40rem;
+      z-index: -1;
+      pointer-events: none;
+      left: 50%;
+      transform: translateX(-50%);
+      margin-left: -20rem;
+      bottom: 4.5rem;
+      transition: opacity 0.4s;
+      height: auto;
+      opacity: 0;
+      transform-origin: center bottom;
+
+      @include breakpoint(mobile) {
+        width: 30rem;
+        transform: translateX(50%);
+        left: auto;
+        right: 0;
+        max-width: none;
+        bottom: 7rem;
+        margin: 0;
+      }
+    }
+    .about-features__card-decor:nth-of-type(2) {
+      position: absolute;
+      width: 74.2rem;
+      z-index: -1;
+      pointer-events: none;
+      right: 0;
+
+      bottom: 0;
+      transform: translate(50%, 50%);
+      transition: opacity 0.4s;
+      height: auto;
+      opacity: 0;
+      transform-origin: center;
+
+      @include breakpoint(mobile) {
+        width: 34.7rem;
+        transform: translateX(50%);
+        max-width: none;
+        bottom: 2rem;
+        display: none;
+      }
+    }
+
+    .about-features__card.active .about-features__card-decor {
+      opacity: 1;
+      transition: opacity 0.4s ease 0.4s;
+      @include breakpoint(mobile) {
+        transition: opacity 0.4s ease 0.4s;
+      }
+    }
+  }
+
+  &:nth-child(3) {
+    .about-features__card-decor {
+      position: absolute;
+      width: 95.7rem;
+      z-index: -1;
+      pointer-events: none;
+      left: 0;
+      bottom: 0;
+      transform: translateX(-50%) translateY(50%);
+      transition: opacity 0.4s;
+      height: auto;
+      opacity: 0;
+      transform-origin: center bottom;
+
+      @include breakpoint(mobile) {
+        width: 34.7rem;
+        transform: translateX(50%);
+        max-width: none;
+        bottom: 2rem;
+        left: auto;
+        right: 0;
+      }
+    }
+
+    .about-features__card.active .about-features__card-decor {
+      opacity: 1;
+
+      @include breakpoint(mobile) {
+        transition: opacity 0.4s ease 0.4s;
+      }
+    }
+  }
+  &:nth-child(4) {
+    .about-features__card-decor {
+      position: absolute;
+      width: 74rem;
+      z-index: -1;
+      pointer-events: none;
+      left: 28rem;
+      bottom: 0;
+      transform: translateY(10%);
+      transition: opacity 0.4s;
+      height: auto;
+      opacity: 0;
+      transform-origin: center bottom;
+
+      @include breakpoint(mobile) {
+        width: 34.7rem;
+        transform: translateX(50%);
+        max-width: none;
+        bottom: 2rem;
+        left: auto;
+        right: 0;
+      }
+    }
+
+    .about-features__card.active .about-features__card-decor {
+      opacity: 1;
+
+      @include breakpoint(mobile) {
+        transition: opacity 0.4s ease 0.4s;
+      }
+    }
+  }
+
   &:first-child {
     border-top: 1px solid black;
   }
@@ -91,13 +213,16 @@
   grid-gap: 2rem;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   position: relative;
+  overflow-y: clip;
 
+  @supports not (overflow-y: clip) {
+    overflow: hidden;
+  }
   @include breakpoint(mobile) {
     padding: 2rem 0;
     grid-template-columns: auto 1fr auto;
     grid-row-gap: 2rem;
-    overflow: hidden;
-    overflow: clip;
+    grid-column-gap: 1.5rem;
   }
 
   &.active {
@@ -174,6 +299,7 @@
     grid-row: 1 / 2;
     grid-column: 2 / 3;
     align-self: center;
+    white-space: nowrap;
   }
 
   .about-features__card.active & {
@@ -411,6 +537,11 @@
     grid-column: 10 / -1;
     grid-row: 2 / 3;
     padding-top: 7rem;
+
+    &--align-end {
+      align-self: flex-end;
+      padding: 0;
+    }
   }
 
   @include breakpoint(mobile) {

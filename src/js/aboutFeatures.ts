@@ -48,13 +48,10 @@ export default function aboutFeatures() {
         const isMobile = window.matchMedia("(max-width: 640px)").matches;
 
         if (!isMobile) {
-          const state = Flip.getState([btn, number, image, card]);
-          const secondState = Flip.getState(
-            [title, text, textSecond, smallText],
-            {
-              props: "fontSize",
-            }
-          );
+          const state = Flip.getState([btn, number, image, card, smallText]);
+          const secondState = Flip.getState([title, text, textSecond], {
+            props: "fontSize",
+          });
           card.classList.toggle("active");
           Flip.from(state, {
             duration: 0.6,
