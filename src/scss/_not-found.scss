@@ -2,8 +2,47 @@
   @include blockWrapper;
   position: relative;
   z-index: 1;
-  padding-top: 12rem;
+  padding-top: 32rem;
   padding-bottom: 14rem;
+  overflow: hidden;
+  overflow: clip;
+
+  @include breakpoint(mobile) {
+    padding-top: 17rem;
+  }
+}
+
+.not-found__decor-one {
+  position: absolute;
+  z-index: -1;
+  width: 55rem;
+  height: auto;
+  left: 0;
+  top: 0;
+  transform: translate(-40%, -10%);
+  pointer-events: none;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.not-found__decor-two {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  right: 0;
+  bottom: 0;
+  width: 88rem;
+  height: auto;
+  transform: translate(50%, 50%);
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+.not-found__decor-two {
+  position: absolute;
+  z-index: -1;
 }
 
 .not-found__content {
