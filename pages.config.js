@@ -9,6 +9,7 @@ import mediacenter from "./pages-data/mediacenter";
 import singleNews from "./pages-data/singleNews";
 import singleNews2 from "./pages-data/singleNews2";
 import about from "./pages-data/about";
+import notFound from "./pages-data/notFound";
 
 const pagesConfig = {
   ...home,
@@ -22,6 +23,7 @@ const pagesConfig = {
   ...singleNews,
   ...singleNews2,
   ...about,
+  ...notFound,
 };
 
 export default pagesConfig;
