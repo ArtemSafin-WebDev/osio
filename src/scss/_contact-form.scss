@@ -46,7 +46,6 @@
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 100%;
-  letter-spacing: 0.2rem;
   text-transform: uppercase;
 
   @include breakpoint(mobile) {
@@ -75,7 +74,6 @@
     font-style: normal;
     font-weight: 500;
     font-size: 2.4rem;
-    letter-spacing: 0;
     line-height: 120%;
     margin-bottom: 2.4rem;
   }
@@ -139,7 +137,6 @@
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 100%;
-  letter-spacing: 0.2rem;
   text-transform: uppercase;
   color: white;
   transition: border-color 0.2s;
@@ -152,7 +149,6 @@
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 100%;
-    letter-spacing: 0.2rem;
   }
 
   &::placeholder {
@@ -179,7 +175,6 @@
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 100%;
-  letter-spacing: 0.2rem;
   text-transform: uppercase;
   color: white;
   display: flex;
@@ -197,7 +192,6 @@
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 100%;
-    letter-spacing: 0.2rem;
   }
 
   svg {
@@ -273,7 +267,6 @@
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 100%;
-  letter-spacing: 0.2rem;
   text-transform: uppercase;
   transition: color 0.2s, background-color 0.2s;
   display: block;
@@ -285,7 +278,6 @@
     font-weight: 500;
     font-size: 1.2rem;
     line-height: 100%;
-    letter-spacing: 0.2rem;
   }
 }
 
@@ -311,9 +303,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 1.4rem;
-
   line-height: 140%;
-  letter-spacing: 0.2rem;
   text-transform: uppercase;
   cursor: pointer;
   user-select: none;
@@ -323,7 +313,6 @@
     font-weight: 500;
     font-size: 1rem;
     line-height: 140%;
-    letter-spacing: 0.2rem;
     text-transform: uppercase;
     align-items: flex-start;
   }
@@ -394,7 +383,6 @@
   font-weight: 500;
   font-size: 1.4rem;
   line-height: 100%;
-  letter-spacing: 0.2rem;
   text-transform: uppercase;
   color: black;
   background: #feff6a;
@@ -408,7 +396,6 @@
     font-weight: 700;
     font-size: 1rem;
     line-height: 100%;
-    letter-spacing: 0.2rem;
     text-transform: uppercase;
   }
 }

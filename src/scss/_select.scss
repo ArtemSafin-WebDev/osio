@@ -19,8 +19,7 @@
     font-size: 1.4rem;
     font-style: normal;
     font-weight: 500;
-    line-height: 100%; /* 1.4rem */
-    letter-spacing: 0.2rem;
+    line-height: 100%;
     text-transform: uppercase;
     transition: color 0.2s;
     color: rgba(white, 0.3);
@@ -129,7 +128,6 @@
   font-style: normal;
   font-weight: 500;
   line-height: 100%;
-  letter-spacing: 0.2rem;
   text-transform: uppercase;
 
   @include breakpoint(mobile) {
@@ -244,7 +242,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: 100%;
-    letter-spacing: 0.2rem;
     text-transform: uppercase;
     width: 100%;
     transition: color 0.2s, background-color 0.2s;

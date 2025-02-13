@@ -26,12 +26,13 @@ html {
 body {
   font-size: 1.4rem;
   line-height: 1.3;
+  letter-spacing: -0.01em;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: var(--bg);
   color: var(--text-color);
-  font-family: var(--stem);
+  font-family: var(--montserrat);
   overscroll-behavior: none;
   overflow-anchor: none;
 }
