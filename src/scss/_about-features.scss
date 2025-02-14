@@ -28,7 +28,7 @@
 .about-features__top-item {
   font-size: 1.4rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 100%;
   text-transform: uppercase;
   color: #77787d;
@@ -36,7 +36,7 @@
   @include breakpoint(mobile) {
     font-size: 1rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 120%;
     text-transform: uppercase;
     &:nth-child(2) {
@@ -243,7 +243,7 @@
   border: 1px solid black;
   font-size: 2rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 120%;
   text-transform: uppercase;
   background-color: #fff;
@@ -253,7 +253,7 @@
     height: 4rem;
     font-size: 1.4rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 120%;
     text-transform: uppercase;
     grid-column: 1 / 2;
@@ -282,14 +282,14 @@
 .about-features__card-title {
   font-size: 2rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 120%;
   text-transform: uppercase;
 
   @include breakpoint(mobile) {
     font-size: 1.4rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 100%;
     text-transform: uppercase;
     grid-row: 1 / 2;
@@ -301,7 +301,7 @@
   .about-features__card.active & {
     font-size: 1.4rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 100%;
 
     text-transform: uppercase;
@@ -314,7 +314,7 @@
     @include breakpoint(mobile) {
       font-size: 1rem;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 100%;
 
       text-transform: uppercase;
@@ -329,7 +329,7 @@
 .about-features__card-text {
   font-size: 3rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   text-transform: uppercase;
   grid-row: 1 / 2;
@@ -350,7 +350,7 @@
   display: none;
   font-size: 4rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 1.2;
   text-transform: uppercase;
 
@@ -363,7 +363,7 @@
     grid-column: 1 / -1;
     font-size: 2.4rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 120%;
     text-transform: uppercase;
   }

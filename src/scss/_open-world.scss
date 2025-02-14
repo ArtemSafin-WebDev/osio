@@ -47,14 +47,14 @@
 
 .open-world__heading {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 4rem;
   line-height: 120%;
   text-transform: uppercase;
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2.4rem;
     line-height: 120%;
     margin-bottom: 9rem;
@@ -70,7 +70,7 @@
   flex-shrink: 0;
   padding: 2rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   border: 1px solid #77787d;
@@ -280,14 +280,14 @@
 
 .open-world__slider-card-category {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   text-transform: uppercase;
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2rem;
     line-height: 100%;
     text-transform: uppercase;
@@ -296,14 +296,14 @@
 
 .open-world__slider-card-heading {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 2.5rem;
   line-height: 120%;
   text-wrap: balance;
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2rem;
     line-height: 120%;
   }
@@ -312,7 +312,7 @@
 .open-world__slider-card-date {
   margin-top: auto;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   color: #77787d;
@@ -322,14 +322,14 @@
     margin-top: 4rem;
     font-size: 1.4rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 100%;
     text-transform: uppercase;
   }
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2rem;
     line-height: 100%;
     text-transform: uppercase;

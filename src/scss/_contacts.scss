@@ -20,7 +20,7 @@
     display: block;
     font-size: 3rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 120%;
     text-transform: uppercase;
     margin-bottom: 5rem;
@@ -96,7 +96,7 @@
 .contacts__heading {
   font-size: 6rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 120%;
   text-transform: uppercase;
   @include breakpoint(mobile) {
@@ -132,7 +132,7 @@
 .contacts__card-key {
   font-size: 2.5rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 140%;
   letter-spacing: -0.1rem;
   font-family: var(--inter);
@@ -149,13 +149,13 @@
 .contacts__card-value {
   font-size: 3.6rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 140%;
 
   @include breakpoint(mobile) {
     font-size: 2rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 140%;
   }
 
@@ -188,7 +188,7 @@
   padding: 1.9rem 2rem;
   font-size: 1.4rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 100%;
   text-transform: uppercase;
   gap: 1rem;
@@ -203,7 +203,7 @@
     padding: 2rem 4rem;
     font-size: 1rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 100%;
     text-transform: uppercase;
     grid-area: req;
@@ -295,7 +295,7 @@
 .contacts__partners-heading {
   font-size: 4rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 120%;
   text-transform: uppercase;
   margin-bottom: 14rem;
@@ -303,7 +303,7 @@
   @include breakpoint(mobile) {
     font-size: 2.4rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 120%;
     text-transform: uppercase;
     margin-bottom: 4rem;
@@ -332,7 +332,7 @@
   display: block;
   font-size: 1.5rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 130%;
   text-transform: uppercase;
   color: #77787d;
@@ -340,7 +340,7 @@
   @include breakpoint(mobile) {
     font-size: 1rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 130%;
     text-transform: uppercase;
   }

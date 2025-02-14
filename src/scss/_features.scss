@@ -58,14 +58,14 @@
 .features__title,
 .features__heading {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   text-transform: uppercase;
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     line-height: 100%;
   }
@@ -75,7 +75,7 @@
   grid-area: text;
   text-align: center;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 5rem;
   line-height: 120%;
   text-align: center;
@@ -88,7 +88,7 @@
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2.4rem;
     line-height: 120%;
   }
@@ -132,7 +132,7 @@
 
 .features__card-amount {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 3rem;
   line-height: 100%;
   text-align: center;
@@ -140,7 +140,7 @@
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2rem;
     line-height: 100%;
   }

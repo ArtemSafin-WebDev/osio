@@ -124,7 +124,7 @@
   grid-row: 1 / 2;
   justify-self: flex-end;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   border: 1px solid #cccccc;
@@ -264,13 +264,13 @@
 
 .products__slider-card-title {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 2.7rem;
   line-height: 140%;
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2.4rem;
     line-height: 120%;
   }

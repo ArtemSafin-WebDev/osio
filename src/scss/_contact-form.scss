@@ -43,14 +43,14 @@
 
 .contact-form__heading {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.2rem;
   line-height: 100%;
   text-transform: uppercase;
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     line-height: 100%;
   }
@@ -64,7 +64,7 @@
 .contact-form__form-heading {
   text-align: center;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 4rem;
   line-height: 120%;
   text-transform: uppercase;
@@ -72,7 +72,7 @@
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2.4rem;
     line-height: 120%;
     margin-bottom: 2.4rem;
@@ -134,7 +134,7 @@
   height: 7.4rem;
   padding: 0 2rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   text-transform: uppercase;
@@ -146,7 +146,7 @@
     padding: 0 2rem;
     border-radius: 1rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2rem;
     line-height: 100%;
   }
@@ -172,7 +172,7 @@
   height: 7.4rem;
   padding: 0 2rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   text-transform: uppercase;
@@ -189,7 +189,7 @@
     padding: 0 2rem;
     border-radius: 1rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2rem;
     line-height: 100%;
   }
@@ -264,7 +264,7 @@
 
 .contact-form__form-select-choice-text {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   text-transform: uppercase;
@@ -275,7 +275,7 @@
   @include breakpoint(mobile) {
     padding: 2rem 2rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2rem;
     line-height: 100%;
   }
@@ -301,7 +301,7 @@
   align-items: center;
   gap: 2rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 140%;
   text-transform: uppercase;
@@ -310,7 +310,7 @@
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1rem;
     line-height: 140%;
     text-transform: uppercase;
@@ -380,7 +380,7 @@
   padding: 3.3rem 17rem;
   text-align: center;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   text-transform: uppercase;

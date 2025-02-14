@@ -74,13 +74,13 @@
 
 .page-footer__copyright {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.9rem;
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2rem;
     line-height: 1.5rem;
     grid-column: 1 / 2;
@@ -89,7 +89,7 @@
 
 .page-footer__policy {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.9rem;
   text-decoration-skip-ink: none;
@@ -99,7 +99,7 @@
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2rem;
     line-height: 1.5rem;
     grid-column: 1 / 2;
@@ -155,13 +155,13 @@
 
 .page-footer__made-by-text {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.9rem;
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2rem;
     line-height: 1.5rem;
     grid-column: 1 / 2;
@@ -201,14 +201,14 @@
 .page-footer__top-heading {
   grid-column: 1 / 3;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 4rem;
   line-height: 120%;
   text-transform: uppercase;
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2.4rem;
     line-height: 120%;
   }
@@ -297,7 +297,7 @@
 .page-footer__nav-submenu-link {
   display: block;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.5rem;
   line-height: 1.9rem;
   @media (hover: hover) {

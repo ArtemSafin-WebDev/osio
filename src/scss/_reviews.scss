@@ -33,14 +33,14 @@
 
 .reviews__heading {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 4rem;
   line-height: 120%;
   text-transform: uppercase;
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 2.4rem;
     line-height: 120%;
     margin-bottom: 6rem;
@@ -174,7 +174,7 @@
   text-align: center;
   flex-shrink: 0;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   text-transform: uppercase;
@@ -289,7 +289,7 @@
   padding: 1.1rem 1.3rem;
   font-size: 1.2rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 100%;
   flex-shrink: 0;
   text-transform: uppercase;
@@ -347,7 +347,7 @@
   @include breakpoint(mobile) {
     font-size: 1.2rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 100%;
     text-transform: uppercase;
   }
@@ -571,14 +571,14 @@
 
 .reviews__slider-card-author-name {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   text-transform: uppercase;
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2rem;
     line-height: 100%;
     text-transform: uppercase;
@@ -693,7 +693,7 @@
   text-align: center;
   font-size: 1.4rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 100%;
   text-transform: uppercase;
   color: white;
@@ -720,7 +720,7 @@
     padding: 2.25rem 2rem;
     font-size: 1rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 100%;
     text-transform: uppercase;
   }

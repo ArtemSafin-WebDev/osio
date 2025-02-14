@@ -16,7 +16,7 @@
 .buy__text {
   font-size: 6rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 120%;
   text-transform: uppercase;
   margin-bottom: 10rem;
@@ -25,7 +25,7 @@
   @include breakpoint(mobile) {
     font-size: 2.4rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 120%;
     text-transform: uppercase;
     margin-bottom: 10rem;
@@ -36,7 +36,7 @@
 .buy__slider-text {
   font-size: 1.5rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 100%;
   text-transform: uppercase;
   margin-bottom: 5rem;
@@ -151,7 +151,7 @@
   justify-self: stretch;
   align-self: flex-end;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.2rem;
   color: #77787d;
   line-height: 130%;
@@ -161,7 +161,7 @@
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.2rem;
     letter-spacing: 0.15rem;
     text-transform: uppercase;
@@ -244,7 +244,7 @@
 .buy__slider-card-info-contacts-item-title {
   font-size: 1.2rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 130%;
   letter-spacing: 0.15rem;
   text-transform: uppercase;
@@ -255,7 +255,7 @@
 .buy__slider-card-info-contacts-item-link {
   font-size: 2rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 120%;
   font-family: var(--inter);
   position: relative;

@@ -18,7 +18,7 @@
   display: block;
   font-size: 6rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 120%;
   text-transform: uppercase;
   color: #ccc;
@@ -30,7 +30,7 @@
     align-items: stretch;
     font-size: 3rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 160%;
     text-transform: uppercase;
     margin-bottom: 5rem;
@@ -177,7 +177,7 @@
     justify-content: space-between;
     font-size: 2.4rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 120%;
     text-transform: uppercase;
     margin-bottom: 3rem;
@@ -257,7 +257,7 @@
   padding: 2rem;
   font-size: 1.4rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 100%;
   text-transform: uppercase;
   border-radius: 1rem;
@@ -302,7 +302,7 @@
 .drivers__results-heading {
   font-size: 4rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 120%;
   text-transform: uppercase;
   margin-bottom: 6rem;
@@ -313,7 +313,7 @@
   @include breakpoint(mobile) {
     font-size: 2.4rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 120%;
     text-transform: uppercase;
     margin-bottom: 4rem;
@@ -337,7 +337,7 @@
 .drivers__results-header-item {
   font-size: 1.2rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 100%;
   letter-spacing: 0.15rem;
   text-transform: uppercase;
@@ -437,7 +437,7 @@
 .drivers__results-card-title {
   font-size: 2.5rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 120%;
   max-width: 36rem;
 
@@ -450,7 +450,7 @@
   @include breakpoint(mobile) {
     font-size: 1.6rem;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 140%;
     padding-right: 1rem;
   }
@@ -545,7 +545,7 @@
       content: attr(data-text);
       font-size: 1.2rem;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 100%;
       letter-spacing: 0.1rem;
       text-transform: uppercase;
@@ -614,7 +614,7 @@
       content: attr(data-text);
       font-size: 1.2rem;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 600;
       line-height: 100%;
       text-transform: uppercase;
       color: #77787d;
@@ -671,7 +671,7 @@
   border: 1px solid #ccc;
   font-size: 1.4rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: 100%;
   text-transform: uppercase;
   margin-top: 6rem;

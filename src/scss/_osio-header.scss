@@ -253,14 +253,14 @@
 .osio-header__lang {
   flex-shrink: 0;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   text-transform: uppercase;
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.4rem;
     line-height: 100%;
     grid-area: lang;
@@ -342,7 +342,7 @@
   background: rgba(255, 255, 255, 0.1);
   border-radius: 0.5rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   text-transform: uppercase;
@@ -459,7 +459,7 @@
     justify-content: center;
     position: relative;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.4rem;
     line-height: 100%;
     text-transform: uppercase;
@@ -501,7 +501,7 @@
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 3rem;
     line-height: 120%;
     text-transform: uppercase;
@@ -611,7 +611,7 @@
 
 .osio-header__search-title {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 4rem;
   line-height: 120%;
   text-transform: uppercase;
@@ -634,7 +634,7 @@
   width: 30%;
   flex-grow: 1;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   text-transform: uppercase;
@@ -652,7 +652,7 @@
   padding: 2rem;
   text-align: center;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   text-transform: uppercase;
@@ -772,7 +772,7 @@
   border-radius: 1rem;
   padding: 0 2rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.2rem;
   line-height: 100%;
   text-transform: uppercase;
@@ -808,7 +808,7 @@
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.4rem;
     line-height: 100%;
     display: flex;
@@ -900,13 +900,13 @@
 
 .osio-header__categories-subcategory-card-title {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 2.4rem;
   line-height: 120%;
 
   @include breakpoint(mobile) {
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.6rem;
     line-height: 120%;
   }
@@ -976,7 +976,7 @@
   white-space: nowrap;
   padding: 2rem;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   line-height: 100%;
   text-transform: uppercase;
@@ -1061,7 +1061,7 @@
 
 .osio-header__categories-subcategories-nav-link {
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.4rem;
   text-transform: uppercase;
   line-height: 100%;
@@ -1145,7 +1145,7 @@
     grid-gap: 1rem;
     align-items: center;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1.4rem;
     line-height: 100%;
     text-align: center;
