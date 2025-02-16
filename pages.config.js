@@ -10,6 +10,7 @@ import singleNews from "./pages-data/singleNews";
 import singleNews2 from "./pages-data/singleNews2";
 import about from "./pages-data/about";
 import notFound from "./pages-data/notFound";
+import focusline from "./pages-data/focusline";
 
 const pagesConfig = {
   ...home,
@@ -24,6 +25,7 @@ const pagesConfig = {
   ...singleNews2,
   ...about,
   ...notFound,
+  ...focusline,
 };
 
 export default pagesConfig;

@@ -19,6 +19,8 @@ import selects from "./selects";
 import drivers from "./drivers";
 import singleNews from "./singleNews";
 import aboutFeatures from "./aboutFeatures";
+import lineCatalog from "./lineCatalog";
+import lineGallery from "./lineGallery";
 
 document.addEventListener("DOMContentLoaded", () => {
   singleNews();
@@ -40,6 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
   selects();
   drivers();
   aboutFeatures();
+  lineCatalog();
+  lineGallery();
 });
 
 window.addEventListener("load", () => {

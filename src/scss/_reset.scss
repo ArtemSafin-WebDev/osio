@@ -45,6 +45,15 @@ body.modal-open {
   overscroll-behavior: none;
 }
 
+@include breakpoint(mobile) {
+  body.mobile-search-open {
+    touch-action: none;
+    -webkit-overflow-scrolling: none;
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+}
+
 body.filters-shown {
   @include breakpoint(mobile) {
     touch-action: none;

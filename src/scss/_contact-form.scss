@@ -388,6 +388,14 @@
   background: #feff6a;
   border-radius: 1rem;
   justify-content: center;
+  transition: background-color 0.2s, color 0.2s;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
   @include breakpoint(mobile) {
     align-self: stretch;
     padding: 2.5rem 5rem;

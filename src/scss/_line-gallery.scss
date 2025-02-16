@@ -1,0 +1,145 @@
+.line-gallery {
+  @include blockWrapper;
+  overflow-x: clip;
+  margin-bottom: 14rem;
+  padding-top: 14rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 8rem;
+    padding-top: 4rem;
+  }
+}
+
+.line-gallery__content {
+  @include blockContent;
+}
+
+.line-gallery__main-slider {
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    width: 50%;
+    margin: 0 7rem;
+
+    @include breakpoint(mobile) {
+      margin: 0 2rem;
+    }
+  }
+}
+
+.line-gallery__main-slider-card {
+  position: relative;
+  aspect-ratio: 800 / 500;
+  transition: opacity 0.4s, transform 0.4s;
+
+  .swiper-slide:not(.swiper-slide-active) & {
+    opacity: 0.3;
+  }
+
+  .swiper-slide-active & {
+    transform: scale(1.5);
+  }
+}
+
+.line-gallery__main-slider-card-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.line-gallery__thumbs-slider {
+  margin-top: 15rem;
+
+  @include breakpoint(mobile) {
+    margin-top: 6rem;
+  }
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    margin: 0 0.5rem;
+    width: 8rem;
+
+    @include breakpoint(mobile) {
+      margin: 0 0.4rem;
+      width: 6rem;
+    }
+  }
+}
+
+.line-gallery__thumbs-slider-card {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  transition: border-color 0.2s;
+  cursor: pointer;
+
+  @include breakpoint(mobile) {
+    width: 6rem;
+    height: 6rem;
+  }
+
+  .swiper-slide-thumb-active & {
+    border-color: #77787d;
+    cursor: default;
+  }
+}
+
+.line-gallery__thumbs-slider-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.line-gallery__arrows {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 4rem;
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.line-gallery__arrow {
+  flex-shrink: 0;
+  width: 7.5rem;
+  height: 7.5rem;
+  background: #e5e5e5;
+  transition: background-color 0.2s, opacity 0.2s;
+  border-radius: 50%;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    fill: black;
+    transition: fill 0.2s;
+  }
+
+  &.swiper-button-disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
+
+  &:not(.swiper-button-disabled) {
+    @media (hover: hover) {
+      &:hover {
+        background-color: black;
+        svg {
+          fill: white;
+        }
+      }
+    }
+  }
+}

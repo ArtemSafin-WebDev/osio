@@ -1,0 +1,129 @@
+.line-text-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.line-text-content__icon {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  margin-bottom: 3rem;
+
+  @include breakpoint(mobile) {
+    width: 4rem;
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.line-text-content__heading {
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.line-text-content__text {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-family: var(--inter);
+  max-width: 47rem;
+
+  b {
+    font-weight: 700;
+  }
+
+  p {
+    margin-bottom: 2rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+}
+
+.line-text-content__apps-list {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+
+  @include breakpoint(mobile) {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+}
+
+.line-text-content__apps-list-item {
+  flex-shrink: 0;
+}
+
+.line-text-content__apps-card {
+  width: 6.2rem;
+  height: 6.2rem;
+  position: relative;
+
+  @include breakpoint(mobile) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.line-text-content__apps-card-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.line-text-content__weight {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-top: 2.5rem;
+
+  @include breakpoint(mobile) {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-top: 1.8rem;
+  }
+  b {
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-transform: uppercase;
+
+    @include breakpoint(mobile) {
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+    }
+  }
+}

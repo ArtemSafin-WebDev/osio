@@ -1,0 +1,64 @@
+.line-image-with-text {
+  @include blockWrapper;
+  margin-bottom: 12rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 6rem;
+  }
+}
+
+.line-image-with-text__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-gap: 2rem;
+  grid-auto-flow: dense;
+
+  .line-text-content__text {
+    max-width: 63rem;
+  }
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.line-image-with-text__text-content {
+  grid-column: 1 / 3;
+
+  .line-image-with-text--touchpad & {
+    @include breakpointMF(small-tablet) {
+      grid-column: 5 / -1;
+    }
+  }
+}
+
+.line-image-with-text__image-wrapper {
+  grid-column: 3 / -1;
+  margin-top: -12rem;
+  position: relative;
+
+  @include breakpointMF(small-tablet) {
+    .line-image-with-text--preinstalled & {
+      margin: 0;
+      padding-left: 10rem;
+    }
+
+    .line-image-with-text--touchpad & {
+      grid-column: 1 / 5;
+      margin: 0;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    margin: 0 calc(-1 * var(--content-padding));
+  }
+}
+
+.line-image-with-text__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

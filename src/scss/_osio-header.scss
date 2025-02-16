@@ -62,7 +62,7 @@
       transition: background-color 0.2s;
     }
 
-    body:not(.menu-open)
+    body:not(.menu-open):not(.mobile-search-open)
       .header-wrapper--dark
       .osio-header:not(
         :has(
@@ -96,7 +96,7 @@
 
   transition: filter 0.2s;
 
-  body:not(.menu-open)
+  body:not(.menu-open):not(.mobile-search-open)
     .header-wrapper--dark
     .osio-header:not(
       :has(
@@ -730,9 +730,21 @@
     transition: fill 0.2s;
   }
 
+  body:not(.menu-open):not(.mobile-search-open) .header-wrapper--dark & {
+    svg {
+      fill: black;
+    }
+  }
+
   .mobile-search-open & {
     svg {
       fill: #feff6a;
+    }
+  }
+
+  .mobile-search-open .header-wrapper--dark & {
+    svg {
+      fill: white;
     }
   }
 }
@@ -1109,7 +1121,7 @@
       width: 100%;
     }
 
-    body:not(.menu-open)
+    body:not(.menu-open):not(.mobile-search-open)
       .header-wrapper--dark
       .osio-header:not(
         :has(

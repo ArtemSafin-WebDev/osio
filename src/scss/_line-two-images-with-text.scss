@@ -1,0 +1,79 @@
+.two-images-with-text {
+  @include blockWrapper;
+  margin-bottom: 10rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 5rem;
+  }
+}
+
+.two-images-with-text__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.two-images-with-text__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.two-images-with-text__left-col {
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.two-images-with-text__left-image-wrapper {
+  padding-right: 20rem;
+  margin-left: calc((100vw - 2rem - 100% * 2) / 2 * -1);
+  margin-top: -14rem;
+  position: relative;
+
+  @include breakpointMF(small-tablet) {
+    .two-images-with-text--screen & {
+      margin-top: -10rem;
+      padding-right: 0;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    padding: 0;
+    margin: 0;
+    margin-left: calc((100vw - 100%) / 2 * -1);
+    order: 3;
+  }
+}
+.two-images-with-text__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.two-images-with-text__right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.two-images-with-text__right-image-wrapper {
+  margin-right: calc((100vw - 2rem - 100% * 2) / 2 * -1);
+  margin-top: -10rem;
+
+  @include breakpoint(mobile) {
+    margin: 0;
+    margin-right: calc((100vw - 100%) / 2 * -1);
+    order: 4;
+  }
+}
