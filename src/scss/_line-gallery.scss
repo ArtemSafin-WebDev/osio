@@ -4,9 +4,17 @@
   margin-bottom: 14rem;
   padding-top: 14rem;
 
+  &--cyberline {
+    padding-top: 3rem;
+  }
+
   @include breakpoint(mobile) {
     margin-bottom: 8rem;
     padding-top: 4rem;
+
+    &--cyberline {
+      padding-top: 0;
+    }
   }
 }
 
@@ -57,6 +65,10 @@
 
   @include breakpoint(mobile) {
     margin-top: 6rem;
+
+    .line-gallery--cyberline & {
+      margin-top: 8rem;
+    }
   }
   .swiper {
     overflow: visible;
@@ -141,5 +153,122 @@
         }
       }
     }
+  }
+
+  .dark-bg & {
+    background-color: rgba(white, 0.1);
+    svg {
+      fill: white;
+    }
+
+    &:not(.swiper-button-disabled) {
+      @media (hover: hover) {
+        &:hover {
+          background-color: white;
+          svg {
+            fill: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+.line-gallery__tabs-nav {
+  margin-bottom: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 40;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 8rem;
+    gap: 1rem;
+  }
+}
+
+.line-gallery__tabs-nav-btn {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: 1px solid transparent;
+  display: grid;
+  place-items: center;
+  transition: border-color 0.2s;
+  flex-shrink: 0;
+
+  @include breakpoint(mobile) {
+    width: 4.4rem;
+    height: 4.4rem;
+  }
+  &--brown {
+    .line-gallery__tabs-nav-btn-text {
+      background: linear-gradient(90deg, #48372c 0%, #281204 100%);
+    }
+  }
+
+  &--graphite {
+    .line-gallery__tabs-nav-btn-text {
+      background: linear-gradient(96deg, #3a3848 5.02%, #161618 101.08%);
+    }
+  }
+
+  &.active {
+    border-color: #c7c7c7;
+  }
+}
+
+.line-gallery__tabs-nav-btn-text {
+  width: 6rem;
+  height: 6rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: linear-gradient(103deg, #c3c2cd 9.13%, #1e1e1e 116.27%);
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  border-radius: 50%;
+
+  @include breakpoint(mobile) {
+    width: 3rem;
+    height: 3rem;
+    font-size: 0.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 100%; /* 0.8rem */
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+}
+
+.line-gallery__tabs-items {
+  position: relative;
+}
+
+.line-gallery__tabs-item {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  z-index: 5;
+
+  &.active {
+    position: relative;
+    z-index: 10;
+    opacity: 1;
+    visibility: inherit;
+    opacity: 1;
+    transition: opacity 0.4s, visibility 0.4s;
   }
 }

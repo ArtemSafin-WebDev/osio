@@ -1,6 +1,18 @@
 .line-guarantee {
   @include blockWrapper;
   margin-bottom: 4rem;
+
+  &--cyberline {
+    @include breakpointMF(small-tablet) {
+      .line-text-content__icon {
+        display: none;
+      }
+
+      .line-text-content {
+        display: contents;
+      }
+    }
+  }
 }
 
 .line-guarantee__content {
@@ -22,6 +34,10 @@
 
     .line-text-content {
       grid-column: 2 / 3;
+    }
+
+    .line-text-content__text {
+      color: white;
     }
   }
 

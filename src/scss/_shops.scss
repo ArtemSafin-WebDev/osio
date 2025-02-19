@@ -1,6 +1,7 @@
 .shops {
   @include blockWrapper;
   background-color: #fff;
+  color: var(--text-color);
 }
 
 .shops__content {

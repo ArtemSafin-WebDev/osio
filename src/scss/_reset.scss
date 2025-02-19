@@ -37,6 +37,11 @@ body {
   overflow-anchor: none;
 }
 
+.dark-bg {
+  background-color: #101015;
+  color: white;
+}
+
 body.menu-open,
 body.modal-open {
   touch-action: none;

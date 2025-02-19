@@ -21,6 +21,7 @@ import singleNews from "./singleNews";
 import aboutFeatures from "./aboutFeatures";
 import lineCatalog from "./lineCatalog";
 import lineGallery from "./lineGallery";
+import tabs from "./tabs";
 
 document.addEventListener("DOMContentLoaded", () => {
   singleNews();
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   aboutFeatures();
   lineCatalog();
   lineGallery();
+  tabs();
 });
 
 window.addEventListener("load", () => {

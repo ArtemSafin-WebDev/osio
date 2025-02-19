@@ -1,0 +1,158 @@
+.cyberline-specs {
+  @include blockWrapper;
+  margin-bottom: 20rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 7rem;
+  }
+}
+
+.cyberline-specs__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.cyberline-specs__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 4rem;
+  }
+}
+
+.cyberline-specs__list-item {
+  display: flex;
+  flex-direction: column;
+}
+.cyberline-specs__card {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "stack";
+  color: white;
+  overflow: hidden;
+  overflow: clip;
+  border-radius: 1rem;
+
+  @include breakpoint(mobile) {
+    overflow: visible;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3.4rem;
+  }
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 96.7%;
+    grid-area: stack;
+
+    @include breakpoint(mobile) {
+      display: none;
+    }
+  }
+}
+
+.cyberline-specs__card-bg {
+  grid-area: stack;
+
+  @include breakpoint(mobile) {
+    order: 15;
+    position: relative;
+    overflow: hidden;
+    overflow: clip;
+    border-radius: 1rem;
+    &::before {
+      content: "";
+      display: block;
+      padding-bottom: 81.6%;
+    }
+  }
+
+  &::after {
+    content: "";
+    background-image: linear-gradient(
+        355deg,
+        rgba(0, 0, 0, 0) 13.2%,
+        rgba(0, 0, 0, 0.6) 80.93%
+      ),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%);
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+
+    @include breakpoint(mobile) {
+      background-image: none;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+
+.cyberline-specs__card-bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cyberline-specs__card-content {
+  grid-area: stack;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  z-index: 10;
+
+  @include breakpoint(mobile) {
+    padding: 0;
+    gap: 1.2rem;
+  }
+}
+
+.cyberline-specs__card-title {
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+}
+
+.cyberline-specs__card-text {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-family: var(--inter);
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  p {
+    margin-bottom: 2rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 1.6rem;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

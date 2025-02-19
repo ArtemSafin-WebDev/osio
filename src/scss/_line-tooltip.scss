@@ -10,6 +10,12 @@
   display: flex;
   left: var(--x, 0%);
   top: var(--y, 0%);
+  pointer-events: all;
+
+  .dark-bg & {
+    border-color: #ccc;
+    background: rgba(255, 255, 255, 0.3);
+  }
 
   &:hover {
     .line-tooltip__content {
@@ -21,8 +27,7 @@
     margin-left: -3rem;
     margin-top: -3rem;
     border-radius: 50rem;
-    border: 1px solid #ccc;
-    background: rgba(255, 255, 255, 0.3);
+
     backdrop-filter: blur(6px);
     left: var(--mobile-x, 0%);
     top: var(--mobile-y, 0%);
@@ -36,20 +41,25 @@
   display: grid;
   place-items: center;
 
-  @include breakpoint(mobile) {
-    width: 6rem;
-    height: 6rem;
-  }
-
   svg {
     fill: black;
     width: 2.4rem;
     height: 2.4rem;
   }
 
+  .dark-bg & {
+    svg {
+      fill: white;
+    }
+  }
   & + .line-tooltip__content .line-tooltip__text {
     padding-left: 0;
     padding-right: 2rem;
+  }
+
+  @include breakpoint(mobile) {
+    width: 6rem;
+    height: 6rem;
   }
 }
 

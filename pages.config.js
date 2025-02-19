@@ -11,6 +11,7 @@ import singleNews2 from "./pages-data/singleNews2";
 import about from "./pages-data/about";
 import notFound from "./pages-data/notFound";
 import focusline from "./pages-data/focusline";
+import cyberline from "./pages-data/cyberline";
 
 const pagesConfig = {
   ...home,
@@ -26,6 +27,7 @@ const pagesConfig = {
   ...about,
   ...notFound,
   ...focusline,
+  ...cyberline,
 };
 
 export default pagesConfig;

@@ -1,0 +1,49 @@
+.line-geography {
+  @include blockWrapper;
+  margin-bottom: 4rem;
+  @include breakpoint(mobile) {
+    margin-bottom: 8rem;
+  }
+}
+
+.line-geography__map {
+  @include breakpointMF(small-tablet) {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+  }
+
+  @include breakpoint(mobile) {
+    @include blockContent;
+    order: 30;
+  }
+}
+
+.line-geography__content {
+  @include blockContent;
+  .line-text-content__text {
+    max-width: 70rem;
+  }
+
+  @include breakpointMF(small-tablet) {
+    grid-row: 1 / 2;
+    z-index: 10;
+  }
+}
+
+.line-geography__row {
+  padding-top: 14rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+
+  @include breakpoint(mobile) {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .line-text-content {
+    grid-column: 2 / 3;
+  }
+}
