@@ -1,6 +1,9 @@
 .line-geography {
   @include blockWrapper;
   margin-bottom: 4rem;
+  &--focusline {
+    margin-bottom: 17rem;
+  }
   @include breakpoint(mobile) {
     margin-bottom: 8rem;
   }
