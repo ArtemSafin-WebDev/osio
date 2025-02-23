@@ -1,5 +1,10 @@
 .line-fullscreen-image {
   @include blockWrapper;
+  background-color: #f2f2f2;
+
+  .dark-bg & {
+    background: #1b1b22;
+  }
 
   &--webcamera {
     margin-bottom: 20rem;
@@ -12,9 +17,38 @@
   &--ports {
     color: var(--text-color);
 
+    &-margin {
+      margin-bottom: 20rem;
+
+      @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+      }
+    }
+
     @include breakpoint(mobile) {
       margin-bottom: 4rem;
+      padding: 4rem 0;
+      padding-bottom: 6rem;
+      grid-row-gap: 6rem;
+      position: relative;
+      z-index: 1;
     }
+  }
+
+  &--capacity {
+    background-color: #ebf2fc;
+    @include breakpoint(mobile) {
+      margin-bottom: 4rem;
+      padding: 4rem 0;
+      padding-bottom: 6rem;
+      grid-row-gap: 6rem;
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  &--ports-blue {
+    background-color: #ebf2fc;
   }
 
   &--for-office {
@@ -45,17 +79,19 @@
       margin-bottom: 5rem;
     }
   }
+  &--capacity {
+    margin-bottom: 20rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 5rem;
+    }
+  }
 }
 
 .line-fullscreen-image__bg {
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   position: relative;
-  background-color: #f2f2f2;
-
-  .dark-bg & {
-    background: #1b1b22;
-  }
 
   .line-fullscreen-image--impressions & {
     background-color: transparent;
@@ -80,8 +116,38 @@
 
   .line-fullscreen-image--ports & {
     @include breakpoint(mobile) {
+      grid-row: 2 / 3;
+      position: static;
+
+      .line-fullscreen-image__main-image {
+        position: relative;
+        left: auto;
+        top: auto;
+        z-index: 4;
+      }
       &::before {
         padding-bottom: 270%;
+
+        display: none;
+      }
+    }
+  }
+  .line-fullscreen-image--capacity & {
+    @include breakpoint(mobile) {
+      @include blockContent;
+      grid-row: 2 / 3;
+      position: static;
+
+      .line-fullscreen-image__main-image {
+        position: relative;
+        left: auto;
+        top: auto;
+        z-index: 4;
+      }
+      &::before {
+        padding-bottom: 270%;
+
+        display: none;
       }
     }
   }
@@ -91,6 +157,15 @@
       display: none;
     }
   }
+}
+
+.line-fullscreen-image__main-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .line-fullscreen-image__bg-image {
@@ -153,10 +228,22 @@
         grid-column: 2 / 3;
       }
     }
+    .line-fullscreen-image--capacity & {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-gap: 2rem;
+      padding: 10rem 0;
+      padding-top: 4rem;
+
+      .line-text-content {
+        grid-column: 2 / 3;
+      }
+    }
 
     .line-fullscreen-image--style & {
       padding: 10rem 0;
     }
+
     .line-fullscreen-image--webcamera-cyberline & {
       padding-top: 22rem;
     }
@@ -171,6 +258,14 @@
 
   @include breakpoint(mobile) {
     padding: 4rem 0;
+
+    .line-fullscreen-image--ports & {
+      padding: 0;
+    }
+    .line-fullscreen-image--capacity & {
+      padding: 0;
+      position: static;
+    }
   }
 }
 

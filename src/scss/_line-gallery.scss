@@ -227,7 +227,6 @@
   display: grid;
   place-items: center;
   text-align: center;
-  background: linear-gradient(103deg, #c3c2cd 9.13%, #1e1e1e 116.27%);
   font-size: 1.3rem;
   font-style: normal;
   font-weight: 700;
@@ -235,6 +234,10 @@
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   border-radius: 50%;
+  background: var(
+    --btn-bg,
+    linear-gradient(103deg, #c3c2cd 9.13%, #1e1e1e 116.27%)
+  );
 
   @include breakpoint(mobile) {
     width: 3rem;

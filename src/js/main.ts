@@ -22,6 +22,7 @@ import aboutFeatures from "./aboutFeatures";
 import lineCatalog from "./lineCatalog";
 import lineGallery from "./lineGallery";
 import tabs from "./tabs";
+import lineVariants from "./lineVariants";
 
 document.addEventListener("DOMContentLoaded", () => {
   singleNews();
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   lineCatalog();
   lineGallery();
   tabs();
+  lineVariants();
 });
 
 window.addEventListener("load", () => {

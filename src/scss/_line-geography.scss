@@ -4,8 +4,15 @@
   &--focusline {
     margin-bottom: 17rem;
   }
+  &--baseline {
+    margin-top: -10rem;
+  }
   @include breakpoint(mobile) {
     margin-bottom: 8rem;
+
+    &--baseline {
+      margin-top: 0;
+    }
   }
 }
 
