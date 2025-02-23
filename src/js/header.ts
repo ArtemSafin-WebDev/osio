@@ -119,4 +119,25 @@ export default function header() {
     }
     document.body.classList.remove("mobile-search-open");
   });
+
+  const items = Array.from(
+    document.querySelectorAll<HTMLElement>(".osio-header__nav-list-item")
+  );
+  items.forEach((item) => {
+    if (!item.querySelector(".osio-header__submenu-dropdown")) return;
+    const link = item.querySelector<HTMLLinkElement>(".osio-header__nav-link");
+    link?.addEventListener("click", (event) => {
+      if (!window.matchMedia("(max-width: 640px)").matches) return;
+      event.preventDefault();
+      item.classList.add("active");
+    });
+
+    const backBtn = item.querySelector<HTMLButtonElement>(
+      ".osio-header__submenu-dropdown-back"
+    );
+    backBtn?.addEventListener("click", (event) => {
+      event.preventDefault();
+      item.classList.remove("active");
+    });
+  });
 }
