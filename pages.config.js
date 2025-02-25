@@ -13,6 +13,7 @@ import notFound from "./pages-data/notFound";
 import focusline from "./pages-data/focusline";
 import cyberline from "./pages-data/cyberline";
 import baseline from "./pages-data/baseline";
+import block from "./pages-data/block";
 
 const pagesConfig = {
   ...home,
@@ -30,6 +31,7 @@ const pagesConfig = {
   ...focusline,
   ...cyberline,
   ...baseline,
+  ...block,
 };
 
 export default pagesConfig;

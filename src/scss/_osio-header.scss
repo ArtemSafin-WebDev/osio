@@ -802,6 +802,7 @@
   color: black;
   background-color: var(--primary-color);
   border-radius: 1rem;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .osio-header__categories-dropdown {

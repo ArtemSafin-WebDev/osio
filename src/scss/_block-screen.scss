@@ -1,0 +1,134 @@
+.block-screen {
+  @include blockWrapper;
+  position: relative;
+  z-index: 1;
+  color: white;
+  margin-bottom: 17rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 4rem;
+  }
+
+  .line-tooltip {
+    color: var(--text-color);
+  }
+}
+
+.block-screen__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.block-screen__bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.block-screen__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  min-height: 166.6rem;
+
+  @include breakpoint(mobile) {
+    padding: 4rem 0;
+    min-height: 132.7rem;
+  }
+  .line-text-content {
+    max-width: 46rem;
+  }
+}
+
+.block-screen__list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-gap: 2rem;
+  margin-top: auto;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 0.8rem;
+  }
+}
+
+.block-screen__list-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.block-screen__card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: 1fr auto 1fr;
+  flex-grow: 1;
+  border-radius: 1rem;
+  background: #fff;
+  padding: 4rem;
+  grid-gap: 2rem;
+  color: var(--text-color);
+  min-height: 30rem;
+
+  @include breakpoint(mobile) {
+    padding: 1.6rem;
+    min-height: 15.4rem;
+  }
+}
+
+.block-screen__card-icon {
+  flex-shrink: 0;
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.block-screen__card-text-content {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.block-screen__card-title {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.05rem;
+  color: #77787d;
+  font-family: var(--inter);
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.05rem;
+  }
+}
+
+.block-screen__card-amount {
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  @include breakpoint(mobile) {
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-transform: uppercase;
+  }
+}
