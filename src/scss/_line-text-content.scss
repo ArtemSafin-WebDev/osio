@@ -25,6 +25,10 @@
   margin-bottom: 2rem;
   text-wrap: balance;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @include breakpoint(mobile) {
     font-size: 2.4rem;
     font-style: normal;

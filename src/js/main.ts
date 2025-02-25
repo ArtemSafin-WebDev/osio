@@ -23,6 +23,7 @@ import lineCatalog from "./lineCatalog";
 import lineGallery from "./lineGallery";
 import tabs from "./tabs";
 import lineVariants from "./lineVariants";
+import selectColor from "./selectColor";
 
 document.addEventListener("DOMContentLoaded", () => {
   singleNews();
@@ -48,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
   lineGallery();
   tabs();
   lineVariants();
+  selectColor();
 });
 
 window.addEventListener("load", () => {
