@@ -1,0 +1,61 @@
+.minipc-upgrade {
+  @include blockWrapper;
+  margin-bottom: 4rem;
+}
+
+.minipc-upgrade__content {
+  @include blockContent;
+}
+
+.minipc-upgrade__top-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  margin-bottom: 6rem;
+  .line-text-content {
+    grid-column: 2 / 3;
+  }
+
+  @include breakpoint(mobile) {
+    display: block;
+    margin-bottom: 4rem;
+  }
+}
+
+.minipc-upgrade__row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+}
+
+.minipc-upgrade__image-wrapper {
+  position: relative;
+  border-radius: 1rem;
+  overflow: hidden;
+  overflow: clip;
+
+  @include breakpoint(mobile) {
+    order: -20;
+  }
+
+  &::before {
+    content: "";
+    padding-bottom: 77%;
+    display: block;
+  }
+}
+
+.minipc-upgrade__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

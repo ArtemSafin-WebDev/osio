@@ -90,6 +90,9 @@
   @include breakpoint(mobile) {
     margin-top: 2rem;
     gap: 1rem;
+    &--small-mobile-gap {
+      gap: 0.4rem;
+    }
   }
 }
 
@@ -101,6 +104,11 @@
   width: 6.2rem;
   height: 6.2rem;
   position: relative;
+
+  &--rounded {
+    border-radius: 0.6rem;
+    overflow: hidden;
+  }
 
   @include breakpoint(mobile) {
     width: 4rem;
