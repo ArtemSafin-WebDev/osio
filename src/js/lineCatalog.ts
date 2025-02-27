@@ -7,6 +7,7 @@ export default function lineCatalog() {
   const elements = Array.from(
     document.querySelectorAll<HTMLElement>(".line-catalog")
   );
+  if (document.body.classList.contains('is-admin')) return;
 
   elements.forEach((element) => {
     const tl = gsap.timeline({
