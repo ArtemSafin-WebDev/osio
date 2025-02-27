@@ -1,0 +1,45 @@
+.minipc-design {
+  @include blockWrapper;
+  margin-bottom: 20rem;
+  margin-top: -12rem;
+
+  @include breakpoint(mobile) {
+    margin: 0;
+    margin-bottom: 8rem;
+  }
+}
+
+.minipc-design__content {
+  @include blockContent;
+
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+    .line-text-content {
+      grid-column: 6 / span 2;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.minipc-design__image-wrapper {
+  grid-column: 1 / 5;
+
+  @include breakpoint(mobile) {
+    order: 10;
+  }
+}
+
+.minipc-design__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}

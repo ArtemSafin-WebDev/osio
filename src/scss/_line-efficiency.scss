@@ -1,6 +1,14 @@
 .line-efficiency {
   @include blockWrapper;
   background-color: #ebf2fc;
+  &.line-efficiency--no-bg {
+    background: transparent;
+    margin-bottom: 14rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 8rem;
+    }
+  }
 }
 
 .line-efficiency__content {
@@ -11,9 +19,16 @@
   padding-bottom: 4rem;
   gap: 6rem;
 
+  .line-efficiency & {
+    padding: 0;
+  }
+
   @include breakpoint(mobile) {
     padding: 4rem 0;
     gap: 4rem;
+    .line-efficiency & {
+      padding: 0;
+    }
   }
 }
 

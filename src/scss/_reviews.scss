@@ -224,6 +224,12 @@
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   grid-template-areas: "stack";
+  color: white;
+
+  &:link,
+  &:visited {
+    color: white;
+  }
 
   &::before {
     content: "";
@@ -318,6 +324,7 @@
   line-height: 140%;
   letter-spacing: -0.05rem;
   font-family: var(--inter);
+  text-wrap: balance;
 
   @include breakpoint(mobile) {
     font-size: 2rem;

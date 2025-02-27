@@ -1,6 +1,15 @@
 .line-specs {
   @include blockWrapper;
   background: #f2f2f2;
+
+  &.line-specs--no-bg {
+    background: transparent;
+    margin-bottom: 14rem;
+
+    @include breakpoint(mobile) {
+      margin-bottom: 8rem;
+    }
+  }
 }
 
 .line-specs__content {
@@ -11,10 +20,17 @@
   flex-direction: column;
   gap: 6rem;
 
+  .line-specs--no-bg & {
+    padding: 0;
+  }
+
   @include breakpoint(mobile) {
     padding-top: 4rem;
     padding-bottom: 4rem;
     gap: 4rem;
+    .line-specs--no-bg & {
+      padding: 0;
+    }
   }
 }
 

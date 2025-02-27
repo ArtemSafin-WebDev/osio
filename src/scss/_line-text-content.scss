@@ -25,6 +25,12 @@
   margin-bottom: 2rem;
   text-wrap: balance;
 
+  em {
+    color: #01befb;
+    line-height: 1;
+    font-style: normal;
+  }
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -45,6 +51,10 @@
   line-height: 140%;
   font-family: var(--inter);
   max-width: 47rem;
+
+  &--wide {
+    max-width: 68rem;
+  }
 
   .dark-bg & {
     color: #77787d;
@@ -80,6 +90,9 @@
   @include breakpoint(mobile) {
     margin-top: 2rem;
     gap: 1rem;
+    &--small-mobile-gap {
+      gap: 0.4rem;
+    }
   }
 }
 
@@ -91,6 +104,11 @@
   width: 6.2rem;
   height: 6.2rem;
   position: relative;
+
+  &--rounded {
+    border-radius: 0.6rem;
+    overflow: hidden;
+  }
 
   @include breakpoint(mobile) {
     width: 4rem;
@@ -258,4 +276,14 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+}
+
+.line-text-content__remark {
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-family: var(--inter);
+  color: rgba(black, 0.3);
+  margin-top: 2rem;
 }

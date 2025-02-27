@@ -57,7 +57,7 @@
   text-transform: uppercase;
   color: rgba(black, 0.15);
   justify-self: center;
-  text-wrap: balance;
+
   position: relative;
   max-width: 140rem;
 
@@ -76,7 +76,7 @@
     width: 100%;
     pointer-events: none;
     color: black;
-    text-wrap: balance;
+
     clip-path: inset(0 0 calc(100% - (var(--progress, 0) * 1%)) 0);
   }
 }
