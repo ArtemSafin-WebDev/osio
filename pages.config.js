@@ -15,6 +15,7 @@ import cyberline from "./pages-data/cyberline";
 import baseline from "./pages-data/baseline";
 import block from "./pages-data/block";
 import minipc from "./pages-data/minipc";
+import serviceCenters from "./pages-data/serviceCenters";
 
 const pagesConfig = {
   ...home,
@@ -34,6 +35,7 @@ const pagesConfig = {
   ...baseline,
   ...block,
   ...minipc,
+  ...serviceCenters,
 };
 
 export default pagesConfig;

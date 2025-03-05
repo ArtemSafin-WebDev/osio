@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+  <head>
+    {{> meta }}
+  </head>
+
+  <body>
+    {{> dark-header }}
+    <main class="page-main">
+      {{> service-centers }}
+
+      {{> contact-form }}
+    </main>
+    {{> footer }}
+    <script type="module" src="/src/js/main.ts"></script>
+    <script src="https://api-maps.yandex.ru/v3/?apikey=f02ed68d-66b3-4bd2-b8eb-c88edc899a8f&lang=ru_RU"></script>
+    <script src="/assets/js/service-centers.js"></script>
+  </body>
+
+</html>
