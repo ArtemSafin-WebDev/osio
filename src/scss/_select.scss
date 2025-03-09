@@ -238,19 +238,21 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 600;
     line-height: 100%;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     width: 100%;
     transition: color 0.2s, background-color 0.2s;
     border-radius: 1rem;
     cursor: pointer;
     display: block;
+    color: #77787d;
     .select__choice-input:checked ~ & {
-      background-color: var(--text-color);
-      color: white;
+      background-color: #f2f2f2;
+      color: #77787d;
       cursor: default;
     }
   }

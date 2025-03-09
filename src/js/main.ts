@@ -25,6 +25,7 @@ import tabs from "./tabs";
 import lineVariants from "./lineVariants";
 import selectColor from "./selectColor";
 import modals from "./modals";
+import search from "./search";
 
 document.addEventListener("DOMContentLoaded", () => {
   singleNews();
@@ -52,6 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   lineVariants();
   selectColor();
   modals();
+  search();
 });
 
 window.addEventListener("load", () => {

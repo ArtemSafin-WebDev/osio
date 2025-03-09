@@ -16,6 +16,8 @@ import baseline from "./pages-data/baseline";
 import block from "./pages-data/block";
 import minipc from "./pages-data/minipc";
 import serviceCenters from "./pages-data/serviceCenters";
+import search from "./pages-data/search";
+import searchNotFound from "./pages-data/searchNotFound";
 
 const pagesConfig = {
   ...home,
@@ -36,6 +38,8 @@ const pagesConfig = {
   ...block,
   ...minipc,
   ...serviceCenters,
+  ...search,
+  ...searchNotFound,
 };
 
 export default pagesConfig;

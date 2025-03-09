@@ -729,9 +729,9 @@
   width: 100%;
   z-index: -1;
   background-color: rgba(119, 120, 125, 1);
-  padding-top: 25rem;
+  padding-top: 20rem;
   @include blockWrapper;
-  padding-bottom: 18rem;
+  padding-bottom: 10rem;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s, visibility 0s linear 0.2s;
@@ -760,17 +760,21 @@
   text-transform: uppercase;
 }
 
+.osio-header__search-width-wrapper {
+  width: 100%;
+  max-width: 91rem;
+  align-self: center;
+  margin-top: 10rem;
+}
+
 .osio-header__search-form {
   display: flex;
   align-items: center;
-  align-self: center;
-  margin-top: 10rem;
+
   padding: 1rem;
   border: 1px solid #ffffff;
   border-radius: 1rem;
   gap: 2rem;
-  width: 67.7rem;
-  max-width: 100%;
 }
 
 .osio-header__search-input {
@@ -803,6 +807,12 @@
   background-color: var(--primary-color);
   border-radius: 1rem;
   transition: background-color 0.2s, color 0.2s;
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
 }
 
 .osio-header__categories-dropdown {
@@ -908,7 +918,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s, visibility 0s linear 0.4s;
-
+  color: white;
   body:not(.loaded) & {
     display: none;
   }
@@ -1437,5 +1447,80 @@
     font-weight: 600;
     line-height: 120%;
     text-transform: uppercase;
+  }
+}
+
+.osio-header__search-results {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  @include breakpoint(mobile) {
+    margin-top: 3.2rem;
+    gap: 2.4rem;
+  }
+}
+
+.osio-header__search-results-title {
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  font-family: var(--inter);
+
+  @include breakpoint(mobile) {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+  }
+}
+
+.osio-header__search-results-list {
+  column-count: 2;
+  column-gap: 4rem;
+
+  @include breakpoint(mobile) {
+    column-count: 1;
+  }
+}
+
+.osio-header__search-results-list-item {
+  margin-bottom: 1.2rem;
+  break-inside: avoid;
+
+  @include breakpoint(mobile) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.osio-header__search-results-link {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  font-family: var(--inter);
+  color: rgba(255, 255, 255, 0.5);
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  &:link,
+  &:visited {
+    color: rgba(255, 255, 255, 0.5);
+  }
+
+  span {
+    color: white;
   }
 }

@@ -1,0 +1,1070 @@
+<section class="search">
+    <div class="search__content">
+        <form action="/" method="GET" class="search__form-wrapper">
+            <div method="POST" class="search__form">
+                <input type="text" name="q" class="search__form-input" value="baseLine" placeholder="Поиск по сайту">
+                <button class="search__form-submit" type="submit">
+                    Найти
+                </button>
+            </div>
+        </form>
+        <div class="search__row">
+            <div class="search__nav">
+                <ul class="search__nav-list">
+                    <li class="search__nav-list-item">
+                        <a href="#" class="search__nav-link active">
+                            продукция
+                        </a>
+                    </li>
+                    <li class="search__nav-list-item">
+                        <a href="#" class="search__nav-link">
+                            обзоры
+                        </a>
+                    </li>
+                    <li class="search__nav-list-item">
+                        <a href="#" class="search__nav-link">
+                            новости
+                        </a>
+                    </li>
+                    <li class="search__nav-list-item">
+                        <a href="#" class="search__nav-link">
+                            поддержка
+                        </a>
+                    </li>
+                    <li class="search__nav-list-item">
+                        <a href="#" class="search__nav-link">
+                            драйверы и по
+                        </a>
+                    </li>
+                    <li class="search__nav-list-item">
+                        <a href="#" class="search__nav-link">
+                            документация
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search__filters">
+                <button class="search__filters-btn js-search-filters-open-btn" type="button">
+                    фильтры
+                    <svg width="14" height="14" aria-hidden="true">
+                        <use xlink:href="#filters"></use>
+                    </svg>
+                </button>
+                <div class="search__filters-dropdown">
+                    <div class="search__filters-dropdown-inner">
+                        <div class="search__filters-dropdown-inner-touch-area">
+
+                        </div>
+                        <button class="search__filters-close js-search-filters-close-btn" type="button">
+                            фильтры
+                            <svg width="14" height="14" aria-hidden="true">
+                                <use xlink:href="#filters-close"></use>
+                            </svg>
+                        </button>
+                        <form action="/" method="GET" class="search__filters-form">
+                            <div class="search__filters-selects">
+                                <div class="search__filters-select">
+                                    <div class="select js-select" data-placeholder="устройство">
+                                        <div class="select__accordion-btn">
+                                            <span class="select__btn-accordion-text">
+                                                устройство
+                                            </span>
+                                            <span class="select__btn-accordion-icon">
+
+                                            </span>
+                                        </div>
+                                        <button class="select__btn" type="button">
+
+                                            <span class="select__btn-text js-btn-text">
+
+                                            </span>
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="select__dropdown">
+                                            <div class="select__dropdown-inner">
+                                                <ul class="select__choices-list">
+                                                    <li class="select__choices-list-item">
+                                                        <label class="select__choice">
+                                                            <input type="radio" name="type" value="Устройство 1"
+                                                                class="select__choice-input">
+                                                            <span class="select__choice-mark"></span>
+                                                            <span class="select__choice-text">
+                                                                Устройство 1
+                                                            </span>
+
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__choices-list-item">
+                                                        <label class="select__choice">
+                                                            <input type="radio" name="type" value="Устройство 2"
+                                                                class="select__choice-input">
+                                                            <span class="select__choice-mark"></span>
+                                                            <span class="select__choice-text">
+                                                                Устройство 2
+                                                            </span>
+
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="search__filters-select">
+
+
+                                    <div class="select js-select" data-placeholder="линейка">
+                                        <div class="select__accordion-btn">
+                                            <span class="select__btn-accordion-text">
+                                                линейка
+                                            </span>
+                                            <span class="select__btn-accordion-icon">
+
+                                            </span>
+                                        </div>
+                                        <button class="select__btn" type="button">
+                                            <span class="select__btn-text js-btn-text">
+
+                                            </span>
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="select__dropdown">
+                                            <div class="select__dropdown-inner">
+                                                <ul class="select__choices-list">
+                                                    <li class="select__choices-list-item">
+                                                        <label class="select__choice">
+                                                            <input type="radio" name="line" value="FocusLine"
+                                                                class="select__choice-input">
+                                                            <span class="select__choice-mark"></span>
+                                                            <span class="select__choice-text">
+                                                                FocusLine
+                                                            </span>
+
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__choices-list-item">
+                                                        <label class="select__choice">
+                                                            <input type="radio" name="line" value="BaseLine"
+                                                                class="select__choice-input">
+                                                            <span class="select__choice-mark"></span>
+                                                            <span class="select__choice-text">
+                                                                BaseLine
+                                                            </span>
+
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__choices-list-item">
+                                                        <label class="select__choice">
+                                                            <input type="radio" name="line" value="CyberLine"
+                                                                class="select__choice-input">
+                                                            <span class="select__choice-mark"></span>
+                                                            <span class="select__choice-text">
+                                                                CyberLine
+                                                            </span>
+
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="search__filters-select">
+
+
+                                    <div class="select js-select" data-placeholder="модель">
+                                        <div class="select__accordion-btn">
+                                            <span class="select__btn-accordion-text">
+                                                модель
+                                            </span>
+                                            <span class="select__btn-accordion-icon">
+
+                                            </span>
+                                        </div>
+                                        <button class="select__btn" type="button">
+
+                                            <span class="select__btn-text js-btn-text">
+
+                                            </span>
+                                            <svg width="14" height="14" aria-hidden="true">
+                                                <use xlink:href="#arrow-down"></use>
+                                            </svg>
+                                        </button>
+                                        <div class="select__dropdown">
+                                            <div class="select__dropdown-inner">
+                                                <ul class="select__choices-list">
+                                                    <li class="select__choices-list-item">
+                                                        <label class="select__choice">
+                                                            <input type="radio" name="model" value="Модель 1"
+                                                                class="select__choice-input">
+                                                            <span class="select__choice-mark"></span>
+                                                            <span class="select__choice-text">
+                                                                Модель 1
+                                                            </span>
+
+                                                        </label>
+                                                    </li>
+                                                    <li class="select__choices-list-item">
+                                                        <label class="select__choice">
+                                                            <input type="radio" name="model" value="Модель 2"
+                                                                class="select__choice-input">
+                                                            <span class="select__choice-mark"></span>
+                                                            <span class="select__choice-text">
+                                                                Модель 2
+                                                            </span>
+
+                                                        </label>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <button class="search__filters-apply js-search-filters-close-btn" type="button">
+                                применить
+                            </button>
+
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="search__results">
+            <div class="search__results-tabs">
+                <div class="search__results-tabs-item">
+                    <h3 class="search__results-heading">
+                        РЕЗУЛЬТАТЫ ПОИСКА <span>(3)</span>
+                    </h3>
+                    <ul class="search__results-list">
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Ноутбуки OSiO BaseLine
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Ноутбуки серии BaseLine с диагональю экрана 15,6” - бюджетное решение для
+                                        пользователей, которым необходим надежный и функциональный ноутбук для
+                                        повседневных задач.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-image-container">
+                                    <img src="/images/search/1.webp" alt="" class="search__results-card-image">
+                                </div>
+                                <div class="search__results-card-link">
+                                    ПОДРОБНЕЕ
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Моноблоки OSiO BaseLine
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Моноблоки серии BaseLine с диагональю 23,8” созданы для комфортной работы,
+                                        творчества и использования дома, сочетая высокую производительность, современный
+                                        дизайн и надежность.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-image-container">
+                                    <img src="/images/search/2.webp" alt="" class="search__results-card-image">
+                                </div>
+                                <div class="search__results-card-link">
+                                    ПОДРОБНЕЕ
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Мини ПК OSiO BaseLine
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Линейка миникомпьютеров с широким портфолио комплектаций под ваши любые задачи.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-image-container">
+                                    <img src="/images/search/3.webp" alt="" class="search__results-card-image">
+                                </div>
+                                <div class="search__results-card-link">
+                                    ПОДРОБНЕЕ
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="search__results-tabs-item">
+                    <h3 class="search__results-heading">
+                        РЕЗУЛЬТАТЫ ПОИСКА <span>(37)</span>
+                    </h3>
+                    <ul class="search__results-list">
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Обзор на ноутбук OSiO BaseLine B150i-004
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Ноутбуки серии BaseLine с диагональю экрана 15,6” - бюджетное решение для
+                                        пользователей, которым необходим надежный и функциональный ноутбук для
+                                        повседневных задач.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    смотреть
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Обзор на ноутбук OSiO BaseLine B150i-009b
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Ноутбуки серии BaseLine с диагональю экрана 15,6” - бюджетное решение для
+                                        пользователей, которым необходим надежный и функциональный ноутбук для
+                                        повседневных задач.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    смотреть
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Обзор на ноутбук OSiO BaseLine B150i-004c
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Ноутбуки серии BaseLine с диагональю экрана 15,6” - бюджетное решение для
+                                        пользователей, которым необходим надежный и функциональный ноутбук для
+                                        повседневных задач.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    смотреть
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Обзор на ноутбук OSiO BaseLine B150i-001c
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Ноутбуки серии BaseLine с диагональю экрана 15,6” - бюджетное решение для
+                                        пользователей, которым необходим надежный и функциональный ноутбук для
+                                        повседневных задач.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    смотреть
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Обзор на моноблок OSiO BaseLine B240i-014b
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Моноблоки серии BaseLine с диагональю 23,8” созданы для комфортной работы,
+                                        творчества и использования дома, сочетая высокую производительность, современный
+                                        дизайн и надежность.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    смотреть
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Обзор на моноблок OSiO BaseLine B240i-019w
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Моноблоки серии BaseLine с диагональю 23,8” созданы для комфортной работы,
+                                        творчества и использования дома, сочетая высокую производительность, современный
+                                        дизайн и надежность.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    смотреть
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Обзор на моноблок OSiO BaseLine B240i-018b
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Моноблоки серии BaseLine с диагональю 23,8” созданы для комфортной работы,
+                                        творчества и использования дома, сочетая высокую производительность, современный
+                                        дизайн и надежность.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    смотреть
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Обзор на мини ПК OSiO BaseLine B51i-017
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Линейка миникомпьютеров с широким портфолио комплектаций под ваши любые задачи.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    смотреть
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Обзор на мини ПК OSiO BaseLine B51i-003
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Линейка миникомпьютеров с широким портфолио комплектаций под ваши любые задачи.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    смотреть
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Обзор на мини ПК OSiO BaseLine B51i-011
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Линейка миникомпьютеров с широким портфолио комплектаций под ваши любые задачи.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    смотреть
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="search__results-tabs-item">
+                    <h3 class="search__results-heading">
+                        РЕЗУЛЬТАТЫ ПОИСКА <span>(16)</span>
+                    </h3>
+                    <ul class="search__results-list">
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Спеццена на ноутбук OSiO BaseLine - скидка 4 000 рублей!
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Уникальная возможность приобрести ноутбук OSiO BaseLine
+                                        B150i-001c. Необыкновенный, красивый и модный цвет
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Представляем новинку: серия BaseLine доступная каждому
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Розничный бренд OSiO представляет новую линейку ноутбуков BaseLine,
+                                        предназначенную для студентов и работающих профессионалов по доступной цене.
+                                        Новая линейка ноутбуков - надежный помощник, созданный для комфортной учеб...
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Мини-ПК OSiO BaseLine: максимум возможностей в компактном формате
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Представляем мини-ПК OSiO BaseLine — мощные и энергоэффективные решения для
+                                        работы и развлечений. Компактный размер и высокопроизводительные процессоры
+                                        делают их отличным выбором для офиса, дома и бизнеса.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Работайте и учитесь с комфортом: ноутбуки OSiO BaseLine для студентов и
+                                        профессионалов
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Обновленные ноутбуки OSiO BaseLine теперь еще удобнее! Легкий корпус, мощная
+                                        батарея и яркий дисплей обеспечат комфортную работу и учебу в любом месте.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Новые технологии в вашем доме: моноблоки OSiO BaseLine
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Моноблоки OSiO BaseLine — это надежность и стиль в одном устройстве. Высокая
+                                        производительность, минималистичный дизайн и удобство использования делают их
+                                        отличным выбором для домашнего и офисного пространства.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Представляем новинку: серия BaseLine доступная каждому
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Розничный бренд OSiO представляет новую линейку ноутбуков BaseLine,
+                                        предназначенную для студентов и работающих профессионалов по доступной цене.
+                                        Новая линейка ноутбуков - надежный помощник, созданный для комфортной учеб...
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Мини-ПК OSiO BaseLine: максимум возможностей в компактном формате
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Представляем мини-ПК OSiO BaseLine — мощные и энергоэффективные решения для
+                                        работы и развлечений. Компактный размер и высокопроизводительные процессоры
+                                        делают их отличным выбором для офиса, дома и бизнеса.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Спеццена на ноутбук OSiO BaseLine - скидка 4 000 рублей!
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Уникальная возможность приобрести ноутбук OSiO BaseLine B150i-001c.
+                                        Необыкновенный, красивый и модный цвет
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    подробнее
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Новые технологии в вашем доме: моноблоки OSiO BaseLine
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Моноблоки OSiO BaseLine — это надежность и стиль в одном устройстве. Высокая
+                                        производительность, минималистичный дизайн и удобство использования делают их
+                                        отличным выбором для домашнего и офисного пространства.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-link">
+                                    подробнее
+                                </div>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="search__results-tabs-item">
+                    <h3 class="search__results-heading">
+                        РЕЗУЛЬТАТЫ ПОИСКА <span>(16)</span>
+                    </h3>
+                    <ul class="search__results-list">
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="search__results-tabs-item">
+                    <h3 class="search__results-heading">
+                        РЕЗУЛЬТАТЫ ПОИСКА <span>(16)</span>
+                    </h3>
+                    <ul class="search__results-list">
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+                <div class="search__results-tabs-item">
+                    <h3 class="search__results-heading">
+                        РЕЗУЛЬТАТЫ ПОИСКА <span>(16)</span>
+                    </h3>
+                    <ul class="search__results-list">
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="search__results-list-item">
+                            <a href="#" class="search__results-card">
+                                <div class="search__results-card-text-content">
+                                    <h4 class="search__results-card-title">
+                                        Драйверы для ноутбуков OSiO BaseLine B140i
+                                    </h4>
+                                    <div class="search__results-card-text">
+                                        Этот драйвер обеспечивает оптимальную стабильность и производительность.
+                                        Драйверы Production Branch оснащены сертификатами ISV, поддержкой всего
+                                        жизненного цикла и обеспечивают все функции драйверов Studio такой же версии.
+                                    </div>
+                                </div>
+                                <div class="search__results-card-download">
+                                    <svg width="14" height="14" aria-hidden="true">
+                                        <use xlink:href="#download"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</section>
