@@ -1,491 +1,137 @@
 <section class="drivers">
-    <div class="drivers__content">
-        <div class="breadcrumbs">
-            <a href="#">
-                ГЛАВНАЯ
-            </a>
-            <a href="#">
-                поддержка
-            </a>
-            <a class="active">
-                драйверы и по
-            </a>
-        </div>
-        <div class="drivers__categories">
-            <a href="#" class="active">
-                Драйверы и по
-            </a>
-            <span>/</span>
-            <a href="#">
-                документация
-            </a>
-        </div>
-        <div class="drivers__filters">
-            <button class="drivers__filters-btn js-drivers-filters-open-btn" type="button">
-                фильтры
-                <svg width="14" height="14" aria-hidden="true">
-                    <use xlink:href="#filters"></use>
-                </svg>
-            </button>
-            <div class="drivers__filters-dropdown">
-                <div class="drivers__filters-dropdown-inner">
-                    <div class="drivers__filters-dropdown-inner-touch-area">
-
-                    </div>
-                    <button class="drivers__filters-close js-drivers-filters-close-btn" type="button">
-                        фильтры
-                        <svg width="14" height="14" aria-hidden="true">
-                            <use xlink:href="#filters-close"></use>
-                        </svg>
-                    </button>
-                    <form action="/" method="GET" class="drivers__filters-form">
-                        <div class="drivers__filters-selects">
-                            <div class="drivers__filters-select">
-
-
-                                <div class="select js-select" data-placeholder="тип оборудования">
-                                    <div class="select__accordion-btn">
-                                        <span class="select__btn-accordion-text">
-                                            тип оборудования
-                                        </span>
-                                        <span class="select__btn-accordion-icon">
-
-                                        </span>
-                                    </div>
-                                    <button class="select__btn" type="button">
-
-                                        <span class="select__btn-text js-btn-text">
-
-                                        </span>
-                                        <svg width="14" height="14" aria-hidden="true">
-                                            <use xlink:href="#arrow-down"></use>
-                                        </svg>
-                                    </button>
-                                    <div class="select__dropdown">
-                                        <div class="select__dropdown-inner">
-                                            <ul class="select__choices-list">
-                                                <li class="select__choices-list-item">
-                                                    <label class="select__choice">
-                                                        <input type="radio" name="type" value="Тип 1"
-                                                            class="select__choice-input">
-                                                        <span class="select__choice-mark"></span>
-                                                        <span class="select__choice-text">
-                                                            Тип 1
-                                                        </span>
-
-                                                    </label>
-                                                </li>
-                                                <li class="select__choices-list-item">
-                                                    <label class="select__choice">
-                                                        <input type="radio" name="type" value="Тип 2"
-                                                            class="select__choice-input">
-                                                        <span class="select__choice-mark"></span>
-                                                        <span class="select__choice-text">
-                                                            Тип 2
-                                                        </span>
-
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="drivers__filters-select">
-
-
-                                <div class="select js-select" data-placeholder="линейка">
-                                    <div class="select__accordion-btn">
-                                        <span class="select__btn-accordion-text">
-                                            линейка
-                                        </span>
-                                        <span class="select__btn-accordion-icon">
-
-                                        </span>
-                                    </div>
-                                    <button class="select__btn" type="button">
-                                        <span class="select__btn-text js-btn-text">
-
-                                        </span>
-                                        <svg width="14" height="14" aria-hidden="true">
-                                            <use xlink:href="#arrow-down"></use>
-                                        </svg>
-                                    </button>
-                                    <div class="select__dropdown">
-                                        <div class="select__dropdown-inner">
-                                            <ul class="select__choices-list">
-                                                <li class="select__choices-list-item">
-                                                    <label class="select__choice">
-                                                        <input type="radio" name="line" value="FocusLine"
-                                                            class="select__choice-input">
-                                                        <span class="select__choice-mark"></span>
-                                                        <span class="select__choice-text">
-                                                            FocusLine
-                                                        </span>
-
-                                                    </label>
-                                                </li>
-                                                <li class="select__choices-list-item">
-                                                    <label class="select__choice">
-                                                        <input type="radio" name="line" value="BaseLine"
-                                                            class="select__choice-input">
-                                                        <span class="select__choice-mark"></span>
-                                                        <span class="select__choice-text">
-                                                            BaseLine
-                                                        </span>
-
-                                                    </label>
-                                                </li>
-                                                <li class="select__choices-list-item">
-                                                    <label class="select__choice">
-                                                        <input type="radio" name="line" value="CyberLine"
-                                                            class="select__choice-input">
-                                                        <span class="select__choice-mark"></span>
-                                                        <span class="select__choice-text">
-                                                            CyberLine
-                                                        </span>
-
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="drivers__filters-select">
-
-
-                                <div class="select js-select" data-placeholder="модель">
-                                    <div class="select__accordion-btn">
-                                        <span class="select__btn-accordion-text">
-                                            модель
-                                        </span>
-                                        <span class="select__btn-accordion-icon">
-
-                                        </span>
-                                    </div>
-                                    <button class="select__btn" type="button">
-
-                                        <span class="select__btn-text js-btn-text">
-
-                                        </span>
-                                        <svg width="14" height="14" aria-hidden="true">
-                                            <use xlink:href="#arrow-down"></use>
-                                        </svg>
-                                    </button>
-                                    <div class="select__dropdown">
-                                        <div class="select__dropdown-inner">
-                                            <ul class="select__choices-list">
-                                                <li class="select__choices-list-item">
-                                                    <label class="select__choice">
-                                                        <input type="radio" name="model" value="Модель 1"
-                                                            class="select__choice-input">
-                                                        <span class="select__choice-mark"></span>
-                                                        <span class="select__choice-text">
-                                                            Модель 1
-                                                        </span>
-
-                                                    </label>
-                                                </li>
-                                                <li class="select__choices-list-item">
-                                                    <label class="select__choice">
-                                                        <input type="radio" name="model" value="Модель 2"
-                                                            class="select__choice-input">
-                                                        <span class="select__choice-mark"></span>
-                                                        <span class="select__choice-text">
-                                                            Модель 2
-                                                        </span>
-
-                                                    </label>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                        <button class="drivers__filters-apply js-drivers-filters-close-btn" type="button">
-                            применить
-                        </button>
-                        <button class="drivers__filters-reset" type="reset">
-                            сбросить фильтры
-                        </button>
-                    </form>
-                </div>
-            </div>
-
-        </div>
-        <div class="drivers__results">
-            <h3 class="drivers__results-heading">
-                Найдено драйверов <span>(42)</span>
-            </h3>
-            <div class="drivers__results-wrapper">
-                <div class="drivers__results-header">
-                    <span class="drivers__results-header-item">
-                        название
-                    </span>
-                    <span class="drivers__results-header-item">
-                        версия драйвера
-                    </span>
-                    <span class="drivers__results-header-item">
-                        дата выпуска
-                    </span>
-                    <span class="drivers__results-header-item">
-                        поддерживаемые ос
-                    </span>
-                    <span class="drivers__results-header-item">
-                        размер файла
-                    </span>
-                </div>
-                <ul class="drivers__results-list">
-                    <li class="drivers__results-list-item">
-                        <a href="#" class="drivers__results-card">
-                            <div class="drivers__results-card-info">
-                                <div class="drivers__results-card-info-heading-wrapper">
-                                    <h4 class="drivers__results-card-title">
-                                        Драйверы для ноутбука OSiO
-                                        BaseLine B150i
-                                    </h4>
-                                    <div class="drivers__results-card-label">
-                                        baseline
-                                    </div>
-                                </div>
-                                <div class="drivers__results-card-info-description">
-                                    Этот драйвер обеспечивает оптимальную стабильность и производительность. Драйверы
-                                    Production Branch оснащены сертификатами ISV, поддержкой всего жизненного цикла и
-                                    обеспечивают все функции драйверов Studio такой же версии.
-                                </div>
-
-                            </div>
-                            <div class="drivers__results-card-version" data-text="версия драйвера">
-                                R550 U10 (553.24)
-                            </div>
-                            <div class="drivers__results-card-date" data-text="дата выпуска">
-                                22 октября 2024
-                            </div>
-                            <div class="drivers__results-card-os" data-text="поддерживаемые ос">
-                                Windows 10,11
-                            </div>
-                            <div class="drivers__results-card-size">
-                                <div class="drivers__results-card-size-text" data-text="размер файла">
-                                    502.9 MB
-                                </div>
-                                <span class="drivers__results-card-icon">
-                                    <svg width="14" height="14" aria-hidden="true">
-                                        <use xlink:href="#download"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="drivers__results-list-item">
-                        <a href="#" class="drivers__results-card">
-                            <div class="drivers__results-card-info">
-                                <div class="drivers__results-card-info-heading-wrapper">
-                                    <h4 class="drivers__results-card-title">
-                                        Драйверы для ноутбука OSiO
-                                        FocusLine F140i 11Gen
-                                    </h4>
-                                    <div class="drivers__results-card-label">
-                                        focusline
-                                    </div>
-                                </div>
-                                <div class="drivers__results-card-info-description">
-                                    Этот драйвер обеспечивает оптимальную стабильность и производительность. Драйверы
-                                    Production Branch оснащены сертификатами ISV, поддержкой всего жизненного цикла и
-                                    обеспечивают все функции драйверов Studio такой же версии.
-                                </div>
-
-                            </div>
-                            <div class="drivers__results-card-version" data-text="версия драйвера">
-                                R550 U10 (553.24)
-                            </div>
-                            <div class="drivers__results-card-date" data-text="дата выпуска">
-                                22 октября 2024
-                            </div>
-                            <div class="drivers__results-card-os" data-text="поддерживаемые ос">
-                                Windows 10,11
-                            </div>
-                            <div class="drivers__results-card-size">
-                                <div class="drivers__results-card-size-text" data-text="размер файла">
-                                    502.9 MB
-                                </div>
-                                <span class="drivers__results-card-icon">
-                                    <svg width="14" height="14" aria-hidden="true">
-                                        <use xlink:href="#download"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="drivers__results-list-item">
-                        <a href="#" class="drivers__results-card">
-                            <div class="drivers__results-card-info">
-                                <div class="drivers__results-card-info-heading-wrapper">
-                                    <h4 class="drivers__results-card-title">
-                                        Драйверы для ноутбука OSiO
-                                        BaseLine B150i
-                                    </h4>
-                                    <div class="drivers__results-card-label">
-                                        baseline
-                                    </div>
-                                </div>
-                                <div class="drivers__results-card-info-description">
-                                    Этот драйвер обеспечивает оптимальную стабильность и производительность. Драйверы
-                                    Production Branch оснащены сертификатами ISV, поддержкой всего жизненного цикла и
-                                    обеспечивают все функции драйверов Studio такой же версии.
-                                </div>
-
-                            </div>
-                            <div class="drivers__results-card-version" data-text="версия драйвера">
-                                R550 U10 (553.24)
-                            </div>
-                            <div class="drivers__results-card-date" data-text="дата выпуска">
-                                22 октября 2024
-                            </div>
-                            <div class="drivers__results-card-os" data-text="поддерживаемые ос">
-                                Windows 10,11
-                            </div>
-                            <div class="drivers__results-card-size">
-                                <div class="drivers__results-card-size-text" data-text="размер файла">
-                                    502.9 MB
-                                </div>
-                                <span class="drivers__results-card-icon">
-                                    <svg width="14" height="14" aria-hidden="true">
-                                        <use xlink:href="#download"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="drivers__results-list-item">
-                        <a href="#" class="drivers__results-card">
-                            <div class="drivers__results-card-info">
-                                <div class="drivers__results-card-info-heading-wrapper">
-                                    <h4 class="drivers__results-card-title">
-                                        Драйверы для ноутбука OSiO
-                                        FocusLine F140i 11Gen
-                                    </h4>
-                                    <div class="drivers__results-card-label">
-                                        focusline
-                                    </div>
-                                </div>
-                                <div class="drivers__results-card-info-description">
-                                    Этот драйвер обеспечивает оптимальную стабильность и производительность. Драйверы
-                                    Production Branch оснащены сертификатами ISV, поддержкой всего жизненного цикла и
-                                    обеспечивают все функции драйверов Studio такой же версии.
-                                </div>
-
-                            </div>
-                            <div class="drivers__results-card-version" data-text="версия драйвера">
-                                R550 U10 (553.24)
-                            </div>
-                            <div class="drivers__results-card-date" data-text="дата выпуска">
-                                22 октября 2024
-                            </div>
-                            <div class="drivers__results-card-os" data-text="поддерживаемые ос">
-                                Windows 10,11
-                            </div>
-                            <div class="drivers__results-card-size">
-                                <div class="drivers__results-card-size-text" data-text="размер файла">
-                                    502.9 MB
-                                </div>
-                                <span class="drivers__results-card-icon">
-                                    <svg width="14" height="14" aria-hidden="true">
-                                        <use xlink:href="#download"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="drivers__results-list-item">
-                        <a href="#" class="drivers__results-card">
-                            <div class="drivers__results-card-info">
-                                <div class="drivers__results-card-info-heading-wrapper">
-                                    <h4 class="drivers__results-card-title">
-                                        Драйверы для ноутбука OSiO
-                                        BaseLine B150i
-                                    </h4>
-                                    <div class="drivers__results-card-label">
-                                        baseline
-                                    </div>
-                                </div>
-                                <div class="drivers__results-card-info-description">
-                                    Этот драйвер обеспечивает оптимальную стабильность и производительность. Драйверы
-                                    Production Branch оснащены сертификатами ISV, поддержкой всего жизненного цикла и
-                                    обеспечивают все функции драйверов Studio такой же версии.
-                                </div>
-
-                            </div>
-                            <div class="drivers__results-card-version" data-text="версия драйвера">
-                                R550 U10 (553.24)
-                            </div>
-                            <div class="drivers__results-card-date" data-text="дата выпуска">
-                                22 октября 2024
-                            </div>
-                            <div class="drivers__results-card-os" data-text="поддерживаемые ос">
-                                Windows 10,11
-                            </div>
-                            <div class="drivers__results-card-size">
-                                <div class="drivers__results-card-size-text" data-text="размер файла">
-                                    502.9 MB
-                                </div>
-                                <span class="drivers__results-card-icon">
-                                    <svg width="14" height="14" aria-hidden="true">
-                                        <use xlink:href="#download"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="drivers__results-list-item">
-                        <a href="#" class="drivers__results-card">
-                            <div class="drivers__results-card-info">
-                                <div class="drivers__results-card-info-heading-wrapper">
-                                    <h4 class="drivers__results-card-title">
-                                        Драйверы для ноутбука OSiO
-                                        FocusLine F140i 11Gen
-                                    </h4>
-                                    <div class="drivers__results-card-label">
-                                        focusline
-                                    </div>
-                                </div>
-                                <div class="drivers__results-card-info-description">
-                                    Этот драйвер обеспечивает оптимальную стабильность и производительность. Драйверы
-                                    Production Branch оснащены сертификатами ISV, поддержкой всего жизненного цикла и
-                                    обеспечивают все функции драйверов Studio такой же версии.
-                                </div>
-
-                            </div>
-                            <div class="drivers__results-card-version" data-text="версия драйвера">
-                                R550 U10 (553.24)
-                            </div>
-                            <div class="drivers__results-card-date" data-text="дата выпуска">
-                                22 октября 2024
-                            </div>
-                            <div class="drivers__results-card-os" data-text="поддерживаемые ос">
-                                Windows 10,11
-                            </div>
-                            <div class="drivers__results-card-size">
-                                <div class="drivers__results-card-size-text" data-text="размер файла">
-                                    502.9 MB
-                                </div>
-                                <span class="drivers__results-card-icon">
-                                    <svg width="14" height="14" aria-hidden="true">
-                                        <use xlink:href="#download"></use>
-                                    </svg>
-                                </span>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-                <a href="#" class="drivers__show-more">
-                    показать еще
-                </a>
-            </div>
-        </div>
+  <div class="drivers__content">
+    <div class="breadcrumbs">
+      <a href="#"> ГЛАВНАЯ </a>
+      <a href="#"> поддержка </a>
+      <a class="active"> драйверы и по </a>
     </div>
+    <div class="drivers__categories">
+      <a href="#" class="active"> Драйверы и по </a>
+      <span>/</span>
+      <a href="#"> документация </a>
+    </div>
+    <div class="drivers__search">
+      <div class="drivers__search-text">
+        Найдите нужный драйвер в списке ниже или воспользуйтесь поиском по
+        серийному номеру устройства.
+      </div>
+      <form action="/" method="GET" class="drivers__search-form">
+        <div class="drivers__search-form-wrapper">
+          <input
+            type="search"
+            class="drivers__search-form-input"
+            placeholder="введите серийный номер"
+          />
+          <button class="drivers__search-form-submit" type="submit">
+            Найти
+          </button>
+        </div>
+        <div class="drivers__search-form-remark">
+          Заводской номер можно найти на шильдике корпуса устройства.<br />
+          Формат серийного номера: 0123XX4567890
+        </div>
+      </form>
+    </div>
+    <div class="drivers__results">
+      <h3 class="drivers__results-heading">результаты поиска</h3>
+      <div class="drivers__results-wrapper">
+        <div class="drivers__results-header">
+          <span class="drivers__results-header-item"> название </span>
+          <span class="drivers__results-header-item"> размер файла </span>
+        </div>
+        <ul class="drivers__results-list drivers__results-list--drivers">
+          <li class="drivers__results-list-item">
+            <a href="#" class="drivers__new-card">
+              <h3 class="drivers__new-card-title">
+                Драйверы для ноутбука OSiO BaseLine B150i
+              </h3>
+              <div class="drivers__new-card-wrapper">
+                <div class="drivers__new-card-file">502.9 MB</div>
+                <span class="drivers__new-card-icon">
+                  <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#download"></use>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="drivers__results-list-item">
+            <a href="#" class="drivers__new-card">
+              <h3 class="drivers__new-card-title">
+                Драйверы для ноутбука OSiO FocusLine F140i 11Gen
+              </h3>
+              <div class="drivers__new-card-wrapper">
+                <div class="drivers__new-card-file">502.9 MB</div>
+                <span class="drivers__new-card-icon">
+                  <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#download"></use>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="drivers__results-list-item">
+            <a href="#" class="drivers__new-card">
+              <h3 class="drivers__new-card-title">
+                Драйверы для ноутбука OSiO BaseLine B240i 11Gen
+              </h3>
+              <div class="drivers__new-card-wrapper">
+                <div class="drivers__new-card-file">502.9 MB</div>
+                <span class="drivers__new-card-icon">
+                  <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#download"></use>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="drivers__results-list-item">
+            <a href="#" class="drivers__new-card">
+              <h3 class="drivers__new-card-title">
+                Драйверы для ноутбука OSiO CyberLine C150i-004 (RTX 2050)
+              </h3>
+              <div class="drivers__new-card-wrapper">
+                <div class="drivers__new-card-file">502.9 MB</div>
+                <span class="drivers__new-card-icon">
+                  <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#download"></use>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="drivers__results-list-item">
+            <a href="#" class="drivers__new-card">
+              <h3 class="drivers__new-card-title">
+                Драйверы для ноутбука OSiO FocusLine F150i 11Gen
+              </h3>
+              <div class="drivers__new-card-wrapper">
+                <div class="drivers__new-card-file">502.9 MB</div>
+                <span class="drivers__new-card-icon">
+                  <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#download"></use>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          </li>
+          <li class="drivers__results-list-item">
+            <a href="#" class="drivers__new-card">
+              <h3 class="drivers__new-card-title">
+                Драйверы для ноутбуков OSiO CyberLine (RTX 3050,4050,4060)
+              </h3>
+              <div class="drivers__new-card-wrapper">
+                <div class="drivers__new-card-file">502.9 MB</div>
+                <span class="drivers__new-card-icon">
+                  <svg width="14" height="14" aria-hidden="true">
+                    <use xlink:href="#download"></use>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
