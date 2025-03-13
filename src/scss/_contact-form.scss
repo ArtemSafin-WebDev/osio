@@ -158,6 +158,10 @@
   &:focus {
     border-color: white;
   }
+
+  &.not-valid {
+    border-color: var(--error-color);
+  }
 }
 
 .contact-form__form-select {
@@ -227,7 +231,7 @@
   position: absolute;
   left: 0;
   top: 100%;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   width: 100%;
   opacity: 0;
   visibility: hidden;
@@ -245,9 +249,8 @@
   display: flex;
   flex-direction: column;
   height: auto;
-  background-color: rgba(119, 120, 125, 1);
-  color: white;
-  border: 1px solid white;
+  background-color: #fff;
+  color: var(--text-color);
   border-radius: 0.8rem;
   overflow: hidden;
 }
@@ -263,14 +266,15 @@
 }
 
 .contact-form__form-select-choice-text {
+  font-size: 1.2rem;
   font-style: normal;
   font-weight: 600;
-  font-size: 1.4rem;
   line-height: 100%;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
-  transition: color 0.2s, background-color 0.2s;
+  padding: 2rem 2rem;
+  color: #77787d;
   display: block;
-  padding: 2.4rem 2rem;
 
   @include breakpoint(mobile) {
     padding: 2rem 2rem;
@@ -283,13 +287,16 @@
 
 .contact-form__form-select-choice-input:checked
   ~ .contact-form__form-select-choice-text {
-  background-color: white;
-  color: black;
+  background-color: #f2f2f2;
 }
 
 .contact-form__form-policy {
   align-self: center;
   margin-bottom: 4rem;
+
+  .validation-error {
+    display: none;
+  }
 
   @include breakpoint(mobile) {
     margin-bottom: 1.6rem;
@@ -342,6 +349,11 @@
   place-items: center;
   width: 3rem;
   height: 3rem;
+  transition: border-color 0.2s;
+
+  .contact-form__form-policy:has(.validation-error) & {
+    border-color: var(--error-color);
+  }
 
   @include breakpoint(mobile) {
     width: 2rem;
