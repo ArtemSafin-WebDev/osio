@@ -18,6 +18,7 @@ import minipc from "./pages-data/minipc";
 import serviceCenters from "./pages-data/serviceCenters";
 import search from "./pages-data/search";
 import searchNotFound from "./pages-data/searchNotFound";
+import specs from "./pages-data/specs";
 
 const pagesConfig = {
   ...home,
@@ -40,6 +41,7 @@ const pagesConfig = {
   ...serviceCenters,
   ...search,
   ...searchNotFound,
+  ...specs,
 };
 
 export default pagesConfig;
