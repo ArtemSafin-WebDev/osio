@@ -2,6 +2,10 @@ import Swiper from "swiper";
 import "swiper/css";
 import { Navigation, Thumbs } from "swiper/modules";
 import "swiper/css/thumbs";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function lineGallery() {
   const elements = Array.from(
@@ -9,6 +13,7 @@ export default function lineGallery() {
   );
 
   elements.forEach((element) => {
+    let mm = gsap.matchMedia();
     const sliders = Array.from(
       element.querySelectorAll<HTMLElement>(".line-gallery__slider")
     );
@@ -59,5 +64,43 @@ export default function lineGallery() {
         },
       });
     });
+    mm.add(
+      "(min-width: 641px)",
+      () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: element,
+            start: "top bottom-=40%",
+          },
+        });
+
+        tl.from(".line-gallery__main", {
+          autoAlpha: 0,
+          duration: 0.6,
+          y: 120,
+          ease: "power2.out",
+        });
+      },
+      element
+    );
+    mm.add(
+      "(max-width: 640px)",
+      () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: element,
+            start: "top bottom-=40%",
+          },
+        });
+
+        tl.from(".line-gallery__main", {
+          autoAlpha: 0,
+          duration: 0.6,
+          y: 50,
+          ease: "power2.out",
+        });
+      },
+      element
+    );
   });
 }

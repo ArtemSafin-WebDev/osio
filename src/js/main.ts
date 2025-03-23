@@ -27,8 +27,20 @@ import selectColor from "./selectColor";
 import modals from "./modals";
 import search from "./search";
 import forms from "./forms";
+import linePartner from "./linePromo";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+import smoothScrolling from "./smoothScrolling";
+import lineFeatures from "./lineFeatures";
+import twoImagesWithTextScreen from "./twoImagesWithTextScreen";
+import lineWithTextPreinstalled from "./lineWithTextPreinstalled";
+import lineConnection from "./lineConnection";
+import lineSpecs from "./lineSpecs";
+
+gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
+  smoothScrolling();
   singleNews();
   openWorld();
   shops();
@@ -56,8 +68,15 @@ document.addEventListener("DOMContentLoaded", () => {
   modals();
   search();
   forms();
+  linePartner();
+  lineFeatures();
+  twoImagesWithTextScreen();
+  lineWithTextPreinstalled();
+  lineConnection();
+  lineSpecs();
 });
 
 window.addEventListener("load", () => {
   document.body.classList.add("loaded");
+  ScrollTrigger.refresh();
 });

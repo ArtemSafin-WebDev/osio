@@ -19,6 +19,7 @@ import serviceCenters from "./pages-data/serviceCenters";
 import search from "./pages-data/search";
 import searchNotFound from "./pages-data/searchNotFound";
 import specs from "./pages-data/specs";
+import driversNotFound from "./pages-data/driversNotFound";
 
 const pagesConfig = {
   ...home,
@@ -42,6 +43,7 @@ const pagesConfig = {
   ...search,
   ...searchNotFound,
   ...specs,
+  ...driversNotFound,
 };
 
 export default pagesConfig;

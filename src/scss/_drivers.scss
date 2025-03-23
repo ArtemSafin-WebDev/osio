@@ -945,3 +945,43 @@
     }
   }
 }
+
+.drivers__not-found {
+  margin: 20rem auto;
+  margin-top: 15rem;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.1rem;
+  font-family: var(--inter);
+  color: #77787d;
+  max-width: 86rem;
+  text-align: center;
+
+  @include breakpoint(mobile) {
+    margin-top: 7rem;
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: -0.05rem;
+    margin: 6rem 0;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  a {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    // text-decoration-skip-ink: none;
+    text-underline-offset: 1px;
+    transition: color 0.2s, text-decoration-color 0.2s;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        text-decoration-color: transparent;
+      }
+    }
+  }
+}

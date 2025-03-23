@@ -52,6 +52,16 @@ export default function aboutFeatures() {
           const secondState = Flip.getState([title, text, textSecond], {
             props: "fontSize",
           });
+          cards
+            .filter((card) => card.classList.contains("active"))
+            .forEach((otherCard) => {
+              if (card === otherCard) return;
+              otherCard
+                .querySelector<HTMLElement>(
+                  ".about-features__card-clickable-area"
+                )
+                ?.click();
+            });
           card.classList.toggle("active");
           Flip.from(state, {
             duration: 0.6,
@@ -91,6 +101,16 @@ export default function aboutFeatures() {
           const secondState = Flip.getState([textSecond, smallText, image], {
             props: "fontSize",
           });
+          cards
+            .filter((card) => card.classList.contains("active"))
+            .forEach((otherCard) => {
+              if (card === otherCard) return;
+              otherCard
+                .querySelector<HTMLElement>(
+                  ".about-features__card-clickable-area"
+                )
+                ?.click();
+            });
           card.classList.toggle("active");
           Flip.from(state, {
             duration: 0.8,

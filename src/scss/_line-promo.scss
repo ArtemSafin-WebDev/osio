@@ -2,6 +2,7 @@
   @include blockWrapper;
   margin-bottom: 20rem;
 
+  // margin-bottom: calc(-200vh + 20rem);
   @include breakpoint(mobile) {
     margin-bottom: 8rem;
   }
@@ -11,6 +12,70 @@
   @include blockContent;
   display: flex;
   flex-direction: column;
+}
+
+.line-promo__pin-spacer {
+  @include breakpointMF(small-tablet) {
+    height: calc((var(--slides-count, 1) - 1) * 200vh);
+
+    @media only screen and (orientation: portrait) {
+      height: calc((var(--slides-count, 1) - 1) * 20vh);
+    }
+  }
+}
+
+.line-promo__slider {
+  @include breakpointMF(small-tablet) {
+    position: sticky;
+    top: 20px;
+    left: 0;
+  }
+  .swiper {
+    overflow: visible;
+  }
+
+  .swiper-wrapper {
+    @include breakpointMF(small-tablet) {
+      gap: 4rem;
+    }
+  }
+
+  .swiper-slide {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+  }
+}
+
+.line-promo__slider-pagination {
+  display: none;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-top: 4rem;
+    .swiper-pagination-bullet {
+      flex-shrink: 0;
+      width: 0.7rem;
+      height: 0.7rem;
+      border-radius: 50%;
+      flex-shrink: 0;
+      background-color: #77787d;
+      opacity: 0.2;
+      transition: opacity 0.2s;
+      &.swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+    }
+  }
+}
+.line-promo__slider-card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .line-promo__top-row {
@@ -68,6 +133,7 @@
   border-radius: 1rem;
   overflow: hidden;
   overflow: clip;
+  margin-top: auto;
   &::before {
     content: "";
     display: block;
