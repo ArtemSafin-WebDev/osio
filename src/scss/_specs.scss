@@ -55,6 +55,12 @@
   }
 }
 
+.dark-bg{
+  .specs__tabs-nav-list {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
 .specs__tabs-nav-list {
   display: flex;
   align-items: center;
@@ -66,6 +72,14 @@
     padding: 1rem;
     margin: 0;
     width: max-content;
+  }
+}
+
+.dark-bg{
+  .specs__tabs-nav-list-item {
+    &::after {
+      background-color: rgba(white, 0.2);
+    }
   }
 }
 
@@ -90,6 +104,28 @@
     padding-right: 0;
     &::after {
       display: none;
+    }
+  }
+}
+
+.dark-bg{
+  .specs__tabs-nav-link {
+    &:link,
+    &:visited {
+      color: white;
+    }
+
+    &.active {
+      background-color: white;
+      color: black;
+    }
+
+    &:not(.active) {
+      @media (hover: hover) and (pointer: fine) {
+        &:hover {
+          color: white;
+        }
+      }
     }
   }
 }
