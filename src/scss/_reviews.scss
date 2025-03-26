@@ -732,3 +732,24 @@
     text-transform: uppercase;
   }
 }
+
+.reviews-russian-video {
+  width: 90rem;
+  max-width: 100%;
+
+  &.fancybox__content {
+    padding: 0;
+  }
+
+  iframe {
+    display: block;
+    object-fit: contain;
+    aspect-ratio: 720 / 405;
+    width: 100%;
+    height: auto;
+  }
+
+  &.reviews-russian-video--vk iframe {
+    aspect-ratio: 853 / 480;
+  }
+}
