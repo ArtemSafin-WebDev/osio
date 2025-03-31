@@ -78,6 +78,17 @@
     }
   }
 }
+.dark-bg{
+  .line-intro__toggle-link {
+    border-color: white;
+    color: white;
+
+    &.active {
+      background-color: white;
+      color: black;
+    }
+  }
+}
 
 .line-intro__toggle-link {
   display: block;
