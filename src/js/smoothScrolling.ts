@@ -7,6 +7,8 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function smoothScrolling() {
+  if (document.body.classList.contains('is-admin')) return;
+
   if (history.scrollRestoration) {
     history.scrollRestoration = "manual";
   }
