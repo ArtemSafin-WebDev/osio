@@ -1,6 +1,7 @@
 const block = {
   "/block.html": {
     title: "Block",
+    isBlocksPage: true,
   },
 };
 

@@ -142,6 +142,14 @@
   position: relative;
   z-index: 1;
   border: 1px solid #ccc;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .open-world__slider-card-image {
+        transform: scale(1.07);
+      }
+    }
+  }
   .mediacenter__list & {
     border: 1px solid #ccc;
   }
@@ -185,6 +193,8 @@
   display: grid;
   place-items: center;
   overflow: hidden;
+  overflow: clip;
+  backface-visibility: hidden;
 
   .open-world__slider-card--video & {
     position: static;
