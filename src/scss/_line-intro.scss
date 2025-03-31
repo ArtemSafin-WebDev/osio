@@ -80,12 +80,16 @@
 }
 .dark-bg{
   .line-intro__toggle-link {
-    border-color: white;
-    color: white;
+    @include breakpoint(mobile) {
+      &:link,
+      &:visited {
+        color: white;
+      }
 
-    &.active {
-      background-color: white;
-      color: black;
+      &.active {
+        background-color: white;
+        color: black;
+      }
     }
   }
 }
