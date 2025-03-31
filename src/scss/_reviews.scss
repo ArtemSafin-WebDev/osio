@@ -241,12 +241,23 @@
       padding-bottom: 162%;
     }
   }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      .reviews__video-card-bg-image {
+        transform: scale(1.04);
+      }
+    }
+  }
 }
 
 .reviews__video-card-bg {
   position: absolute;
   inset: 0;
   z-index: -1;
+  overflow: hidden;
+  overflow: clip;
+  backface-visibility: hidden;
 
   &::after {
     content: "";
@@ -263,6 +274,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s;
 }
 
 .reviews__video-card-content {

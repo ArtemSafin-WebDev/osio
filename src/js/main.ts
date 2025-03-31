@@ -40,6 +40,7 @@ import lineSpecs from "./lineSpecs";
 gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", () => {
+  header();
   smoothScrolling();
   singleNews();
   openWorld();
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
   products();
   features();
   contactForm();
-  header();
+
   brand();
   fancybox();
   buy();
