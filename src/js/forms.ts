@@ -42,6 +42,10 @@ export default function forms() {
             if (form) {
               form.reset();
             }
+            if (res.data.IBLOCK_ID == 41){
+              //@ts-ignore
+              ym(96009291,'reachGoal','Futer-Otpravka-formy');
+            }
           })
           .catch((err) => {
             console.error(err);
