@@ -78,6 +78,21 @@
     }
   }
 }
+.dark-bg{
+  .line-intro__toggle-link {
+    @include breakpoint(mobile) {
+      &:link,
+      &:visited {
+        color: white;
+      }
+
+      &.active {
+        background-color: white;
+        color: black;
+      }
+    }
+  }
+}
 
 .line-intro__toggle-link {
   display: block;
