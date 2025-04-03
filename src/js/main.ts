@@ -36,6 +36,7 @@ import twoImagesWithTextScreen from "./twoImagesWithTextScreen";
 import lineWithTextPreinstalled from "./lineWithTextPreinstalled";
 import lineConnection from "./lineConnection";
 import lineSpecs from "./lineSpecs";
+import lineTooltip from "./lineTooltip";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,7 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
   products();
   features();
   contactForm();
-
+  lineTooltip();
   brand();
   fancybox();
   buy();

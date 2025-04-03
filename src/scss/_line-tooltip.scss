@@ -64,15 +64,69 @@
 }
 
 .line-tooltip__content {
-  grid-template-columns: 0fr;
-  display: grid;
-  transition: grid-template-columns 500ms;
+  @include breakpointMF(small-tablet) {
+    grid-template-columns: 0fr;
+    display: grid;
+    transition: grid-template-columns 500ms;
+  }
+
+  @include breakpoint(mobile) {
+    position: absolute;
+    left: 50%;
+    top: var(--offset-top, 50%);
+    transform: translateX(-50%) translateY(-100%);
+    margin: auto;
+    margin-top: -1rem;
+    width: 80vw;
+    z-index: 30;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+    &.active {
+      opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
+  }
 }
 
 .line-tooltip__content-inner {
   overflow: hidden;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+
+  @include breakpoint(mobile) {
+    overflow: visible;
+    padding: 4rem 2rem;
+    text-align: center;
+    border-radius: 1rem;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    display: block;
+  }
+}
+
+.line-tooltip__close-btn {
+  display: none;
+
+  @include breakpoint(mobile) {
+    position: absolute;
+    width: 2.4rem;
+    height: 2.4rem;
+    display: block;
+    right: 1rem;
+    top: 1rem;
+
+    svg {
+      display: block;
+      width: 100%;
+      height: 100%;
+      fill: var(--text-color);
+    }
+  }
 }
 
 .line-tooltip__text {
@@ -94,6 +148,10 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.0075rem;
-    height: 6rem;
+    height: auto;
+    padding: 0;
+    display: block;
+    width: auto;
+    align-items: stretch;
   }
 }
