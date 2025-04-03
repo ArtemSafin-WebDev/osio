@@ -379,7 +379,6 @@
   font-weight: 700;
   font-size: 1.5rem;
   line-height: 100%;
-
   text-transform: uppercase;
   color: white;
   border-radius: 5rem;
@@ -388,16 +387,6 @@
   align-self: flex-start;
   margin-top: 4rem;
 
-  @include breakpoint(mobile) {
-    padding: 2.4rem 3rem;
-    gap: 2rem;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 1rem;
-    line-height: 100%;
-    text-transform: uppercase;
-    margin-top: 3.5rem;
-  }
   svg {
     flex-shrink: 0;
     width: 1.462rem;
@@ -412,5 +401,23 @@
   &:link,
   &:visited {
     color: white;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: white;
+      color: var(--text-color);
+    }
+  }
+
+  @include breakpoint(mobile) {
+    padding: 2.4rem 3rem;
+    gap: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 100%;
+    text-transform: uppercase;
+    margin-top: 3.5rem;
   }
 }

@@ -37,6 +37,7 @@ import lineWithTextPreinstalled from "./lineWithTextPreinstalled";
 import lineConnection from "./lineConnection";
 import lineSpecs from "./lineSpecs";
 import lineTooltip from "./lineTooltip";
+import advantages from "./advantages";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -46,6 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
   singleNews();
   openWorld();
   shops();
+  advantages();
   reviews();
   categories();
   ticker();

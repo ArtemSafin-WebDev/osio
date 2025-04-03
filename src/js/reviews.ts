@@ -13,6 +13,83 @@ export default function reviews() {
   );
 
   elements.forEach((element) => {
+    let mm = gsap.matchMedia();
+    mm.add(
+      "(min-width: 641px)",
+      () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: element,
+            start: "top bottom-=30%",
+          },
+        });
+        tl.from(".reviews__top-row", {
+          autoAlpha: 0,
+          duration: 0.6,
+          ease: "power3.out",
+          y: 40,
+        });
+
+        tl.from(
+          ".reviews__video-card",
+          {
+            duration: 1.2,
+            stagger: 0.2,
+            y: 40,
+            ease: "power3.out",
+            autoAlpha: 0,
+          },
+          "<+=0.4"
+        );
+        tl.from(
+          ".reviews__bottom-row",
+          {
+            autoAlpha: 0,
+            duration: 0.4,
+          },
+          "<+=0.4"
+        );
+      },
+      element
+    );
+    mm.add(
+      "(max-width: 640px)",
+      () => {
+        const tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: element,
+            start: "top bottom-=30%",
+          },
+        });
+        tl.from(".reviews__heading", {
+          autoAlpha: 0,
+          duration: 1,
+          ease: "power3.out",
+          y: 30,
+        });
+
+        tl.from(
+          ".reviews__video-card",
+          {
+            duration: 1.2,
+            stagger: 0.2,
+            y: 30,
+            ease: "power3.out",
+            autoAlpha: 0,
+          },
+          "<+=0.4"
+        );
+        tl.from(
+          ".reviews__show-more",
+          {
+            autoAlpha: 0,
+            duration: 0.8,
+          },
+          "<+=0.4"
+        );
+      },
+      element
+    );
     const container = element.querySelector<HTMLElement>(".swiper");
     if (!container) return;
 

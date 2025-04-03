@@ -256,14 +256,15 @@
   line-height: 120%;
   font-family: var(--inter);
   position: relative;
-  z-index: 3;
 }
 
 .buy__bottom {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-gap: 2rem;
-  align-items: flex-end;
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 2rem;
+    align-items: flex-end;
+  }
 }
 
 .buy__arrows {

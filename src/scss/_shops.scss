@@ -1,6 +1,6 @@
-.dark-bg{
+.dark-bg {
   .shops {
-    padding-top: 5rem
+    padding-top: 5rem;
   }
 }
 .shops {
@@ -205,10 +205,12 @@
 }
 
 .shops__bottom {
-  display: grid;
-  grid-template-columns: 1fr auto 1fr;
-  grid-gap: 2rem;
-  align-items: flex-end;
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-gap: 2rem;
+    align-items: flex-end;
+  }
 }
 
 .shops__arrows {
