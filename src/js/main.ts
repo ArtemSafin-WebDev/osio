@@ -38,8 +38,11 @@ import lineConnection from "./lineConnection";
 import lineSpecs from "./lineSpecs";
 import lineTooltip from "./lineTooltip";
 import advantages from "./advantages";
+import pageFooter from "./pageFooter";
+import { ScrollToPlugin } from "gsap/all";
+import scrollUp from "./scrollUp";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 document.addEventListener("DOMContentLoaded", () => {
   header();
@@ -78,9 +81,24 @@ document.addEventListener("DOMContentLoaded", () => {
   lineWithTextPreinstalled();
   lineConnection();
   lineSpecs();
+  pageFooter();
+  scrollUp();
 });
 
 window.addEventListener("load", () => {
+  window.scrollTo(0, 0);
+  if (window.location.hash) {
+    console.log("Hash", window.location.hash);
+    gsap.to(window, {
+      duration: 1,
+      scrollTo: {
+        y: window.location.hash,
+        offsetY: 50,
+      },
+      autoKill: false,
+      delay: 0.4,
+    });
+  }
   document.body.classList.add("loaded");
   ScrollTrigger.refresh();
 });

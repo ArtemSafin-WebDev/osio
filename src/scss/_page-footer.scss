@@ -25,6 +25,9 @@
 .page-footer__logo {
   align-self: center;
   margin-bottom: 23.6rem;
+  svg {
+    overflow: visible;
+  }
 
   @include breakpoint(mobile) {
     margin-bottom: 15.4rem;

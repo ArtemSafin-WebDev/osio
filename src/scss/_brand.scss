@@ -15,7 +15,7 @@
   position: relative;
 
   @include breakpoint(mobile) {
-    min-height: max(100svh, 77rem);
+    min-height: auto;
     padding: 3rem 0;
     gap: 2.4rem;
     flex-direction: column;
@@ -31,7 +31,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
     backdrop-filter: blur(10px);
   }
 }
@@ -69,10 +69,12 @@
   text-transform: uppercase;
 
   @include breakpoint(mobile) {
-    font-style: normal;
-    font-weight: 600;
     font-size: 1rem;
-    line-height: 180%;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 180%; /* 1.8rem */
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
     position: relative;
     z-index: 2;
   }
@@ -88,10 +90,11 @@
 
   @include breakpoint(mobile) {
     max-width: none;
+    font-size: 2.4rem;
     font-style: normal;
     font-weight: 600;
-    font-size: 2.4rem;
-    line-height: 120%;
+    line-height: 120%; /* 2.88rem */
+    text-transform: none;
     position: relative;
     z-index: 2;
   }
@@ -109,13 +112,15 @@
 
   @include breakpoint(mobile) {
     max-width: none;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 400;
-    font-size: 1.2rem;
     line-height: 140%;
     position: relative;
     z-index: 2;
     letter-spacing: 0;
+    order: 30;
+    text-transform: uppercase;
   }
 }
 
@@ -130,21 +135,29 @@
   place-items: center;
   z-index: 1;
 
+  @media (hover: hover) {
+    &:hover {
+      svg {
+        transform: scale(1.15);
+      }
+    }
+  }
+
   @include breakpoint(mobile) {
-    width: 32rem;
-    height: 32rem;
+    width: 100%;
+    aspect-ratio: 1 / 1;
     margin: 0;
-    position: absolute;
+    position: relative;
     z-index: 1;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 1.5rem;
+    height: auto;
+    margin-top: 6rem;
   }
 
   svg {
     fill: white;
     width: 11.7rem;
     height: 9.1rem;
+    transition: transform 0.2s;
 
     @include breakpoint(mobile) {
       width: 5.3rem;
