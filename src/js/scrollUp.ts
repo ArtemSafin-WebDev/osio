@@ -29,10 +29,12 @@ export default function scrollUp() {
   btn?.addEventListener("click", (event) => {
     event.preventDefault();
     gsap.to(window, {
-      duration: 1,
+      duration: 0.2,
+      ease: "none",
       scrollTo: {
         y: 0,
       },
+      delay: 0,
       autoKill: false,
     });
   });

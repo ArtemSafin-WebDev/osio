@@ -13,7 +13,8 @@
   }
 
   @include breakpoint(mobile) {
-    display: none;
+    right: 2rem;
+    bottom: 2rem;
   }
 }
 
@@ -24,6 +25,11 @@
   backdrop-filter: blur(6px);
   width: 7rem;
   height: 7rem;
+
+  @include breakpoint(mobile) {
+    width: 6rem;
+    height: 6rem;
+  }
 
   svg {
     display: block;
