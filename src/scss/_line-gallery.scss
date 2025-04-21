@@ -22,7 +22,18 @@
   @include blockContent;
 }
 
+.line-gallery__slider {
+  @include breakpointMF(small-tablet) {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .line-gallery__main-slider {
+  @include breakpointMF(small-tablet) {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+  }
   .swiper {
     overflow: visible;
   }
@@ -62,6 +73,11 @@
 
 .line-gallery__thumbs-slider {
   margin-top: 15rem;
+
+  @include breakpointMF(small-tablet) {
+    grid-row: 2 / 3;
+    grid-column: 1 / -1;
+  }
 
   @include breakpoint(mobile) {
     margin-top: 6rem;
@@ -119,6 +135,18 @@
   justify-content: center;
   margin-top: 4rem;
 
+  @include breakpointMF(small-tablet) {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    width: 100%;
+    justify-self: center;
+    max-width: 74%;
+    align-self: center;
+    z-index: 60;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
   @include breakpoint(mobile) {
     display: none;
   }
@@ -131,6 +159,9 @@
   background: #e5e5e5;
   transition: background-color 0.2s, opacity 0.2s;
   border-radius: 50%;
+
+  pointer-events: auto;
+
   svg {
     display: block;
     width: 100%;
