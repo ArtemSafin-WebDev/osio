@@ -41,6 +41,7 @@ import advantages from "./advantages";
 import pageFooter from "./pageFooter";
 import { ScrollToPlugin } from "gsap/all";
 import scrollUp from "./scrollUp";
+import mediacenter from "./mediacenter";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -83,6 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
   lineSpecs();
   pageFooter();
   scrollUp();
+  mediacenter();
 });
 
 window.addEventListener("load", () => {

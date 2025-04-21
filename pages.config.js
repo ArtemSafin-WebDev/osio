@@ -20,6 +20,7 @@ import search from "./pages-data/search";
 import searchNotFound from "./pages-data/searchNotFound";
 import specs from "./pages-data/specs";
 import driversNotFound from "./pages-data/driversNotFound";
+import reviews from "./pages-data/reviews";
 
 const pagesConfig = {
   ...home,
@@ -44,6 +45,7 @@ const pagesConfig = {
   ...searchNotFound,
   ...specs,
   ...driversNotFound,
+  ...reviews,
 };
 
 export default pagesConfig;
