@@ -2,7 +2,7 @@ import Swiper from "swiper";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/parallax";
-import { EffectFade, Controller, Parallax } from "swiper/modules";
+import { EffectFade, Controller, Parallax, Autoplay } from "swiper/modules";
 
 export default function intro() {
   const elements = Array.from(document.querySelectorAll<HTMLElement>(".intro"));
@@ -40,8 +40,11 @@ export default function intro() {
       longSwipesRatio: 0.2,
       speed: 1000,
       loop: false,
-
-      modules: [EffectFade, Controller],
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      modules: [EffectFade, Controller, Autoplay],
       init: false,
       on: {
         init: (swiper) => {
