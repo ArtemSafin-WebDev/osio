@@ -49,6 +49,11 @@
   grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-gap: 2rem;
   grid-auto-flow: dense;
+  padding-top: 10rem;
+
+  @include breakpoint(mobile) {
+    padding-top: 4rem;
+  }
 
   .line-text-content__text {
     max-width: 63rem;
