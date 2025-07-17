@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
+    <rect x="2" y="15" width="57" height="31" rx="5" stroke="black" stroke-width="2" />
+    <path
+        d="M42.1819 21H18.818C17.4863 21 16.314 21.8779 15.9393 23.1558L12.1272 36.1558C11.564 38.0768 13.0042 40 15.006 40H45.994C47.9958 40 49.436 38.0768 48.8728 36.1559L45.0607 23.1558C44.686 21.8779 43.5137 21 42.1819 21Z"
+        stroke="black" stroke-width="2" />
+    <circle cx="53" cy="30" r="2" stroke="black" stroke-width="2" />
+    <circle cx="8" cy="30" r="2" stroke="black" stroke-width="2" />
+    <circle cx="23" cy="25" r="1" fill="black" />
+    <circle cx="28" cy="25" r="1" fill="black" />
+    <circle cx="34" cy="25" r="1" fill="black" />
+    <circle cx="39" cy="25" r="1" fill="black" />
+    <circle cx="19" cy="31" r="1" fill="black" />
+    <circle cx="25" cy="31" r="1" fill="black" />
+    <circle cx="31" cy="31" r="1" fill="black" />
+    <circle cx="37" cy="31" r="1" fill="black" />
+    <circle cx="43" cy="31" r="1" fill="black" />
+    <circle cx="16" cy="36" r="1" fill="black" />
+    <circle cx="22" cy="36" r="1" fill="black" />
+    <circle cx="28" cy="36" r="1" fill="black" />
+    <circle cx="34" cy="36" r="1" fill="black" />
+    <circle cx="40" cy="36" r="1" fill="black" />
+    <circle cx="45" cy="36" r="1" fill="black" />
+</svg>

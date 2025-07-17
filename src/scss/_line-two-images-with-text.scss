@@ -24,6 +24,10 @@
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 2rem;
 
+  // &--interface {
+  //   grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  // }
+
   @include breakpoint(mobile) {
     display: flex;
     flex-direction: column;
@@ -32,8 +36,16 @@
 }
 
 .two-images-with-text__left-col {
+  &--interface {
+    padding-right: 30rem;
+
+    .line-text-content__text {
+      max-width: none;
+    }
+  }
   @include breakpoint(mobile) {
     display: contents;
+    padding: 0;
   }
 }
 
@@ -96,9 +108,19 @@
   margin-top: -10rem;
   pointer-events: none;
 
+  &--interface {
+    margin-top: 10rem;
+    margin-left: -30rem;
+  }
+
   @include breakpoint(mobile) {
     margin: 0;
     margin-right: calc((100vw - 100%) / 2 * -1);
     order: 4;
+
+    &--interface {
+      margin-top: 6rem;
+      margin-left: 0;
+    }
   }
 }
