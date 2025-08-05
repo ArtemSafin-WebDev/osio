@@ -41,7 +41,7 @@ export default function intro() {
       speed: 1000,
       loop: false,
       autoplay: {
-        delay: 4000,
+        delay: 8000,
         disableOnInteraction: false,
       },
       modules: [EffectFade, Controller, Autoplay],
