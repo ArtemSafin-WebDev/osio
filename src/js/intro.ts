@@ -40,10 +40,10 @@ export default function intro() {
       longSwipesRatio: 0.2,
       speed: 1000,
       loop: false,
-      autoplay: {
-        delay: 8000,
-        disableOnInteraction: false,
-      },
+      // autoplay: {
+      //   delay: 8000,
+      //   disableOnInteraction: false,
+      // },
       modules: [EffectFade, Controller, Autoplay],
       init: false,
       on: {
