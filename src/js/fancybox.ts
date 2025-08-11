@@ -10,6 +10,8 @@ export default function fancybox() {
   document.addEventListener("click", (event) => {
     const target = event.target;
 
+    console.log(target)
+
     if (
         // @ts-ignore
         target.matches(BTN_SELECTOR) ||
