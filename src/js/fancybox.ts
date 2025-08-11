@@ -10,8 +10,6 @@ export default function fancybox() {
   document.addEventListener("click", (event) => {
     const target = event.target;
 
-    console.log(target)
-
     if (
         // @ts-ignore
         target.matches(BTN_SELECTOR) ||
@@ -21,6 +19,7 @@ export default function fancybox() {
       event.preventDefault();
 
       // @ts-ignore
+      let card = target.closest(BTN_SELECTOR);
       const id = card.dataset.id;
       // @ts-ignore
       const request = BX.ajax.runAction('gilyazov:core.api.reviews.iframe', {
