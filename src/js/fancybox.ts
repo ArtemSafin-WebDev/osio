@@ -6,10 +6,13 @@ export default function fancybox() {
     placeFocusBack: false,
   });
 
-  const cards = document.querySelectorAll('.reviews__video-card');
-  cards.forEach(function (card){
-    card.addEventListener('click', function(e) {
-      e.preventDefault();
+  const BTN_SELECTOR = '.reviews__video-card';
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+    // @ts-ignore
+    if (target.matches(BTN_SELECTOR)) {
+      event.preventDefault();
+
       // @ts-ignore
       const id = card.dataset.id;
       // @ts-ignore
@@ -27,6 +30,6 @@ export default function fancybox() {
           type: 'html'
         }]);
       });
-    });
+    }
   });
 }
