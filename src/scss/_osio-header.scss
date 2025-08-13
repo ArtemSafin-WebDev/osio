@@ -487,26 +487,26 @@
 .osio-header__buy {
   flex-shrink: 0;
   text-align: center;
-  padding: 2rem 4rem;
-  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem 2.4rem;
+  background: #feff6a;
   border-radius: 0.5rem;
+  color: black;
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 600;
-  font-size: 1.4rem;
   line-height: 100%;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
-  color: white;
-  transition: background-color 0.2s, color 0.2s;
-
   &:link,
   &:visited {
-    color: white;
+    color: black;
   }
 
-  @media (hover: hover) {
+  @media (hover: hover) and (pointer: fine) {
     &:hover {
-      background-color: white;
-      color: black;
+      background-color: black;
+      color: white;
     }
   }
 
@@ -519,13 +519,13 @@
         )
     ):not(:has(.osio-header__search-wrapper:hover))
     & {
-    background-color: rgba(0, 0, 0, 0.1);
     color: black;
+    background: #feff6a;
     &:link,
     &:visited {
       color: black;
     }
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
       &:hover {
         background-color: black;
         color: white;

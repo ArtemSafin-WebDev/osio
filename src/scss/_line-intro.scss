@@ -78,7 +78,7 @@
     }
   }
 }
-.dark-bg{
+.dark-bg {
   .line-intro__toggle-link {
     @include breakpoint(mobile) {
       &:link,
@@ -270,13 +270,19 @@
   text-transform: uppercase;
   padding: 3rem;
   border-radius: 20rem;
-  background: rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  background: black;
+  border: 1px solid black;
   background-clip: padding-box;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+
+  &:link,
+  &:visited {
+    color: white;
+  }
   svg {
     flex-shrink: 0;
     fill: currentColor;
@@ -286,9 +292,9 @@
 
   @media (hover: hover) and (pointer: fine) {
     &:hover {
-      background-color: black;
-      color: white;
-      border-color: black;
+      background-color: rgba(0, 0, 0, 0.1);
+      color: black;
+      border-color: rgba(0, 0, 0, 0.1);
     }
   }
 
