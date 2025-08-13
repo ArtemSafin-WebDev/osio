@@ -6,11 +6,20 @@ export default function fancybox() {
     placeFocusBack: false,
   });
 
-  const cards = document.querySelectorAll('.reviews__video-card');
-  cards.forEach(function (card){
-    card.addEventListener('click', function(e) {
-      e.preventDefault();
+  const BTN_SELECTOR = '.reviews__video-card';
+  document.addEventListener("click", (event) => {
+    const target = event.target;
+
+    if (
+        // @ts-ignore
+        target.matches(BTN_SELECTOR) ||
+        // @ts-ignore
+        target.closest(BTN_SELECTOR)
+    ) {
+      event.preventDefault();
+
       // @ts-ignore
+      let card = target.closest(BTN_SELECTOR);
       const id = card.dataset.id;
       // @ts-ignore
       const request = BX.ajax.runAction('gilyazov:core.api.reviews.iframe', {
@@ -27,6 +36,6 @@ export default function fancybox() {
           type: 'html'
         }]);
       });
-    });
+    }
   });
 }
