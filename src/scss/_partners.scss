@@ -12,6 +12,26 @@
   flex-direction: column;
 }
 
+.partners__subtitle {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #77787d;
+  margin-bottom: 2.5rem;
+  @include breakpoint(mobile) {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+  }
+}
+
 .partners__heading {
   text-wrap: balance;
   font-size: 4rem;
@@ -21,6 +41,10 @@
   text-transform: uppercase;
   margin-bottom: 12rem;
   text-wrap: balance;
+
+  .partners-modal & {
+    margin-bottom: 8rem;
+  }
 
   &--large {
     font-size: 6rem;
@@ -49,6 +73,10 @@
     letter-spacing: -0.1rem;
     text-transform: uppercase;
     margin-bottom: 6rem;
+
+    .partners-modal & {
+      margin-bottom: 4rem;
+    }
     br {
       display: none;
     }
@@ -64,6 +92,10 @@
   text-transform: uppercase;
   margin-bottom: 5rem;
   color: black;
+
+  .partners-modal & {
+    margin-bottom: 4rem;
+  }
   @include breakpoint(mobile) {
     font-size: 1rem;
     font-style: normal;
@@ -72,6 +104,10 @@
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     margin-bottom: 2rem;
+
+    .partners-modal & {
+      margin-bottom: 1.2rem;
+    }
   }
 }
 
@@ -80,10 +116,19 @@
   grid-template-columns: repeat(5, minmax(0, 1fr));
   grid-gap: 2rem;
   margin-bottom: 22rem;
+
+  .partners-modal & {
+    margin-bottom: 3rem;
+    grid-gap: 1.3rem;
+  }
   @include breakpoint(mobile) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 0.8rem;
     margin-bottom: 6rem;
+    .partners-modal & {
+      margin-bottom: 3rem;
+      grid-gap: 0.8rem;
+    }
   }
 }
 
@@ -100,6 +145,8 @@
   border: 1px solid #ccc;
   overflow: hidden;
   flex-grow: 1;
+  position: relative;
+  z-index: 1;
   &::before {
     content: "";
     display: block;
@@ -108,6 +155,10 @@
     @include breakpoint(mobile) {
       padding-bottom: 89%;
     }
+  }
+
+  .partners-modal & {
+    border-radius: 0.6rem;
   }
 
   @media (hover: hover) and (pointer: fine) {
@@ -123,6 +174,15 @@
       }
     }
   }
+
+  @include breakpoint(mobile) {
+    .partners-modal & {
+      border-radius: 1rem;
+      &::before {
+        padding-bottom: 64.2%;
+      }
+    }
+  }
 }
 
 .partners__card-bg {
@@ -133,7 +193,7 @@
 }
 
 .partners__card-bg-image {
-  width: 24.6rem;
+  width: 72%;
   aspect-ratio: 246 / 164;
   object-fit: contain;
   @include breakpoint(mobile) {
@@ -148,11 +208,21 @@
   padding-right: 1.6rem;
   display: flex;
   flex-direction: column;
+
+  .partners-modal & {
+    padding: 1.2rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+  }
   @include breakpoint(mobile) {
     padding-left: 1.6rem;
     padding-bottom: 1.6rem;
     padding-right: 1.2rem;
     padding-top: 1.2rem;
+
+    .partners-modal & {
+      padding: 1.6rem;
+    }
   }
 }
 
@@ -167,6 +237,15 @@
   margin-right: auto;
   color: #77787d;
 
+  .partners-modal & {
+    font-size: 0.7957rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.1326rem;
+    text-transform: uppercase;
+  }
+
   @include breakpoint(mobile) {
     font-size: 1rem;
     font-style: normal;
@@ -175,6 +254,10 @@
     font-family: var(--inter);
     letter-spacing: 0.15rem;
     text-transform: uppercase;
+
+    .partners-modal & {
+      display: none;
+    }
   }
 }
 
@@ -185,6 +268,10 @@
   margin-bottom: auto;
   position: relative;
   z-index: 10;
+  .partners-modal & {
+    width: 1.28rem;
+    height: 1.28rem;
+  }
 
   svg {
     display: block;
@@ -192,6 +279,13 @@
     height: 100%;
     fill: #cccccc;
     transition: fill 0.4s;
+  }
+
+  @include breakpoint(mobile) {
+    .partners-modal & {
+      width: 2rem;
+      height: 2rem;
+    }
   }
 }
 
@@ -206,6 +300,12 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s, visibility 0s linear 0.4s;
+
+  .partners-modal & {
+    padding: 1.2rem;
+    padding-top: 1rem;
+    padding-right: 1rem;
+  }
   @include breakpoint(mobile) {
     display: none;
   }
@@ -218,12 +318,20 @@
   font-family: var(--inter);
   margin-top: auto;
   margin-right: auto;
+
+  .partners-modal & {
+    gap: 0.8rem;
+  }
 }
 
 .partners__card-contacts-item {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+
+  .partners-modal & {
+    zoom: 0.8;
+  }
 }
 
 .partners__card-contacts-item-key {
@@ -250,7 +358,10 @@
   font-weight: 400;
   line-height: 100%;
   color: #77787d;
-  text-transform: uppercase;
+
+  &--uppercase {
+    text-transform: uppercase;
+  }
 
   @include breakpoint(mobile) {
     font-size: 1.2rem;

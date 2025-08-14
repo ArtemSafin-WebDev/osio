@@ -1,0 +1,81 @@
+.partners-modal {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overscroll-behavior-y: contain;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1400;
+  display: flex;
+  flex-direction: column;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  opacity: 0;
+  visibility: hidden;
+  padding: 4rem var(--content-padding);
+
+  &.active {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 0 var(--content-padding);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #fff;
+    color: var(--text-color);
+  }
+}
+
+.partners-modal__inner {
+  position: relative;
+  margin: auto;
+  position: relative;
+  border-radius: 1rem;
+  background: #fff;
+  padding: 4rem;
+  width: 100%;
+  max-width: 130rem;
+  //   max-width: 1300px;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    border-radius: 0;
+    all: revert;
+    box-sizing: border-box;
+    display: contents;
+  }
+}
+
+.partners-modal__close {
+  position: absolute;
+  right: 4rem;
+  top: 4rem;
+  z-index: 30;
+  width: 4rem;
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  svg {
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: black;
+  }
+
+  @include breakpoint(mobile) {
+    width: 2.4rem;
+    height: 2.4rem;
+    right: var(--content-padding);
+    top: 3rem;
+    svg {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

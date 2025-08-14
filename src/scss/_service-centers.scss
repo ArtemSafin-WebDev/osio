@@ -526,10 +526,6 @@
     transition: opacity 0.4s, visibility 0.4s;
   }
 
-  body:not(.loaded) & {
-    display: none;
-  }
-
   @include breakpoint(mobile) {
     padding: 0;
     background-color: #fff;
