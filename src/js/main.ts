@@ -15,6 +15,7 @@ import fancybox from "./fancybox";
 import buy from "./buy";
 import actualMaterials from "./actualMaterials";
 import otherMaterials from "./otherMaterials";
+import detailNewsGallery from "./detailNewsGallery";
 import selects from "./selects";
 import drivers from "./drivers";
 import singleNews from "./singleNews";
@@ -65,6 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
   buy();
   actualMaterials();
   otherMaterials();
+  detailNewsGallery();
   selects();
   drivers();
   aboutFeatures();
