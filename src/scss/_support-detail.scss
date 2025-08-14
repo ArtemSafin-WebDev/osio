@@ -330,9 +330,9 @@
   padding-top: 4rem;
 
   @include breakpoint(mobile) {
-    padding: 0;
-    padding-bottom: 4rem;
-    gap: 4rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
   }
 }
 
