@@ -163,3 +163,40 @@
     display: none;
   }
 }
+
+.line-features__made-in-russia {
+  position: absolute;
+  right: 4rem;
+  top: 4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 145%;
+  text-transform: uppercase;
+  color: #77787d;
+
+  @include breakpoint(mobile) {
+    right: 1.6rem;
+    top: 1.6rem;
+  }
+}
+
+.line-features__made-in-russia-icon {
+  flex-shrink: 0;
+  object-fit: contain;
+  width: 2.2rem;
+  height: 2.2rem;
+  @include breakpoint(mobile) {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}
+
+.line-features__made-in-russia-text {
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
