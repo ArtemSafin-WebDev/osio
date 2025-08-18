@@ -78,7 +78,7 @@
   }
 
   @include breakpointMF(small-tablet) {
-    @media (hover: hover) {
+    @media (hover: hover) and (pointer: fine) {
       .categories__list-item:nth-child(1) &:hover .categories__card-image {
         transform: translate(-50%, -50%) scale(1.1);
       }
@@ -89,6 +89,12 @@
       }
     }
   }
+}
+
+.categories__card-link-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 7;
 }
 
 .categories__card-image {
@@ -111,6 +117,34 @@
     right: auto;
     transform: translate(-50%, -50%) scale(0.65);
   }
+}
+
+.categories__card-layers {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: #f2f2f2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+}
+
+.categories__card-layer {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  z-index: 2;
+}
+
+.categories__card-layer-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .categories__card-title {
   width: min-content;
@@ -143,6 +177,11 @@
   color: black;
   transition: color 0.2s, background-color 0.2s, border-color 0.2s;
   margin-top: auto;
+
+  &:link {
+    position: relative;
+    z-index: 15;
+  }
   &:link,
   &:visited {
     color: black;
@@ -193,5 +232,77 @@
     font-weight: 600;
     line-height: 120%;
     text-transform: uppercase;
+  }
+}
+
+.categories__card-lines-btns {
+  display: flex;
+  flex-direction: column;
+
+  align-items: flex-start;
+  margin-top: -2rem;
+  @include breakpoint(mobile) {
+    margin-top: -2.5rem;
+  }
+}
+
+.categories__card-lines-btn {
+  display: block;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  color: rgba(black, 0.4);
+  position: relative;
+  z-index: 15;
+  padding: 0.5rem 0;
+  &:link,
+  &:visited {
+    color: rgba(black, 0.4);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      color: black;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    padding: 0.1rem 0;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .categories__card:has(.categories__card-lines-btn:nth-child(1):hover)
+    .categories__card-layer:nth-child(1),
+  .categories__card:has(.categories__card-lines-btn:nth-child(2):hover)
+    .categories__card-layer:nth-child(2),
+  .categories__card:has(.categories__card-lines-btn:nth-child(3):hover)
+    .categories__card-layer:nth-child(3),
+  .categories__card:has(.categories__card-lines-btn:nth-child(4):hover)
+    .categories__card-layer:nth-child(4),
+  .categories__card:has(.categories__card-lines-btn:nth-child(5):hover)
+    .categories__card-layer:nth-child(5) {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+    z-index: 5;
+  }
+
+  .categories__card:has(.categories__card-lines-btn:hover)
+    .categories__card-layers {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+}
+
+@include breakpoint(mobile) {
+  .categories__card:has(.categories__card-layers) .categories__card-image {
+    margin-top: 2rem;
   }
 }
