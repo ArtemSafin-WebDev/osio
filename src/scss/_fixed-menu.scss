@@ -1,0 +1,326 @@
+.fixed-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 90;
+  background-color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  @include blockWrapper;
+
+  .fixed-menu-shown & {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  @include breakpoint(mobile) {
+    display: none;
+  }
+}
+
+.fixed-menu__content {
+  @include blockContent;
+  display: flex;
+  align-items: center;
+  gap: 9.8rem;
+  padding: 1.6rem 0;
+
+  @include breakpoint(mobile) {
+    padding: 0;
+    height: 6rem;
+    gap: 2rem;
+  }
+}
+
+.fixed-menu__logo {
+  flex-shrink: 0;
+  margin-right: auto;
+  @include breakpoint(mobile) {
+    position: relative;
+    z-index: 80;
+  }
+}
+
+.fixed-menu__logo-image {
+  display: block;
+  height: auto;
+  width: 21.6rem;
+  @include breakpoint(mobile) {
+    width: 12.1rem;
+  }
+}
+
+.fixed-menu__nav {
+  align-self: stretch;
+  margin: -1.6rem 0;
+  display: flex;
+  gap: 12rem;
+
+  @include breakpoint(mobile) {
+    margin: 0;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.fixed-menu__callback-btn {
+  flex-shrink: 0;
+  text-align: center;
+  padding: 2rem 2.4rem;
+  background: #feff6a;
+  border-radius: 0.5rem;
+  color: black;
+  transition: background-color 0.2s, color 0.2s;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  &:link,
+  &:visited {
+    color: black;
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  @include breakpoint(mobile) {
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 2rem 4rem;
+  }
+}
+
+.fixed-menu__nav-list {
+  display: flex;
+  gap: 3rem;
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    gap: 0;
+  }
+}
+
+.fixed-menu__nav-list-item {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  @include breakpoint(mobile) {
+    border-bottom: 1px solid rgba(black, 0.3);
+    &:last-child {
+      border: none;
+    }
+  }
+}
+
+.fixed-menu__nav-link {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  justify-content: center;
+
+  @include breakpoint(mobile) {
+    font-size: 1.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    padding: 1.8rem 0;
+  }
+}
+
+.fixed-menu__nav-link-inner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  @include breakpoint(mobile) {
+    justify-content: space-between;
+  }
+  svg {
+    flex-shrink: 0;
+    width: 1.1rem;
+    height: 0.5rem;
+    fill: currentColor;
+    transition: transform 0.2s;
+  }
+
+  .fixed-menu__nav-list-item:hover & {
+    svg {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.fixed-menu__nav-link-text {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 0.4rem;
+    background-color: currentColor;
+    pointer-events: none;
+    opacity: 0;
+    margin-top: 0.8rem;
+  }
+
+  @include breakpoint(mobile) {
+    &::after {
+      display: none;
+    }
+  }
+  .fixed-menu__nav-link.active & {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.fixed-menu__nav-dropdown {
+  position: absolute;
+  left: -1rem;
+  top: 100%;
+  padding-top: 0.5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s;
+  z-index: 20;
+  width: max-content;
+
+  .fixed-menu__nav-list-item:hover & {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s, visibility 0.4s;
+  }
+
+  @include breakpoint(mobile) {
+    all: revert;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 500ms;
+  }
+}
+
+.fixed-menu__nav-dropdown-inner {
+  background-color: #fff;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  padding: 4rem 3rem;
+  color: var(--text-color);
+  box-shadow: 0 0.3rem 3rem rgba(black, 0.2);
+
+  @include breakpoint(mobile) {
+    all: revert;
+    box-sizing: border-box;
+    grid-row: 1 / 2;
+    overflow: hidden;
+  }
+}
+
+.fixed-menu__submenu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  @include breakpoint(mobile) {
+    gap: 1.2rem;
+  }
+}
+
+.fixed-menu__submenu-link {
+  display: block;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.fixed-menu__mobile-wrapper {
+  display: contents;
+
+  @include breakpoint(mobile) {
+    background: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overscroll-behavior-y: contain;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 60;
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.4s, visibility 0s linear 0.4s;
+    // opacity: 0;
+    // visibility: hidden;
+    padding: 4rem var(--content-padding);
+    padding-top: 8rem;
+
+    &.active {
+      opacity: 1;
+      visibility: inherit;
+      transition: opacity 0.4s, visibility 0.4s;
+    }
+  }
+}
+
+.fixed-menu__burger {
+  display: none;
+
+  @include breakpoint(mobile) {
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 2rem;
+    height: 2rem;
+    gap: 0.6rem;
+    justify-content: center;
+    position: relative;
+    z-index: 80;
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      height: 0.2rem;
+      background-color: black;
+      transition: transform 0.2s, background-color 0.2s;
+      width: 100%;
+    }
+
+    .fixed-menu-open & {
+      &::before {
+        transform: translateY(0.4rem) rotate(-30deg);
+      }
+
+      &::after {
+        transform: translateY(-0.4rem) rotate(30deg);
+      }
+    }
+  }
+}

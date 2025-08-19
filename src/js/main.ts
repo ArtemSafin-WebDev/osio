@@ -43,6 +43,7 @@ import pageFooter from "./pageFooter";
 import { ScrollToPlugin } from "gsap/all";
 import scrollUp from "./scrollUp";
 import mediacenter from "./mediacenter";
+import fixedMenu from "./fixedMenu";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -87,6 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
   pageFooter();
   scrollUp();
   mediacenter();
+  fixedMenu();
 });
 
 window.addEventListener("load", () => {
