@@ -280,6 +280,21 @@
   }
 }
 
+.single-detail__images {
+  margin: 2rem 0;
+
+  @include breakpoint(mobile) {
+    margin: 3rem 0;
+  }
+
+  img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+  }
+}
+
 .single-news__image-wrapper {
   position: relative;
   grid-column: 2 / 4;
