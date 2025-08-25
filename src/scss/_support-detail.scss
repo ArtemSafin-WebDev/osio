@@ -345,8 +345,11 @@
     flex-direction: column;
     height: auto;
     box-sizing: border-box;
-    width: calc(100% - 2rem * 3 / 4);
-    margin-right: 2rem;
+    /*width: calc(100% - 2rem * 3 / 4);
+    margin-right: 2rem;*/
+
+    width: 100%;
+    margin: 0 1.5rem;
 
     @include breakpoint(mobile) {
       width: 30rem;

@@ -8,7 +8,7 @@ export default function actualMaterials() {
   );
 
   elements.forEach((element) => {
-    const navBtns = Array.from(
+    /*const navBtns = Array.from(
       element.querySelectorAll<HTMLButtonElement>(
         ".actual-materials__tabs-nav-link"
       )
@@ -31,7 +31,7 @@ export default function actualMaterials() {
         event.preventDefault();
         setActiveTab(btnIndex);
       });
-    });
+    });*/
 
     let instances: Swiper[] = [];
 
