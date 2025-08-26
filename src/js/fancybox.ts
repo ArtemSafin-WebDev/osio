@@ -6,7 +6,7 @@ export default function fancybox() {
     placeFocusBack: false,
   });
 
-  const BTN_SELECTOR = '.reviews__video-card';
+  const BTN_SELECTOR = '.js__video-card';
   document.addEventListener("click", (event) => {
     const target = event.target;
 
