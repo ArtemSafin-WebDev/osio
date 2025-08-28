@@ -1,0 +1,69 @@
+.cyberline-memory-upgrade {
+  @include blockWrapper;
+  position: relative;
+  z-index: 1;
+  background: #101015;
+  color: white;
+}
+
+.cyberline-memory-upgrade__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+  }
+}
+
+.cyberline-memory-upgrade__content {
+  @include blockContent;
+  min-height: 96rem;
+  padding-top: 16rem;
+  padding-bottom: 14rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+
+  .line-text-content__text {
+    max-width: 53rem;
+    color: #77787d;
+  }
+
+  @include breakpoint(mobile) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    min-height: 70rem;
+    display: block;
+
+    .line-text-content__heading {
+      font-size: 2.4rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+      letter-spacing: -0.1rem;
+      text-transform: uppercase;
+    }
+
+    .line-text-content__text {
+      br {
+        display: none;
+      }
+    }
+  }
+}
+
+.cyberline-memory-upgrade__wrapper {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  @include breakpoint(mobile) {
+    gap: 3rem;
+  }
+}

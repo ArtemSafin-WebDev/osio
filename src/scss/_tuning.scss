@@ -1,0 +1,48 @@
+.tuning {
+  @include blockWrapper;
+  position: relative;
+  z-index: 1;
+  background: #101015;
+  color: white;
+}
+
+.tuning__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+  }
+}
+
+.tuning__content {
+  @include blockContent;
+  min-height: 96rem;
+  padding-top: 20rem;
+  padding-bottom: 14rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  .line-text-content {
+    grid-column: 2 / 3;
+  }
+
+  .line-text-content__text {
+    max-width: 46rem;
+    color: #77787d;
+  }
+
+  @include breakpoint(mobile) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    min-height: 54.6rem;
+    display: flex;
+    flex-direction: column;
+  }
+}

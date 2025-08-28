@@ -1,0 +1,96 @@
+.vesa {
+  @include blockWrapper;
+  position: relative;
+  z-index: 1;
+  @include breakpoint(mobile) {
+    margin-bottom: 4rem;
+  }
+}
+
+.vesa__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+  }
+}
+
+.vesa__content {
+  @include blockContent;
+  min-height: 96rem;
+  padding-top: 24rem;
+  padding-bottom: 14rem;
+
+  .line-text-content__text {
+    max-width: 46rem;
+  }
+
+  @include breakpoint(mobile) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    min-height: 65rem;
+  }
+}
+
+.vesa__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  @include breakpoint(mobile) {
+    gap: 3rem;
+  }
+}
+
+.vesa__list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 5rem;
+  row-gap: 2.5rem;
+  @include breakpoint(mobile) {
+    gap: 3rem;
+    row-gap: 1.5rem;
+  }
+}
+
+.vesa__card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  @include breakpoint(mobile) {
+    gap: 0.6rem;
+  }
+}
+
+.vesa__card-icon {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  align-self: center;
+  @include breakpoint(mobile) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.vesa__card-title {
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  font-family: var(--inter);
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+}
