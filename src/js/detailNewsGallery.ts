@@ -15,6 +15,8 @@ export default function detailNewsGallery() {
       slidesPerView: "auto",
       speed: 600,
       modules: [Navigation],
+      loop: true,
+      centeredSlides: true,
       navigation: {
         prevEl: element.querySelector<HTMLButtonElement>(
           ".news-gallery__arrow--prev"
