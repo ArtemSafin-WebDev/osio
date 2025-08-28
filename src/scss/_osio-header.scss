@@ -165,14 +165,12 @@
   display: contents;
 
   @include breakpoint(mobile) {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-gap: 2rem;
-    grid-template-areas: "lang social" "cat cat" "nav nav" "link link";
+    display: flex;
+    flex-direction: column;
     padding: 0 var(--content-padding);
     padding-bottom: 2.8rem;
-    padding-top: 1.6rem;
-    grid-template-rows: auto 1fr auto auto;
+    padding-top: 2.4rem;
+    gap: 3.2rem;
     flex-shrink: 0;
     flex-grow: 1;
   }
@@ -222,7 +220,7 @@
   @include breakpoint(mobile) {
     flex-direction: column;
     flex-wrap: nowrap;
-    gap: 1.5rem;
+    gap: 0.8rem;
     align-items: stretch;
   }
 }
@@ -423,8 +421,8 @@
   align-items: center;
   gap: 0.5rem;
   @include breakpoint(mobile) {
-    grid-area: social;
-    justify-self: flex-end;
+    margin-bottom: 1rem;
+
     align-self: center;
   }
 }
@@ -561,8 +559,9 @@
   flex-direction: column;
 
   @include breakpoint(mobile) {
-    grid-area: cat;
-    align-self: center;
+    align-self: stretch;
+    order: -20;
+    // margin-bottom: 5rem;
   }
 }
 
@@ -573,9 +572,9 @@
   flex-wrap: wrap;
 
   @include breakpoint(mobile) {
-    flex-direction: column;
-    flex-wrap: nowrap;
-    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 0.8rem;
   }
 }
 
@@ -655,12 +654,36 @@
   }
 
   @include breakpoint(mobile) {
+    font-size: 1.4rem;
     font-style: normal;
     font-weight: 600;
-    font-size: 3rem;
-    line-height: 120%;
+    line-height: 100%;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    aspect-ratio: 168 / 146;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1.6rem;
   }
+}
+
+.osio-header__categories-link-bg {
+  display: none;
+  @include breakpoint(mobile) {
+    display: block;
+    inset: 0;
+    z-index: -1;
+  }
+}
+.osio-header__categories-link-bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .osio-header__search-wrapper {
@@ -749,12 +772,11 @@
   z-index: -1;
   background-color: rgba(119, 120, 125, 1);
   padding-top: 20rem;
-  @include blockWrapper;
   padding-bottom: 10rem;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.2s, visibility 0s linear 0.2s;
-
+  @include blockWrapper;
   .osio-header__search-wrapper:hover & {
     opacity: 1;
     visibility: inherit;
@@ -859,7 +881,7 @@
     visibility: hidden;
     transition: opacity 0.4s, visibility 0s linear 0.4s;
     padding-top: calc(5.2rem + 6rem);
-
+    z-index: 40;
     .mobile-categories-open & {
       opacity: 1;
       visibility: inherit;

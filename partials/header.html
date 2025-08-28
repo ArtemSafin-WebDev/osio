@@ -78,9 +78,9 @@
                             </ul>
                         </nav>
                         <a href="tel:+78002011178" class="osio-header__phone">8 800 201 11 78</a>
-                        <a href="#" class="osio-header__lang">
+                        {{!-- <a href="#" class="osio-header__lang">
                             EN
-                        </a>
+                        </a> --}}
                         <div class="osio-header__social">
                             <ul class="osio-header__social-list">
                                 <li class="osio-header__social-list-item">
@@ -97,6 +97,13 @@
                                         </svg>
                                     </a>
                                 </li>
+                                <li class="osio-header__social-list-item">
+                                    <a href="#" class="osio-header__social-link">
+                                        <svg width="14" height="14" aria-hidden="true">
+                                            <use xlink:href="#social-telegram"></use>
+                                        </svg>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                         <a href="#partners-modal" class="osio-header__buy">
@@ -108,6 +115,10 @@
                             <ul class="osio-header__categories-list">
                                 <li class="osio-header__categories-list-item">
                                     <a href="#" class="osio-header__categories-link">
+                                        <div class="osio-header__categories-link-bg">
+                                            <img src="/images/nav-categories/1.webp" alt=""
+                                                class="osio-header__categories-link-bg-image">
+                                        </div>
                                         Ноутбуки
                                     </a>
                                     <div class="osio-header__categories-dropdown">
@@ -198,16 +209,29 @@
                                 <li class="osio-header__categories-list-item">
                                     <a href="#"
                                         class="osio-header__categories-link {{#if isBlocksPage}} active {{/if}}">
-                                        Моноблоки
+                                        <div class="osio-header__categories-link-bg">
+                                            <img src="/images/nav-categories/2.webp" alt=""
+                                                class="osio-header__categories-link-bg-image">
+                                        </div>
+                                        Мини пк
                                     </a>
                                 </li>
                                 <li class="osio-header__categories-list-item">
                                     <a href="#" class="osio-header__categories-link">
-                                        Системные блоки
+                                        <div class="osio-header__categories-link-bg">
+                                            <img src="/images/nav-categories/3.webp" alt=""
+                                                class="osio-header__categories-link-bg-image">
+                                        </div>
+                                        моноблоки
                                     </a>
                                 </li>
                                 <li class="osio-header__categories-list-item">
+
                                     <a href="#" class="osio-header__categories-link">
+                                        <div class="osio-header__categories-link-bg">
+                                            <img src="/images/nav-categories/4.webp" alt=""
+                                                class="osio-header__categories-link-bg-image">
+                                        </div>
                                         Мониторы
                                     </a>
                                 </li>
