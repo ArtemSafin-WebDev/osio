@@ -1,0 +1,130 @@
+.processor {
+  @include blockWrapper;
+  margin-bottom: 4rem;
+}
+
+.processor__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.processor__top-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  margin-bottom: 6rem;
+
+  .line-text-content {
+    grid-column: 2 / 3;
+  }
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+}
+
+.processor__stack {
+}
+
+.processor__stack {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-gap: 2rem;
+
+  @include breakpoint(mobile) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.processor__image-wrapper {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: "";
+    display: block;
+    padding-bottom: 34.8%;
+    grid-area: stack;
+    @include breakpoint(mobile) {
+      padding-bottom: 79%;
+    }
+  }
+}
+
+.processor__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.processor__table {
+  grid-area: stack;
+  color: white;
+  grid-area: stack;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  z-index: 15;
+  padding: 4rem;
+  padding-left: 0;
+  max-width: 70rem;
+
+  @include breakpoint(mobile) {
+    padding: 1.5rem;
+    max-width: none;
+    grid-column: 1 / -1;
+  }
+
+  table {
+    thead {
+      th {
+        font-size: 1.5rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        font-family: var(--inter);
+        color: #77787d;
+        text-align: left;
+        padding-bottom: 1.6rem;
+        vertical-align: top;
+        @include breakpoint(mobile) {
+          font-size: 1rem;
+          font-style: normal;
+          font-weight: 500;
+          font-family: var(--stem);
+          line-height: 140%;
+          padding-bottom: 0.8rem;
+        }
+      }
+    }
+
+    tbody {
+      td {
+        font-size: 2.7rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        vertical-align: top;
+        text-align: left;
+        padding-bottom: 1.4rem;
+
+        @include breakpoint(mobile) {
+          font-size: 1.2rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 134%;
+          padding-bottom: 0.7rem;
+        }
+      }
+    }
+  }
+}

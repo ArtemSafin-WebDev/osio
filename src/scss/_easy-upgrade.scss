@@ -1,0 +1,55 @@
+.easy-upgrade {
+  @include blockWrapper;
+  position: relative;
+  z-index: 1;
+}
+
+.easy-upgrade__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+  }
+}
+
+.easy-upgrade__content {
+  @include blockContent;
+  min-height: 96rem;
+  padding-top: 24rem;
+  padding-bottom: 14rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+
+  .line-text-content__text {
+    max-width: 62rem;
+  }
+
+  .line-text-content__remark {
+    color: #77787d;
+  }
+
+  @include breakpoint(mobile) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    min-height: 66rem;
+    display: block;
+  }
+}
+
+.easy-upgrade__wrapper {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  @include breakpoint(mobile) {
+    gap: 3rem;
+  }
+}
