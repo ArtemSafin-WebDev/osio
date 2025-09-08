@@ -1,0 +1,104 @@
+.ports {
+  @include blockWrapper;
+  padding-top: 10rem;
+  padding-bottom: 4rem;
+  @include breakpoint(mobile) {
+    padding: 4rem 0;
+  }
+}
+
+.ports__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+  gap: 5.6rem;
+
+  .line-text-content__text {
+    max-width: 68rem;
+  }
+  @include breakpoint(mobile) {
+    gap: 4rem;
+  }
+}
+
+.ports__top-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  @include breakpoint(mobile) {
+    display: block;
+  }
+}
+
+.ports__wrapper {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.ports__list {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 5rem;
+  row-gap: 2.5rem;
+  @include breakpoint(mobile) {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 0.8rem;
+    grid-row-gap: 1.6rem;
+  }
+}
+
+.ports__card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 1rem;
+  @include breakpoint(mobile) {
+    gap: 0.4rem;
+  }
+}
+
+.ports__card-icon {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  align-self: center;
+  @include breakpoint(mobile) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.ports__card-title {
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  font-family: var(--inter);
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+}
+
+.ports__bottom-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.ports__image-card-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+}

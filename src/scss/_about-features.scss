@@ -377,9 +377,6 @@
   align-self: flex-start;
   width: 13rem;
   justify-self: center;
-  overflow: hidden;
-  overflow: clip;
-  border-radius: 50%;
 
   @include breakpointMF(small-tablet) {
     grid-column: 5 / 7;
@@ -406,6 +403,31 @@
   }
 }
 
+.about-features__card-extra-image {
+  position: absolute;
+  top: 2.4rem;
+  width: 20rem;
+  height: auto;
+  right: -10rem;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s, visibility 0s linear 0.4s, transform 0.2s;
+  // transform: scale(0);
+  @include breakpoint(mobile) {
+    width: 10rem;
+    top: -2rem;
+    right: -2.8rem;
+  }
+  .active & {
+    opacity: 1;
+    visibility: inherit;
+    transition: opacity 0.4s ease 0.2s, visibility 0.4s ease 0.2s,
+      transform 0.2s;
+    transform: scale(1);
+  }
+}
+
 .about-features__card-image {
   position: absolute;
   left: 0;
@@ -413,6 +435,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 50%;
 }
 
 .about-features__card-btn {

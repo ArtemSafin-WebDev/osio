@@ -1,0 +1,25 @@
+.two-monitors {
+  @include blockWrapper;
+  padding: 10rem;
+  padding-bottom: 4rem;
+
+  @include breakpoint(mobile) {
+    padding: 4rem 0;
+  }
+}
+
+.two-monitors__content {
+  @include blockContent;
+}
+
+.two-monitors__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-top: 6rem;
+  border-radius: 1rem;
+  @include breakpoint(mobile) {
+    border-radius: 0.4rem;
+    margin-top: 4rem;
+  }
+}

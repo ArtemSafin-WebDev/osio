@@ -116,7 +116,7 @@
     max-width: none;
     grid-template-columns: minmax(0, 1fr);
 
-    margin-bottom: 5.5rem;
+    margin-bottom: 4rem;
     align-self: stretch;
     grid-gap: 0.8rem;
   }
@@ -336,23 +336,26 @@ textarea.contact-form__form-text-input {
 
 .contact-form__form-policy-checkbox {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 2rem;
+  font-size: 1.1rem;
   font-style: normal;
-  font-weight: 600;
-  font-size: 1.4rem;
-  line-height: 140%;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
   cursor: pointer;
   user-select: none;
 
   @include breakpoint(mobile) {
+    font-size: 0.9rem;
     font-style: normal;
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 140%;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
     align-items: flex-start;
+    gap: 1.6rem;
   }
   a {
     text-decoration: underline;
@@ -389,7 +392,7 @@ textarea.contact-form__form-text-input {
   @include breakpoint(mobile) {
     width: 2rem;
     height: 2rem;
-    border-radius: 0.4rem;
+    border-radius: 0.6rem;
   }
 
   &::before {
@@ -422,17 +425,19 @@ textarea.contact-form__form-text-input {
   align-self: center;
   padding: 3.3rem 17rem;
   text-align: center;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1.4rem;
-  line-height: 100%;
+
   text-transform: uppercase;
   color: black;
   background: #feff6a;
   border-radius: 1rem;
   justify-content: center;
   transition: background-color 0.2s, color 0.2s;
-
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%; /* 1.4rem */
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
   @media (hover: hover) and (pointer: fine) {
     &:hover {
       background-color: black;
@@ -443,10 +448,14 @@ textarea.contact-form__form-text-input {
     align-self: stretch;
     padding: 2.5rem 5rem;
     border-radius: 1rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 700;
-    font-size: 1rem;
     line-height: 100%;
-    text-transform: uppercase;
+    letter-spacing: 0.2rem;
   }
+}
+
+.contact-form__form-checkbox-text {
+  max-width: 54rem;
 }

@@ -44,6 +44,8 @@ import { ScrollToPlugin } from "gsap/all";
 import scrollUp from "./scrollUp";
 import mediacenter from "./mediacenter";
 import fixedMenu from "./fixedMenu";
+import cookies from "./cookies";
+import newsGallery from "./newsGallery";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -89,6 +91,8 @@ document.addEventListener("DOMContentLoaded", () => {
   scrollUp();
   mediacenter();
   fixedMenu();
+  cookies();
+  newsGallery();
 });
 
 window.addEventListener("load", () => {

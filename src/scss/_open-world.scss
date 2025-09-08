@@ -282,25 +282,28 @@
 
   @include breakpoint(mobile) {
     padding: 1.6rem;
-    gap: 1.6rem;
+    gap: 0.8rem;
 
-    min-height: 19rem;
+    min-height: 23.5rem;
   }
 }
 
 .open-world__slider-card-category {
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 600;
-  font-size: 1.4rem;
   line-height: 100%;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
 
   @include breakpoint(mobile) {
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 600;
-    font-size: 1.2rem;
     line-height: 100%;
+    letter-spacing: 0.2rem;
     text-transform: uppercase;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -312,20 +315,23 @@
   text-wrap: balance;
 
   @include breakpoint(mobile) {
+    font-size: 2rem;
     font-style: normal;
     font-weight: 600;
-    font-size: 2rem;
     line-height: 120%;
   }
 }
 
 .open-world__slider-card-date {
   margin-top: auto;
+
+  color: #77787d;
+
+  font-size: 1.4rem;
   font-style: normal;
   font-weight: 600;
-  font-size: 1.4rem;
   line-height: 100%;
-  color: #77787d;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
 
   .open-world__slider-card--large & {
@@ -377,6 +383,25 @@
   align-items: center;
   justify-self: center;
   gap: 2rem;
+}
+
+.open-world__slider-card-desc {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: -0.05rem;
+  font-family: var(--inter);
+  color: #77787d;
+
+  @include breakpoint(mobile) {
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.05rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .open-world__arrow {
