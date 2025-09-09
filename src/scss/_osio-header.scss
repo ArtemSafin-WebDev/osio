@@ -882,6 +882,7 @@
     transition: opacity 0.4s, visibility 0s linear 0.4s;
     padding-top: calc(5.2rem + 6rem);
     z-index: 40;
+    padding-top: 6rem;
     .mobile-categories-open & {
       opacity: 1;
       visibility: inherit;
@@ -1369,7 +1370,7 @@
 .osio-header__categories-dropdown-list {
   @include breakpointMF(small-tablet) {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     grid-gap: 2rem;
     grid-column: 2 / 12;
   }
@@ -1384,6 +1385,12 @@
 .osio-header__categories-dropdown-list-item {
   display: flex;
   flex-direction: column;
+  @include breakpointMF(small-tablet) {
+    grid-column: span 2;
+    &--wide {
+      grid-column: span 3;
+    }
+  }
 }
 
 .osio-header__categories-dropdown-card {
@@ -1409,6 +1416,15 @@
 
     @include breakpoint(mobile) {
       padding-bottom: 72%;
+    }
+  }
+
+  .osio-header__categories-dropdown-list-item--wide & {
+    &::before {
+      padding-bottom: 51%;
+      @include breakpoint(mobile) {
+        padding-bottom: 72.5%;
+      }
     }
   }
 
@@ -1450,7 +1466,7 @@
 
   @include breakpoint(mobile) {
     padding: 1.6rem;
-    gap: 1rem;
+    gap: 0rem;
   }
 }
 
