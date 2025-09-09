@@ -22,6 +22,7 @@ import specs from "./pages-data/specs";
 import driversNotFound from "./pages-data/driversNotFound";
 import reviews from "./pages-data/reviews";
 import newBlocks from "./pages-data/new-blocks";
+import computers from "./pages-data/computers";
 
 const pagesConfig = {
   ...home,
@@ -48,6 +49,7 @@ const pagesConfig = {
   ...driversNotFound,
   ...reviews,
   ...newBlocks,
+  ...computers,
 };
 
 export default pagesConfig;

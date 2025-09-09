@@ -40,6 +40,7 @@
   margin-bottom: 15.4rem;
   text-wrap: balance;
   max-width: 105rem;
+  text-transform: uppercase;
 
   @include breakpoint(mobile) {
     font-style: normal;

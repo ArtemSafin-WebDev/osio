@@ -37,17 +37,15 @@
   flex-direction: column;
 
   @include breakpointMF(small-tablet) {
-    &:nth-child(1) {
-      grid-row: span 2;
+    grid-row: span 2;
 
-      .categories__card-image {
-        left: 50%;
-        right: auto;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: auto;
-      }
+    .categories__card-image {
+      left: 50%;
+      right: auto;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 80%;
+      height: auto;
     }
   }
 }
@@ -79,13 +77,8 @@
 
   @include breakpointMF(small-tablet) {
     @media (hover: hover) and (pointer: fine) {
-      .categories__list-item:nth-child(1) &:hover .categories__card-image {
+      &:hover .categories__card-image {
         transform: translate(-50%, -50%) scale(1.1);
-      }
-      .categories__list-item:not(:nth-child(1))
-        &:hover
-        .categories__card-image {
-        transform: scale(1.1);
       }
     }
   }
