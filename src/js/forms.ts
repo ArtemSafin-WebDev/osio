@@ -46,6 +46,8 @@ export default function forms() {
               //@ts-ignore
               ym(96009291,'reachGoal','Futer-Otpravka-formy');
             }
+            //@ts-ignore
+            _tmr.push({ type: 'reachGoal', id: 3485637, goal: 'contact'});
           })
           .catch((err) => {
             console.error(err);
