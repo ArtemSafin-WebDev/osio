@@ -223,4 +223,13 @@
     font-size: 1rem;
     bottom: 2rem;
   }
+
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--text-color);
+      border-color: var(--text-color);
+      color: #fff;
+    }
+  }
+
 }
