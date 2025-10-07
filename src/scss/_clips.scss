@@ -1,0 +1,62 @@
+.clips {
+  @include blockWrapper;
+  position: relative;
+  z-index: 1;
+  padding: 8rem 0;
+  background: #101015;
+  color: white;
+
+  .line-text-content__text {
+    max-width: 68rem;
+    color: #77787d;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 4rem 0;
+  }
+}
+
+.clips__content {
+  @include blockContent;
+  display: flex;
+  gap: 2rem;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.clips__image-container {
+  flex-grow: 1;
+  margin-left: calc(-1 * (100vw - 100%) / 2);
+  display: flex;
+
+  @include breakpoint(mobile) {
+    margin: 0 calc(-1 * var(--content-padding));
+    flex-grow: 0;
+    order: 10;
+  }
+}
+
+.clips__text-content {
+  width: calc(50% - 1rem);
+  align-self: center;
+
+  @include breakpoint(mobile) {
+    width: auto;
+    align-self: stretch;
+  }
+}
+
+.clips__image {
+  width: auto;
+  display: block;
+  height: 80rem;
+  margin-right: auto;
+
+  @include breakpoint(mobile) {
+    height: 32rem;
+    max-width: 100%;
+  }
+}

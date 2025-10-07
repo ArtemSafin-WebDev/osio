@@ -1,0 +1,47 @@
+.cooling {
+  @include blockWrapper;
+  position: relative;
+  z-index: 1;
+  padding: 8rem 0;
+  background: #101015;
+  color: white;
+  .line-text-content__text {
+    max-width: 46rem;
+    color: #77787d;
+  }
+
+  @include breakpoint(mobile) {
+    padding: 4rem 0;
+  }
+}
+
+.cooling__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.cooling__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  width: 76rem;
+
+  @include breakpoint(mobile) {
+    width: 100%;
+  }
+}
+
+.cooling__text-content {
+  margin-top: 14rem;
+  @include breakpoint(mobile) {
+    margin: 0;
+    order: -10;
+  }
+}

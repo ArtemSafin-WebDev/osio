@@ -1,0 +1,93 @@
+.cyberline-style {
+  @include blockWrapper;
+  position: relative;
+  z-index: 1;
+  padding: 4rem 0;
+  background: #101015;
+  color: white;
+}
+
+.cyberline-style__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+  }
+}
+
+.cyberline-style__left-col {
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.cyberline-style__right-col {
+  @include breakpoint(mobile) {
+    display: contents;
+  }
+}
+
+.cyberline-style__icon {
+  width: 6rem;
+  height: 6rem;
+  align-items: flex-start;
+
+  @include breakpoint(mobile) {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.cyberline-style__heading {
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-top: 4rem;
+  max-width: 40rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.1rem;
+    text-transform: uppercase;
+    margin-top: 2rem;
+  }
+}
+
+.cyberline-style__image-wrapper {
+  max-width: 100%;
+  margin-top: 7.5rem;
+  position: relative;
+
+  @include breakpoint(mobile) {
+    margin: 0;
+    order: 10;
+  }
+}
+
+.cyberline-style__image {
+  display: block;
+  margin: 0 auto;
+  height: auto;
+  width: 40.7rem;
+  @include breakpoint(mobile) {
+    width: 20rem;
+  }
+}
+
+.cyberline-style__second-illustration {
+  display: block;
+  width: 100%;
+  height: auto;
+}

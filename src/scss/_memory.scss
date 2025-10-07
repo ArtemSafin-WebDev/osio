@@ -1,0 +1,66 @@
+.memory {
+  @include blockWrapper;
+  position: relative;
+  z-index: 1;
+  padding: 20rem 0;
+  background: #101015;
+  color: white;
+
+  @include breakpoint(mobile) {
+    padding: 4rem 0;
+  }
+
+  .line-text-content__text {
+    max-width: 46rem;
+  }
+
+  .line-text-content__weight {
+    margin-bottom: 2rem;
+    max-width: 52rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+    @include breakpoint(mobile) {
+      font-size: 2.2rem;
+      font-style: normal;
+
+      line-height: 120%;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+  }
+}
+
+.memory__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-gap: 2rem;
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+}
+
+.memory__text-content {
+  grid-column: 1 / 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.memory__image-container {
+  grid-column: 4 / -1;
+}
+
+.memory__image {
+  width: 77rem;
+  height: auto;
+  margin: 0 auto;
+
+  @include breakpoint(mobile) {
+    margin: 0;
+    width: 100%;
+  }
+}
