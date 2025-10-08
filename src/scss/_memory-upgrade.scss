@@ -18,7 +18,7 @@
     object-fit: cover;
 
     @include breakpoint(mobile) {
-      object-fit: none;
+      object-fit: fill;
     }
   }
 }
