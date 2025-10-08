@@ -37,6 +37,10 @@
 
   .specs__card-remark {
     margin-top: auto;
+
+    @include breakpoint(mobile) {
+      margin-top: 1.5rem;
+    }
   }
 
   @include breakpoint(mobile) {
