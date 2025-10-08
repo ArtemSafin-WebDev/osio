@@ -35,6 +35,10 @@
     max-width: 53rem;
   }
 
+  .specs__card-remark {
+    margin-top: auto;
+  }
+
   @include breakpoint(mobile) {
     padding-top: 4rem;
     padding-bottom: 4rem;
