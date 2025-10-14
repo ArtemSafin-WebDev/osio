@@ -1,0 +1,75 @@
+.adapter {
+  @include blockWrapper;
+  padding: 4rem 0;
+}
+
+.adapter__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+  }
+}
+
+.adapter__text-content {
+  margin-top: 10rem;
+  @include breakpoint(mobile) {
+    margin: 0;
+  }
+
+  .line-text-content__text {
+    max-width: 46.5rem;
+    @include breakpoint(mobile) {
+      max-width: none;
+    }
+  }
+}
+
+.line-text-content__power {
+  margin-top: 3rem;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: uppercase;
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.1rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+  }
+  span {
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    text-transform: uppercase;
+    letter-spacing: 0;
+    @include breakpoint(mobile) {
+      font-size: 1rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 120%;
+      text-transform: uppercase;
+      letter-spacing: 0;
+    }
+  }
+}
+
+.adapter__image-wrapper {
+  @include breakpoint(mobile) {
+    margin: 0 calc(-1 * var(--content-padding));
+  }
+}
+
+.adapter__image {
+  width: 100%;
+}
