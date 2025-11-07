@@ -64,6 +64,52 @@
   }
 }
 
+.line-text-content__button {
+  display: flex;
+  align-items: center;
+  padding: 1.9rem 2rem;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 100%;
+  text-transform: uppercase;
+  gap: 1rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  transition: border-color 0.2s, background-color 0.2s, color 0.2s;
+  color: var(--text-color);
+  justify-self: flex-start;
+  justify-content: center;
+  text-align: center;
+  @include breakpoint(mobile) {
+    padding: 2rem 4rem;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%;
+    text-transform: uppercase;
+    grid-area: req;
+    align-self: flex-end;
+    justify-self: stretch;
+  }
+  &:link,
+  &:visited {
+    color: var(--text-color);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      background-color: var(--text-color);
+      border-color: var(--text-color);
+      color: white;
+
+      svg {
+        fill: white;
+      }
+    }
+  }
+}
+
 .adapter__image-wrapper {
   @include breakpoint(mobile) {
     margin: 0 calc(-1 * var(--content-padding));
