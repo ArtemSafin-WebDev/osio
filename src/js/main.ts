@@ -30,7 +30,7 @@ import search from "./search";
 import forms from "./forms";
 import linePartner from "./linePromo";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import {ScrollToPlugin, ScrollTrigger} from "gsap/all";
 import smoothScrolling from "./smoothScrolling";
 import lineFeatures from "./lineFeatures";
 import twoImagesWithTextScreen from "./twoImagesWithTextScreen";
@@ -40,75 +40,76 @@ import lineSpecs from "./lineSpecs";
 import lineTooltip from "./lineTooltip";
 import advantages from "./advantages";
 import pageFooter from "./pageFooter";
-import { ScrollToPlugin } from "gsap/all";
 import scrollUp from "./scrollUp";
 import mediacenter from "./mediacenter";
 import fixedMenu from "./fixedMenu";
 import cookies from "./cookies";
 import newsGallery from "./newsGallery";
+import partnerVideo from "./partnerVideo.ts";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 document.addEventListener("DOMContentLoaded", () => {
-  header();
-  smoothScrolling();
-  singleNews();
-  openWorld();
-  shops();
-  advantages();
-  reviews();
-  categories();
-  ticker();
-  intro();
-  products();
-  features();
-  contactForm();
-  lineTooltip();
-  brand();
-  fancybox();
-  buy();
-  actualMaterials();
-  otherMaterials();
-  detailNewsGallery();
-  selects();
-  drivers();
-  aboutFeatures();
-  lineCatalog();
-  lineGallery();
-  tabs();
-  lineVariants();
-  selectColor();
-  modals();
-  search();
-  forms();
-  linePartner();
-  lineFeatures();
-  twoImagesWithTextScreen();
-  lineWithTextPreinstalled();
-  lineConnection();
-  lineSpecs();
-  pageFooter();
-  scrollUp();
-  mediacenter();
-  fixedMenu();
-  cookies();
-  newsGallery();
+    header();
+    smoothScrolling();
+    singleNews();
+    openWorld();
+    shops();
+    advantages();
+    reviews();
+    categories();
+    ticker();
+    intro();
+    products();
+    features();
+    contactForm();
+    lineTooltip();
+    brand();
+    fancybox();
+    buy();
+    actualMaterials();
+    otherMaterials();
+    detailNewsGallery();
+    selects();
+    drivers();
+    aboutFeatures();
+    lineCatalog();
+    lineGallery();
+    tabs();
+    lineVariants();
+    selectColor();
+    modals();
+    search();
+    forms();
+    linePartner();
+    lineFeatures();
+    twoImagesWithTextScreen();
+    lineWithTextPreinstalled();
+    lineConnection();
+    lineSpecs();
+    pageFooter();
+    scrollUp();
+    mediacenter();
+    fixedMenu();
+    cookies();
+    newsGallery();
+    partnerVideo();
 });
 
 window.addEventListener("load", () => {
-  window.scrollTo(0, 0);
-  if (window.location.hash) {
-    console.log("Hash", window.location.hash);
-    gsap.to(window, {
-      duration: 1,
-      scrollTo: {
-        y: window.location.hash,
-        offsetY: 50,
-      },
-      autoKill: false,
-      delay: 0.4,
-    });
-  }
-  document.body.classList.add("loaded");
-  ScrollTrigger.refresh();
+    window.scrollTo(0, 0);
+    if (window.location.hash) {
+        console.log("Hash", window.location.hash);
+        gsap.to(window, {
+            duration: 1,
+            scrollTo: {
+                y: window.location.hash,
+                offsetY: 50,
+            },
+            autoKill: false,
+            delay: 0.4,
+        });
+    }
+    document.body.classList.add("loaded");
+    ScrollTrigger.refresh();
 });
