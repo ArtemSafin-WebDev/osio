@@ -1,0 +1,86 @@
+.partner-video {
+  @include blockWrapper;
+  padding: 4rem 0;
+  background-color: #fff;
+
+  @include breakpoint(mobile) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+}
+
+.partner-video__content {
+  @include blockContent;
+  display: flex;
+  flex-direction: column;
+}
+
+.partner-video__heading {
+  text-wrap: balance;
+  font-size: 4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  text-transform: uppercase;
+  margin-bottom: 5rem;
+
+  @include breakpoint(mobile) {
+    font-size: 2.4rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    letter-spacing: -0.1rem;
+    text-transform: uppercase;
+    margin-bottom: 2.4rem;
+  }
+}
+
+.partner-video__card {
+  overflow: hidden;
+  aspect-ratio: 1840 / 744;
+  border-radius: 1rem;
+  background-color: black;
+  display: block;
+  position: relative;
+
+  @include breakpoint(mobile) {
+    aspect-ratio: 16 / 9;
+  }
+
+  svg {
+    fill: white;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10rem;
+    height: 10rem;
+    z-index: 10;
+
+    @include breakpoint(mobile) {
+      width: 4rem;
+      height: 4rem;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.40);
+  }
+}
+
+.partner-video__card-bg {
+  position: absolute;
+  inset: 0;
+}
+
+.partner-video__card-bg-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
