@@ -64,6 +64,20 @@
   }
 }
 
+.line-text-content__btns {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 3rem;
+
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.6rem;
+    order: 30;
+    margin-top: 2rem;
+  }
+}
 .line-text-content__button {
   display: flex;
   align-items: center;
