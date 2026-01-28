@@ -105,7 +105,9 @@
   letter-spacing: 0.2rem;
   text-transform: uppercase;
   color: black;
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
   border-radius: 4rem;
   user-select: none;
   white-space: nowrap;
@@ -216,11 +218,11 @@
 
   @include breakpoint(mobile) {
     max-width: none;
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.07em;
   }
 }
 
@@ -273,7 +275,10 @@
   background: black;
   border: 1px solid black;
   background-clip: padding-box;
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -327,7 +332,10 @@
   border-radius: 20rem;
   border: 1px solid rgba(0, 0, 0, 0.4);
   background-clip: padding-box;
-  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -362,7 +370,7 @@
 }
 
 .line-intro__image-wrapper {
-  width: 100rem;
+  width: 95rem;
   height: auto;
 
   position: relative;

@@ -1,0 +1,46 @@
+.block-cooling {
+  @include blockWrapper;
+  margin-bottom: 5rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 5rem;
+  }
+}
+
+.block-cooling__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas: "stack";
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.block-cooling__image-wrapper {
+  grid-area: stack;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  @include breakpoint(mobile) {
+    order: 20;
+  }
+}
+
+.block-cooling__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.block-cooling__wrapper {
+  grid-area: stack;
+  z-index: 15;
+  padding-top: 20rem;
+
+  @include breakpoint(mobile) {
+    padding: 0;
+  }
+}

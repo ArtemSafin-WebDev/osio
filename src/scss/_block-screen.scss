@@ -9,7 +9,8 @@
     margin-bottom: 4rem;
   }
 
-  .line-tooltip {
+  .line-tooltip,
+  .line-tooltip__content {
     color: var(--text-color);
   }
 }
@@ -40,6 +41,10 @@
   @include breakpoint(mobile) {
     padding: 4rem 0;
     min-height: 132.7rem;
+
+    &--block-2 {
+      min-height: 137rem;
+    }
   }
   .line-text-content {
     max-width: 46rem;

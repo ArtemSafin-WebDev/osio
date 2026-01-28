@@ -53,9 +53,10 @@
   aspect-ratio: 445 / 379;
   padding: 4rem;
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   flex-grow: 1;
   width: 100%;
+  gap: 1.6rem;
 
   .dark-bg & {
     background: #1b1b22;
@@ -69,6 +70,7 @@
     aspect-ratio: 167 / 144;
     padding: 1.6rem;
     border-radius: 0.5rem;
+    flex-direction: column;
   }
 
   .line-features__list-item--large & {
@@ -101,9 +103,25 @@
   flex-direction: column;
   flex-grow: 1;
   gap: 0.7rem;
+  width: 30%;
 
   @include breakpoint(mobile) {
     gap: 0.3rem;
+    width: auto;
+    flex-grow: 0;
+  }
+}
+
+.line-features__card-wifi {
+  flex-shrink: 0;
+  width: 9.4rem;
+  height: auto;
+  align-self: flex-start;
+  margin-top: 0.4rem;
+
+  @include breakpoint(mobile) {
+    margin: 0;
+    width: 4.3rem;
   }
 }
 
@@ -201,19 +219,21 @@
   }
 }
 
-.line-features__card-button{
+.line-features__card-button {
   flex-shrink: 0;
   text-align: center;
   padding: 2rem 2.4rem;
   background: #cccccc;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   color: #000;
-  transition: background-color .2s, color .2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 600;
   line-height: 100%;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   text-transform: uppercase;
   position: absolute;
   bottom: 4rem;
@@ -231,5 +251,4 @@
       color: #fff;
     }
   }
-
 }

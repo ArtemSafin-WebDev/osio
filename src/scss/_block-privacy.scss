@@ -1,0 +1,45 @@
+.block-privacy {
+  @include blockWrapper;
+  margin-bottom: 10rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+  }
+}
+
+.block-privacy__content {
+  @include blockContent;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 2rem;
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+  }
+}
+
+.block-privacy__left-col {
+  grid-column: 1 / 2;
+  margin-left: calc((100svw - 2rem - (100% * 2)) / 2 * -1);
+  padding-right: 23rem;
+  @include breakpoint(mobile) {
+    padding: 0;
+    margin: 0;
+    order: 20;
+  }
+}
+
+.block-privacy__right-col {
+  grid-column: 2 / 3;
+  padding-top: 19rem;
+  @include breakpoint(mobile) {
+    padding: 0;
+  }
+}
+
+.block-privacy__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}

@@ -24,6 +24,12 @@
     }
   }
 
+  .block-dynamic--2 & {
+    .line-text-content {
+      margin-top: 2rem;
+    }
+  }
+
   .block-dynamic--inverted & {
     @include breakpointMF(small-tablet) {
       .line-text-content {
@@ -37,6 +43,10 @@
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   grid-gap: 2rem;
+
+  .block-dynamic--2 & {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 5fr);
+  }
   @include breakpoint(mobile) {
     display: flex;
     flex-direction: column;

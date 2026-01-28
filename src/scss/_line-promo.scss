@@ -57,6 +57,10 @@
     justify-content: center;
     gap: 0.7rem;
     margin-top: 4rem;
+
+    &.swiper-pagination-lock {
+      display: none;
+    }
     .swiper-pagination-bullet {
       flex-shrink: 0;
       width: 0.7rem;

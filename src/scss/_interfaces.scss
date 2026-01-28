@@ -1,0 +1,87 @@
+.interfaces {
+  @include blockWrapper;
+  margin-bottom: 14rem;
+  padding-top: 10rem;
+
+  @include breakpoint(mobile) {
+    margin-bottom: 2rem;
+    padding-top: 5rem;
+  }
+}
+
+.interfaces__content {
+  @include blockContent;
+  display: flex;
+  gap: 2.8rem;
+  @include breakpoint(mobile) {
+    flex-direction: column;
+    gap: 7rem;
+  }
+}
+
+.interfaces__left-col {
+  width: 47rem;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+
+  @include breakpoint(mobile) {
+    width: auto;
+    flex-shrink: 1;
+  }
+}
+
+.interfaces__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 32.5rem;
+  gap: 2rem;
+  row-gap: 4rem;
+  margin-top: 4rem;
+
+  @include breakpoint(mobile) {
+    max-width: none;
+    margin-top: 3rem;
+  }
+}
+
+.interfaces__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+  text-align: center;
+}
+
+.interfaces__card-icon {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+}
+
+.interfaces__card-title {
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 132%;
+}
+
+.interfaces__right-col {
+  flex-grow: 1;
+  margin-right: calc((100svw - 100%) / 2 * -1);
+  padding-top: 10rem;
+
+  @include breakpoint(mobile) {
+    padding: 0;
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.interfaces__image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
