@@ -55,7 +55,7 @@
   }
 }
 
-.dark-bg{
+.dark-bg {
   .specs__tabs-nav-list {
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
@@ -75,7 +75,7 @@
   }
 }
 
-.dark-bg{
+.dark-bg {
   .specs__tabs-nav-list-item {
     &::after {
       background-color: rgba(white, 0.2);
@@ -108,7 +108,7 @@
   }
 }
 
-.dark-bg{
+.dark-bg {
   .specs__tabs-nav-link {
     &:link,
     &:visited {
@@ -140,7 +140,9 @@
   line-height: 100%;
   text-transform: uppercase;
   color: black;
-  transition: color 0.2s, background-color 0.2s;
+  transition:
+    color 0.2s,
+    background-color 0.2s;
   border-radius: 4rem;
   user-select: none;
   white-space: nowrap;
@@ -186,14 +188,18 @@
   z-index: 5;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.4s, visibility 0s ease 0.4s;
+  transition:
+    opacity 0.4s,
+    visibility 0s ease 0.4s;
 
   &.active {
     position: relative;
     z-index: 10;
     opacity: 1;
     visibility: inherit;
-    transition: opacity 0.4s, visibility 0.4s;
+    transition:
+      opacity 0.4s,
+      visibility 0.4s;
   }
 }
 
@@ -222,6 +228,7 @@
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     grid-gap: 4rem;
+    grid-row-gap: 2rem;
   }
 }
 
@@ -257,12 +264,34 @@
 .specs__card-list {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-gap: 2rem;
-  grid-row-gap: 4rem;
+  gap: 2rem;
+  row-gap: 4rem;
+
+  &--compact {
+    row-gap: 1.6rem;
+  }
+
+  &--flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    .specs__card-list-item {
+      width: 20rem;
+    }
+  }
 
   @include breakpoint(mobile) {
     grid-template-columns: minmax(0, 1fr);
-    grid-gap: 1.8rem;
+    gap: 1.8rem;
+    &--flex {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    &--compact {
+      row-gap: 1.2rem;
+    }
   }
 }
 
@@ -355,6 +384,9 @@
   max-width: 100%;
 
   @include breakpointMF(small-tablet) {
+    &--wide {
+      width: 100%;
+    }
     &--fullwidth {
       width: 100%;
     }
@@ -371,6 +403,10 @@
   @include breakpoint(mobile) {
     width: 100%;
     margin-top: 4rem;
+
+    &--wide {
+      width: 100%;
+    }
     &--fullwidth {
       width: calc(100% + 4rem);
       box-sizing: content-box;
