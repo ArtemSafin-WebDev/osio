@@ -51,7 +51,7 @@ async function initMap() {
   let markers = [];
 
   const cards = Array.from(
-    document.querySelectorAll(".service-centers__points-card")
+    document.querySelectorAll(".service-centers__points-card .service-centers__points-card-text")
   );
 
   cards.forEach((card) => {
@@ -59,6 +59,9 @@ async function initMap() {
     const lng = Number(card.getAttribute("data-lng"));
 
     console.log(pinUrl);
+
+    const title = card.closest('.service-centers__points-card')
+        .querySelector('.service-centers__points-card-title');
 
     const markerElement = document.createElement("div");
     markerElement.className = "service-centers__marker";
@@ -68,7 +71,7 @@ async function initMap() {
     markerElement.appendChild(markerPin);
     const markerPopover = document.createElement("div");
     markerPopover.className = "service-centers__marker-popover";
-    markerPopover.innerHTML = card.innerHTML;
+    markerPopover.innerHTML = title.outerHTML + card.outerHTML;
     markerPopover.style.display = "none";
     markerElement.appendChild(markerPopover);
 
