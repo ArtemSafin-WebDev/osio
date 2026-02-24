@@ -92,8 +92,8 @@ async function initMap() {
     card.addEventListener("click", (event) => {
       if (event.target.matches("a")) return;
       event.preventDefault();
-      cards.forEach((card) => card.classList.remove("active"));
-      card.classList.add("active");
+      cards.forEach((card) => card.closest('.service-centers__points-card').classList.remove("active"));
+      card.closest('.service-centers__points-card').classList.add("active");
 
       card.scrollIntoView({
         behavior: "smooth",
@@ -117,7 +117,7 @@ async function initMap() {
 
     markerPin.addEventListener("click", () => {
       cards.forEach((card) => card.classList.remove("active"));
-      card.classList.add("active");
+      card.closest('.service-centers__points-card').classList.add("active");
       card.scrollIntoView({
         behavior: "smooth",
         block: "nearest",
