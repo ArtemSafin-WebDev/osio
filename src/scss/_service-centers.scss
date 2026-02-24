@@ -445,7 +445,7 @@
   line-height: 120%;
   font-family: var(--inter);
 
-  &:nth-last-child {
+  &:not(:last-child) {
     padding-bottom: 2rem;
     margin-bottom: 3rem;
     border-bottom: 1px solid rgba(0, 0, 0, .1);
@@ -457,7 +457,7 @@
     font-weight: 400;
     line-height: 110%;
 
-    &:nth-last-child {
+    &:not(:last-child) {
       padding-bottom: 2rem;
       margin-bottom: 3rem;
     }
